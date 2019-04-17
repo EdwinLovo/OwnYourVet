@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "929428746727",
+    "firebase_url": "https://ownyourvet.firebaseio.com",
+    "project_id": "ownyourvet",
+    "storage_bucket": "ownyourvet.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:929428746727:android:a945d7a39e2260ac",
+        "android_client_info": {
+          "package_name": "com.pdm.ownyourvet"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "929428746727-2ldeb8tmt7utqnagag2sl66npnv8vt1q.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.pdm.ownyourvet",
+            "certificate_hash": "dce965c71864bf7b870d408c447270cbc7fa344a"
+          }
+        },
+        {
+          "client_id": "929428746727-mdesblterdp0cebpsnk4naf61qhism5a.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBEE_ayCWDHlwvjxUpD5TJvspXEGDc6MzM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "929428746727-mdesblterdp0cebpsnk4naf61qhism5a.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
