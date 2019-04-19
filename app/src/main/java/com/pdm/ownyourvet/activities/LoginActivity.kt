@@ -1,34 +1,60 @@
 package com.pdm.ownyourvet.activities
 
-import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Button
-import android.widget.TextView
-import com.pdm.ownyourvet.R
+import com.google.firebase.auth.FirebaseAuth
+import com.pdm.ownyourvet.*
 import kotlinx.android.synthetic.main.activity_login.*
 
 class LoginActivity : AppCompatActivity() {
 
-    lateinit var newAccount: Button
-    lateinit var forgotPassword:TextView
+    private lateinit var mAuth: FirebaseAuth
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
+        mAuth = FirebaseAuth.getInstance()
 
-        newAccount = button_signUp
-        forgotPassword = textView_ForgotPassword
-
-        newAccount.setOnClickListener {
-            var intent:Intent = Intent(this, SignUpActivity::class.java)
-            startActivity(intent)
+        button_LogIn.setOnClickListener {
+            val email = editText_Email.text.toString()
+            val password = editText_Password.text.toString()
+            if (isValidEmail(email) && isValidPassword(password)){
+                logInByEmail(email, password)
+            } else {
+                toast("Please make sure all the data is correct")
+            }
         }
 
-        forgotPassword.setOnClickListener {
-            var intent:Intent = Intent(this, ForgotPasswordActivity::class.java)
-            startActivity(intent)
+        textView_ForgotPassword.setOnClickListener {
+            goToActivity<ForgotPasswordActivity> {  }
+            overridePendingTransition(android.R.anim.slide_in_left, android.R.anim.slide_out_right)
         }
 
+        button_CreateAccount.setOnClickListener {
+            goToActivity<SignUpActivity> {  }
+            overridePendingTransition(android.R.anim.slide_in_left, android.R.anim.slide_out_right)
+        }
+
+        editText_Email.validate {
+            editText_Email.error = if (isValidEmail(it)) null else "Email is not valid"
+        }
+
+        editText_Password.validate {
+            editText_Password.error = if (isValidPassword(it)) null else "Password should contain 1 lowercase, 1 uppercase, 1 number, 1 special character and 6 characters length at least"
+        }
+
+    }
+
+    private fun logInByEmail(email:String, password:String){
+        mAuth.signInWithEmailAndPassword(email,password)
+                .addOnCompleteListener(this){task ->
+                    if (task.isSuccessful){
+                        toast("User is now logged in.")
+                        val currentUser = mAuth.currentUser
+
+                    } else {
+                        toast("An unexpected error occurred, please try again.")
+                    }
+                }
     }
 }
