@@ -41,7 +41,7 @@ class SignUpActivity : AppCompatActivity() {
         }
 
         editText_Password_SignUp.validate {
-            editText_Password_SignUp.error = if (isValidPassword(it)) null else "Password should contain 1 lowercase, 1 uppercase, 1 number, 1 special character and 6 characters length at least"
+            editText_Password_SignUp.error = if (isValidPassword(it)) null else "Password must contain 1 lowercase, 1 uppercase, 1 number, 1 special character and 6 characters length at least"
         }
 
         editText_ConfirmPassword_SignUp.validate {
@@ -53,11 +53,13 @@ class SignUpActivity : AppCompatActivity() {
         mAuth.createUserWithEmailAndPassword(email, password)
                 .addOnCompleteListener(this) { task ->
                     if (task.isSuccessful) {
-                        toast("An email has been sent to you. Please confirm before Sign In.")
-                        goToActivity<LoginActivity>{
-                            flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+                        mAuth.currentUser!!.sendEmailVerification().addOnCompleteListener(this){
+                            toast("An email has been sent to you. Please confirm before Sign In.")
+                            goToActivity<LoginActivity>{
+                                flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+                            }
+                            overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out)
                         }
-                        overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out)
                     } else {
                         toast("An unexpected error occurred, please try again.")
                         val e = task.exception as FirebaseAuthException

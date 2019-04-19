@@ -40,7 +40,7 @@ class LoginActivity : AppCompatActivity() {
         }
 
         editText_Password.validate {
-            editText_Password.error = if (isValidPassword(it)) null else "Password should contain 1 lowercase, 1 uppercase, 1 number, 1 special character and 6 characters length at least"
+            editText_Password.error = if (isValidPassword(it)) null else "Password must contain 1 lowercase, 1 uppercase, 1 number, 1 special character and 6 characters length at least"
         }
 
     }
@@ -49,9 +49,11 @@ class LoginActivity : AppCompatActivity() {
         mAuth.signInWithEmailAndPassword(email,password)
                 .addOnCompleteListener(this){task ->
                     if (task.isSuccessful){
-                        toast("User is now logged in.")
-                        val currentUser = mAuth.currentUser
-
+                        if (mAuth.currentUser!!.isEmailVerified){
+                            toast("User is now logged in.")
+                        } else {
+                            toast("User must confirm email first.")
+                        }
                     } else {
                         toast("An unexpected error occurred, please try again.")
                     }
