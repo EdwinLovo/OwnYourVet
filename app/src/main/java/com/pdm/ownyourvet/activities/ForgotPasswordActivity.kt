@@ -9,12 +9,11 @@ import kotlinx.android.synthetic.main.activity_forgot_password.*
 
 class ForgotPasswordActivity : AppCompatActivity() {
 
-    private lateinit var  mAuth: FirebaseAuth
+    private val mAuth: FirebaseAuth by lazy { FirebaseAuth.getInstance() }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_forgot_password)
-        mAuth = FirebaseAuth.getInstance()
 
         editText_Email_Forgot.validate {
             editText_Email_Forgot.error = if (isValidEmail(it)) null else "Email is not valid"

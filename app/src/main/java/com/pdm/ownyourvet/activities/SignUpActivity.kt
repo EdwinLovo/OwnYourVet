@@ -10,13 +10,11 @@ import kotlinx.android.synthetic.main.activity_sign_up.*
 
 class SignUpActivity : AppCompatActivity() {
 
-    private lateinit var mAuth:FirebaseAuth
+    private val mAuth: FirebaseAuth by lazy { FirebaseAuth.getInstance() }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_sign_up)
-
-        mAuth = FirebaseAuth.getInstance()
 
         button_GoLogin_SignUp.setOnClickListener {
             goToActivity<LoginActivity>{
