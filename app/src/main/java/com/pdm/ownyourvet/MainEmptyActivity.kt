@@ -4,7 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.google.firebase.auth.FirebaseAuth
-import com.pdm.ownyourvet.activities.LoginActivity
+import com.pdm.ownyourvet.Activities.LoginActivity
 
 // Login and Main Activity flow
 class MainEmptyActivity : AppCompatActivity() {

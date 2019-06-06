@@ -21,13 +21,13 @@
             </intent-filter>
         </activity>
         <activity
-                android:name=".activities.ForgotPasswordActivity"
+                android:name=".Activities.ForgotPasswordActivity"
                 android:windowSoftInputMode="adjustPan">
         </activity>
-        <activity android:name=".activities.SignUpActivity">
+        <activity android:name=".Activities.SignUpActivity">
         </activity>
         <activity
-                android:name=".activities.LoginActivity"
+                android:name=".Activities.LoginActivity"
                 android:theme="@style/NoPreview"
                 android:windowSoftInputMode="adjustPan">
         </activity>

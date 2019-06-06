@@ -1,4 +1,4 @@
-package com.pdm.ownyourvet.activities
+package com.pdm.ownyourvet.Activities
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
