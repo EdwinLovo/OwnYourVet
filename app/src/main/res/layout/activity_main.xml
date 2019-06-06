@@ -8,7 +8,7 @@
     android:gravity="center"
     android:background="@color/colorPrimaryDark"
         tools:context=".MainActivity">
-
+<!--
     <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -26,6 +26,10 @@
             android:layout_marginTop="30dp"
             android:layout_marginLeft="32dp"
             android:layout_marginRight="32dp"
-            android:background="@drawable/button_ripple_google"/>
+            android:background="@drawable/button_ripple_google"/>-->
 
+    <FrameLayout
+        android:id="@+id/framelayoutContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
 </LinearLayout>
