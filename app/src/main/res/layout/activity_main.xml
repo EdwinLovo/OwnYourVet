@@ -1,35 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:tools="http://schemas.android.com/tools"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:gravity="center"
     android:background="@color/colorPrimaryDark"
-        tools:context=".MainActivity">
-<!--
-    <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Welcome to OwnYourVet!"
-        android:gravity="center"
-        android:textColor="@color/colorAccent"
-        android:textSize="40sp"/>
+    tools:context=".MainActivity">
 
-        <Button
-            android:id="@+id/button_SignOut_MainActivity"
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/login_button_xl_height"
-            android:text="Sign Out"
-            android:textSize="20sp"
-            android:layout_marginTop="30dp"
-            android:layout_marginLeft="32dp"
-            android:layout_marginRight="32dp"
-            android:background="@drawable/button_ripple_google"/>-->
-
-    <FrameLayout
-        android:id="@+id/framelayoutContainer"
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
+        android:layout_height="wrap_content"
+        app:titleTextColor="@color/colorPrimaryText"
+        android:background="?colorPrimary" />
+
+
+    <fragment
+        android:id="@+id/nav_host_fragment"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:name="androidx.navigation.fragment.NavHostFragment"
+        app:navGraph="@navigation/app_navigation"
+        app:defaultNavHost="true" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_nav"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:itemTextColor="@color/colorAccentDark"
+        app:itemIconTint="@color/colorAccentDark"
+        app:menu="@menu/navigation_menu"/>
+
 </LinearLayout>
