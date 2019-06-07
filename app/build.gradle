@@ -4,6 +4,8 @@ apply plugin: 'kotlin-android'
 
 apply plugin: 'kotlin-android-extensions'
 
+apply plugin: 'androidx.navigation.safeargs'
+
 android {
     compileSdkVersion 28
     defaultConfig {
@@ -24,6 +26,8 @@ android {
 }
 
 dependencies {
+    def nav_version = "2.1.0-alpha04"
+
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
     implementation 'androidx.appcompat:appcompat:1.1.0-alpha04'
@@ -48,6 +52,12 @@ dependencies {
 
     // multidex
     implementation 'com.android.support:multidex:1.0.3'
+
+    // Navigation Editor
+    implementation "androidx.navigation:navigation-fragment:$nav_version"
+    implementation "androidx.navigation:navigation-ui:$nav_version"
+    implementation 'com.google.android.material:material:1.0.0-rc01'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0-rc02'
 
 }
 apply plugin: 'com.google.gms.google-services'
