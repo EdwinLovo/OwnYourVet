@@ -45,7 +45,7 @@ class ChatFragment : Fragment() {
         setUpCurrentUser()
         setUpRecyclerView()
         setUpChatBtn()
-        suscribeToChatMessage()
+        subscribeToChatMessage()
 
         return _view
     }
@@ -72,7 +72,8 @@ class ChatFragment : Fragment() {
         _view.buttonSend.setOnClickListener {
             val messageText = _view.editTextMessage.text.toString()
             if (messageText.isNotEmpty()){
-                val message = Message(currentUser.uid, messageText, currentUser.photoUrl.toString(), Date())
+                val  photo = currentUser.photoUrl?.let { currentUser.photoUrl.toString() } ?: run { "" }
+                val message = Message(currentUser.uid, messageText, photo, Date())
                 saveMessage(message)
                 _view.editTextMessage.setText("")
             }
@@ -95,7 +96,7 @@ class ChatFragment : Fragment() {
             }
     }
 
-    private fun suscribeToChatMessage(){
+    private fun subscribeToChatMessage(){
         chatSubscription = chatDBRef
             .orderBy("sentAt", Query.Direction.DESCENDING)
             .limit(200)
