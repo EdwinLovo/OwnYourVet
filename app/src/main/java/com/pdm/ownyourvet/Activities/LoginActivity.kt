@@ -3,6 +3,7 @@ package com.pdm.ownyourvet.Activities
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import com.google.android.gms.auth.api.Auth
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions
@@ -10,8 +11,10 @@ import com.google.android.gms.common.ConnectionResult
 import com.google.android.gms.common.api.GoogleApiClient
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.GoogleAuthProvider
+import com.google.firebase.firestore.FirebaseFirestore
 import com.pdm.ownyourvet.*
 import kotlinx.android.synthetic.main.activity_login.*
+import kotlin.math.log
 
 class LoginActivity : AppCompatActivity(), GoogleApiClient.OnConnectionFailedListener {
 
@@ -95,13 +98,13 @@ class LoginActivity : AppCompatActivity(), GoogleApiClient.OnConnectionFailedLis
             goToActivity<MainActivity> {
                 flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
             }
+            getUserByUID()
             toast("Signed In by Google")
         }
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
-
         if (requestCode == RC_GOOGLE_SIGN_IN){
             val result = Auth.GoogleSignInApi.getSignInResultFromIntent(data)
             if (result.isSuccess){
@@ -113,5 +116,11 @@ class LoginActivity : AppCompatActivity(), GoogleApiClient.OnConnectionFailedLis
 
     override fun onConnectionFailed(p0: ConnectionResult) {
         toast("Connection Failed!!")
+    }
+
+    private fun getUserByUID(){
+        val store:FirebaseFirestore = FirebaseFirestore.getInstance()
+        val c = store.collection("users").document()
+        Log.d("CODIGO", "DOC: ${c.get()}")
     }
 }
