@@ -77,8 +77,21 @@ class LoginActivity : AppCompatActivity(), GoogleApiClient.OnConnectionFailedLis
                 .addOnCompleteListener(this){task ->
                     if (task.isSuccessful){
                         if (mAuth.currentUser!!.isEmailVerified){
-                            goToActivity<MainActivity> {
-                                flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+                            isUserRegistered { match, admin ->
+                                Log.d("CODIGO", "SA: "+match)
+                                if (!match){
+                                    createUserByType()
+                                }
+
+                                if (admin){
+                                    goToActivity<AdminMainActivity> {
+                                        flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+                                    }
+                                } else {
+                                    goToActivity<MainActivity> {
+                                        flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+                                    }
+                                }
                             }
                         } else {
                             toast("User must confirm email first.")
@@ -95,10 +108,26 @@ class LoginActivity : AppCompatActivity(), GoogleApiClient.OnConnectionFailedLis
             if (mGoogleApiClient.isConnected){
                 Auth.GoogleSignInApi.signOut(mGoogleApiClient)
             }
-            goToActivity<MainActivity> {
-                flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+
+
+            //Log.d("CODIGO", "BOOL: "+isUserRegistered())
+            isUserRegistered { match, admin ->
+                Log.d("CODIGO", "SA: "+match)
+                if (!match){
+                    createUserByType()
+                }
+
+                if (admin){
+                    goToActivity<AdminMainActivity> {
+                        flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+                    }
+                } else {
+                    goToActivity<MainActivity> {
+                        flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+                    }
+                }
             }
-            getUserByUID()
+
             toast("Signed In by Google")
         }
     }
@@ -118,9 +147,28 @@ class LoginActivity : AppCompatActivity(), GoogleApiClient.OnConnectionFailedLis
         toast("Connection Failed!!")
     }
 
-    private fun getUserByUID(){
+    private fun isUserRegistered(callback: (match:Boolean, admin:Boolean) -> Unit):Boolean{
+        var type = true
+        var match = false
         val store:FirebaseFirestore = FirebaseFirestore.getInstance()
-        val c = store.collection("users").document()
-        Log.d("CODIGO", "DOC: ${c.get()}")
+        val f = store.collection("users").whereEqualTo("uid", mAuth.currentUser?.uid)
+        Log.d("CODIGO", "USER: "+f.get())
+        store.collection("users").get()
+            .addOnSuccessListener { result ->
+                for (document in result) {
+                    Log.d("CODIGO", "UID: "+document.data["uid"]+" UID2: "+mAuth.currentUser?.uid)
+                    if (document.data["uid"].toString()==mAuth.currentUser?.uid.toString()){
+                        match = true
+                        type = document.data["admin"] as Boolean
+                        Log.d("CODIGO", "V1: "+match)
+                    }
+                }
+                Log.d("CODIGO", "SS: "+match)
+                callback(match, type)
+            }
+        Log.d("CODIGO", "V2: "+match)
+
+        return match
     }
+
 }
