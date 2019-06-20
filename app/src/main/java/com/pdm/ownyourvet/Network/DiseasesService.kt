@@ -12,8 +12,8 @@ const val BASE_URL = ""
 
 interface DiseasesService {
 
-    @GET
-    fun getDiseases():Deferred<Response<Diseases>>
+    @GET("/")
+    fun getDiseases():Deferred<Response<List<Diseases>>>
 
     companion object {
         fun getDiseasesService():DiseasesService= Retrofit.Builder()

@@ -18,7 +18,7 @@ class DiseasesRepo(private val diseasesDao: DiseasesDao) {
     @WorkerThread
     suspend fun deleteDiseases() = diseasesDao.deleteAllDiseases()
 
-    fun retrieveDiseasesAsync(diseases: Diseases):Deferred<Response<Diseases>> =
+    fun retrieveDiseasesAsync():Deferred<Response<List<Diseases>>> =
             DiseasesService.getDiseasesService().getDiseases()
 
 }
