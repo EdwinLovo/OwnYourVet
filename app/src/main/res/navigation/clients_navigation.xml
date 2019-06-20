@@ -7,12 +7,12 @@
 
     <fragment
         android:id="@+id/destination_home"
-        android:name="com.pdm.ownyourvet.ClientFragments.HomeFragment"
+        android:name="com.pdm.ownyourvet.Fragments.ClientFragments.HomeFragment"
         android:label="Home"
         tools:layout="@layout/fragment_home" />
     <fragment
         android:id="@+id/destination_chat"
-        android:name="com.pdm.ownyourvet.UniversalFragments.ChatFragment"
+        android:name="com.pdm.ownyourvet.Fragments.ChatFragment"
         android:label="Chat"
         tools:layout="@layout/fragment_chat" />
 </navigation>

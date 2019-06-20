@@ -10,7 +10,7 @@ import androidx.navigation.Navigation
 import androidx.navigation.ui.NavigationUI
 import com.google.firebase.auth.FirebaseAuth
 import com.pdm.ownyourvet.Activities.LoginActivity
-import com.pdm.ownyourvet.UniversalFragments.ChatFragment
+import com.pdm.ownyourvet.Fragments.ChatFragment
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity(), ChatFragment.OnFragmentInteractionListener {

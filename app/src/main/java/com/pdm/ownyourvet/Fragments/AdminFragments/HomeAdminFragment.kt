@@ -1,4 +1,4 @@
-package com.pdm.ownyourvet.AdminFragments
+package com.pdm.ownyourvet.Fragments.AdminFragments
 
 
 import android.os.Bundle

@@ -1,4 +1,4 @@
-package com.pdm.ownyourvet.UniversalFragments
+package com.pdm.ownyourvet.Fragments
 
 
 import android.net.Uri

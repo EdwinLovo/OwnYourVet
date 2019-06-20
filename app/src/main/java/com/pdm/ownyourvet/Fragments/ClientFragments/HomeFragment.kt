@@ -1,4 +1,4 @@
-package com.pdm.ownyourvet.ClientFragments
+package com.pdm.ownyourvet.Fragments.ClientFragments
 
 
 import android.os.Bundle
