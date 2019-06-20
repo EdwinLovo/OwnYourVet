@@ -31,14 +31,7 @@ class MainActivity : AppCompatActivity(), ChatFragment.OnFragmentInteractionList
         setUpBottomNavMenu(navController)
         setUpSideNavigationMenu(navController)
         setUpActionBar(navController)
-/*
-        val chatFragment = ChatFragment()
-        supportFragmentManager.beginTransaction().add(R.id.framelayoutContainer,chatFragment).commit()*/
 
-        /*button_SignOut_MainActivity.setOnClickListener {
-            mAuth.signOut()
-            goToActivity<LoginActivity>()
-        }*/
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {

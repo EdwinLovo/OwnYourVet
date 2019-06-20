@@ -4,7 +4,6 @@ import android.app.Activity
 import android.content.Intent
 import android.text.Editable
 import android.text.TextWatcher
-import android.util.Log
 import android.util.Patterns
 import android.view.LayoutInflater
 import android.view.ViewGroup
@@ -70,10 +69,8 @@ fun createUserByType(){
 
     usersDBRef.add(newUser)
         .addOnFailureListener {
-            Log.d("CODIGO", "Error")
         }
         .addOnCompleteListener{
-            Log.d("CODIGO", "User type created")
         }
 }
 

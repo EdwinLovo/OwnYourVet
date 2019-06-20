@@ -3,7 +3,6 @@ package com.pdm.ownyourvet.Activities
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import com.google.android.gms.auth.api.Auth
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions
@@ -14,7 +13,6 @@ import com.google.firebase.auth.GoogleAuthProvider
 import com.google.firebase.firestore.FirebaseFirestore
 import com.pdm.ownyourvet.*
 import kotlinx.android.synthetic.main.activity_login.*
-import kotlin.math.log
 
 class LoginActivity : AppCompatActivity(), GoogleApiClient.OnConnectionFailedListener {
 
@@ -78,7 +76,6 @@ class LoginActivity : AppCompatActivity(), GoogleApiClient.OnConnectionFailedLis
                     if (task.isSuccessful){
                         if (mAuth.currentUser!!.isEmailVerified){
                             isUserRegistered { match, admin ->
-                                Log.d("CODIGO", "SA: "+match)
                                 if (!match){
                                     createUserByType()
                                 }
@@ -109,10 +106,8 @@ class LoginActivity : AppCompatActivity(), GoogleApiClient.OnConnectionFailedLis
                 Auth.GoogleSignInApi.signOut(mGoogleApiClient)
             }
 
-
-            //Log.d("CODIGO", "BOOL: "+isUserRegistered())
             isUserRegistered { match, admin ->
-                Log.d("CODIGO", "SA: "+match)
+
                 if (!match){
                     createUserByType()
                 }
@@ -152,21 +147,16 @@ class LoginActivity : AppCompatActivity(), GoogleApiClient.OnConnectionFailedLis
         var match = false
         val store:FirebaseFirestore = FirebaseFirestore.getInstance()
         val f = store.collection("users").whereEqualTo("uid", mAuth.currentUser?.uid)
-        Log.d("CODIGO", "USER: "+f.get())
         store.collection("users").get()
             .addOnSuccessListener { result ->
                 for (document in result) {
-                    Log.d("CODIGO", "UID: "+document.data["uid"]+" UID2: "+mAuth.currentUser?.uid)
                     if (document.data["uid"].toString()==mAuth.currentUser?.uid.toString()){
                         match = true
                         type = document.data["admin"] as Boolean
-                        Log.d("CODIGO", "V1: "+match)
                     }
                 }
-                Log.d("CODIGO", "SS: "+match)
                 callback(match, type)
             }
-        Log.d("CODIGO", "V2: "+match)
 
         return match
     }
