@@ -1,7 +1,10 @@
 package com.pdm.ownyourvet
 
 import android.app.Activity
+import android.content.Context
 import android.content.Intent
+import android.net.ConnectivityManager
+import android.net.NetworkInfo
 import android.text.Editable
 import android.text.TextWatcher
 import android.util.Patterns
@@ -55,6 +58,13 @@ fun Activity.isValidPassword(password: String):Boolean{
 
 fun Activity.isValidConfirmPassword(password: String, confirmPassword: String):Boolean{
     return password == confirmPassword
+}
+
+fun isConnected(context: Context):Boolean{
+    val connectivityManager = context.getSystemService(Context.CONNECTIVITY_SERVICE) as ConnectivityManager
+    val activeNetwork: NetworkInfo? = connectivityManager.activeNetworkInfo
+    val connected:Boolean = activeNetwork?.isConnected == true
+    return connected
 }
 
 fun createUserByType(){

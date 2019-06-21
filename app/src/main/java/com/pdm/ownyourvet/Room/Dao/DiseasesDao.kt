@@ -11,7 +11,7 @@ import com.pdm.ownyourvet.Room.Entities.Diseases
 interface DiseasesDao {
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    suspend fun insertDiseas(diseases: Diseases)
+    suspend fun insertDiseases(diseases: Diseases)
 
     @Query("select * from diseases")
     fun getAllDiseases():LiveData<List<Diseases>>

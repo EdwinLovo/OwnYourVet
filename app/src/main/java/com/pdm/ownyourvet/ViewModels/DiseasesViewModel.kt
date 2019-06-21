@@ -32,7 +32,7 @@ class DiseasesViewModel(private val app:Application):AndroidViewModel(app) {
     }
 
     fun retrieveMovies() = viewModelScope.launch(Dispatchers.IO){
-        this@DiseasesViewModel.deleteDiseases()
+        //this@DiseasesViewModel.deleteDiseases()
         val response=diseasesRepository.retrieveDiseasesAsync().await()
 
         if (response.isSuccessful) with(response.body()!!.data){

@@ -14,7 +14,7 @@ class DiseasesRepo(private val diseasesDao: DiseasesDao) {
     val allDiseases:LiveData<List<Diseases>> = diseasesDao.getAllDiseases()
 
     @WorkerThread
-    suspend fun insertDisease(diseases: Diseases) = diseasesDao.insertDiseas(diseases)
+    suspend fun insertDisease(diseases: Diseases) = diseasesDao.insertDiseases(diseases)
 
     @WorkerThread
     suspend fun deleteDiseases() = diseasesDao.deleteAllDiseases()

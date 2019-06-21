@@ -13,6 +13,7 @@ import com.pdm.ownyourvet.Adapters.DiseaseAdapter
 
 import com.pdm.ownyourvet.R
 import com.pdm.ownyourvet.ViewModels.DiseasesViewModel
+import com.pdm.ownyourvet.isConnected
 import kotlinx.android.synthetic.main.fragment_diseases.view.*
 
 class DiseasesFragment : Fragment() {
@@ -37,7 +38,9 @@ class DiseasesFragment : Fragment() {
         recyclerView.adapter = adapter
         recyclerView.layoutManager = LinearLayoutManager(view.context)
 
-        diseasesViewModel.retrieveMovies()
+        if (isConnected(view.context)){
+            diseasesViewModel.retrieveMovies()
+        }
 
         diseasesViewModel.allDiseases.observe(this, Observer { diseases ->
             diseases?.let { adapter.setDiseases(it) }
