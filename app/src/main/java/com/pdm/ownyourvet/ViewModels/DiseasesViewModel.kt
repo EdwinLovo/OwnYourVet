@@ -16,6 +16,7 @@ class DiseasesViewModel(private val app:Application):AndroidViewModel(app) {
 
     private val diseasesRepository:DiseasesRepo
     val allDiseases:LiveData<List<Diseases>>
+    var diseasesBySpecie:LiveData<List<Diseases>>?=null
 
     init {
         val diseasesDao = RoomDB.getInstance(app).diseasesDao()
@@ -25,6 +26,10 @@ class DiseasesViewModel(private val app:Application):AndroidViewModel(app) {
 
     fun insertDisease(diseases: Diseases) = viewModelScope.launch(Dispatchers.IO){
         diseasesRepository.insertDisease(diseases)
+    }
+
+    fun updateDiseasesBySpecie(specie:Long) = viewModelScope.launch(Dispatchers.IO){
+        diseasesBySpecie = diseasesRepository.getDiseasesBySpecieId(specie)
     }
 
     fun deleteDiseases() = viewModelScope.launch(Dispatchers.IO){

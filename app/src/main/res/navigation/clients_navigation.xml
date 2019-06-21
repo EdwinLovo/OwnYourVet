@@ -18,6 +18,6 @@
     <fragment
         android:id="@+id/destination_diseases"
         android:name="com.pdm.ownyourvet.Fragments.DiseasesFragment"
-        android:label="Diseases Informaction"
+        android:label="Enfermedades"
         tools:layout="@layout/fragment_diseases" />
 </navigation>

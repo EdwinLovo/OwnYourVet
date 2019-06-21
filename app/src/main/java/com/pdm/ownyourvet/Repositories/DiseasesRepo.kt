@@ -13,6 +13,8 @@ class DiseasesRepo(private val diseasesDao: DiseasesDao) {
 
     val allDiseases:LiveData<List<Diseases>> = diseasesDao.getAllDiseases()
 
+    fun getDiseasesBySpecieId(specie:Long) = diseasesDao.getDiseasesBySpecieId(specie)
+
     @WorkerThread
     suspend fun insertDisease(diseases: Diseases) = diseasesDao.insertDiseases(diseases)
 

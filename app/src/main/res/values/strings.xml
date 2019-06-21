@@ -11,6 +11,8 @@
     <string name="login_create_account">Crear nueva cuenta</string>
     <string name="login_go_login">Regresar al inicio de sesión</string>
 
+    <string name="selected_item">Selected item:</string>
+
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="chat_edittext_message_hint">Escribe un mensaje...</string>

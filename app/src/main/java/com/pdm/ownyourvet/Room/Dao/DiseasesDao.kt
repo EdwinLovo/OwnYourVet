@@ -16,6 +16,9 @@ interface DiseasesDao {
     @Query("select * from diseases")
     fun getAllDiseases():LiveData<List<Diseases>>
 
+    @Query("select * from diseases where specie_id=:specie")
+    fun getDiseasesBySpecieId(specie:Long):LiveData<List<Diseases>>
+
     @Query("delete from diseases")
     suspend fun deleteAllDiseases()
 
