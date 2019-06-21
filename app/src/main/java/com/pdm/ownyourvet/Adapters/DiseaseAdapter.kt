@@ -9,10 +9,12 @@ import com.pdm.ownyourvet.R
 import com.pdm.ownyourvet.Room.Entities.Diseases
 import kotlinx.android.synthetic.main.diseases_item.view.*
 
-class DiseaseAdapter internal constructor(private val context: Context):RecyclerView.Adapter<DiseaseAdapter.DiseasesViewHolder>(){
+abstract class DiseaseAdapter internal constructor(private val context: Context):RecyclerView.Adapter<DiseaseAdapter.DiseasesViewHolder>(){
 
     private var inflater = LayoutInflater.from(context)
     private var diseases = emptyList<Diseases>()
+
+    abstract fun setClickListenerToDisease(holder: DiseasesViewHolder, disease:Diseases)
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): DiseasesViewHolder {
         val itemView = inflater.inflate(R.layout.diseases_item, parent, false)
@@ -30,6 +32,8 @@ class DiseaseAdapter internal constructor(private val context: Context):Recycler
         } else {
             holder.specie.text = "Gatos"
         }
+
+        setClickListenerToDisease(holder, currentDisease)
     }
 
     inner class DiseasesViewHolder(itemView:View):RecyclerView.ViewHolder(itemView){
