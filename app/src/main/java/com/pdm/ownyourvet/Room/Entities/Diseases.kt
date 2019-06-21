@@ -8,16 +8,12 @@ import com.squareup.moshi.Json
 data class Diseases(
 
     @PrimaryKey
-    @field:Json(name = "id")
-    val id:Long = 0,
+    val id:Long,
 
-    @field:Json(name = "name")
     val name:String,
 
-    @field:Json(name = "animal")
-    val animal:String,
+    val specie_id:Long,
 
-    @field:Json(name = "description")
-    val description:String
+    val information:String
 
 )

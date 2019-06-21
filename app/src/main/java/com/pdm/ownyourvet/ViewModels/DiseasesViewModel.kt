@@ -31,11 +31,11 @@ class DiseasesViewModel(private val app:Application):AndroidViewModel(app) {
         diseasesRepository.deleteDiseases()
     }
 
-    fun retrieveMovies(movie:String) = viewModelScope.launch(Dispatchers.IO){
+    fun retrieveMovies() = viewModelScope.launch(Dispatchers.IO){
         this@DiseasesViewModel.deleteDiseases()
         val response=diseasesRepository.retrieveDiseasesAsync().await()
 
-        if (response.isSuccessful) with(response.body()){
+        if (response.isSuccessful) with(response.body()!!.data){
             this?.forEach {
                 this@DiseasesViewModel.insertDisease(it)
                 Log.d("CODIGO", it.name+" ingresada correctamente")
@@ -44,7 +44,7 @@ class DiseasesViewModel(private val app:Application):AndroidViewModel(app) {
             Log.d("CODIGO", "Error: $response")
             when(this.code()){
                 404->{
-                    Toast.makeText(app, "Movie not found", Toast.LENGTH_LONG).show()
+                    Toast.makeText(app, "Disease not found", Toast.LENGTH_LONG).show()
                 }
             }
         }

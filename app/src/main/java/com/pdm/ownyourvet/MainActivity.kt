@@ -57,9 +57,9 @@ class MainActivity : AppCompatActivity(), ChatFragment.OnFragmentInteractionList
     }
 
     private fun setUpBottomNavMenu(navController: NavController){
-        bottom_nav?.let {
+        /*bottom_nav?.let {
             NavigationUI.setupWithNavController(it, navController)
-        }
+        }*/
     }
 
     private fun setUpSideNavigationMenu(navController: NavController){

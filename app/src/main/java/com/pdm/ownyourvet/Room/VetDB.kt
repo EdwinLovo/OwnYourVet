@@ -7,7 +7,7 @@ import androidx.room.RoomDatabase
 import com.pdm.ownyourvet.Room.Dao.DiseasesDao
 import com.pdm.ownyourvet.Room.Entities.Diseases
 
-@Database(entities = [Diseases::class], version = 1, exportSchema = false)
+@Database(entities = [Diseases::class], version = 2, exportSchema = false)
 abstract class RoomDB:RoomDatabase() {
 
     abstract fun diseasesDao(): DiseasesDao

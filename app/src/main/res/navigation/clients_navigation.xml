@@ -15,4 +15,9 @@
         android:name="com.pdm.ownyourvet.Fragments.ChatFragment"
         android:label="Chat"
         tools:layout="@layout/fragment_chat" />
+    <fragment
+        android:id="@+id/destination_diseases"
+        android:name="com.pdm.ownyourvet.Fragments.DiseasesFragment"
+        android:label="Diseases Informaction"
+        tools:layout="@layout/fragment_diseases" />
 </navigation>
