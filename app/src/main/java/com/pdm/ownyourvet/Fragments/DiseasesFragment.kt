@@ -23,14 +23,14 @@ import kotlinx.android.synthetic.main.fragment_diseases.view.*
 
 class DiseasesFragment : Fragment() {
 
-    private lateinit var diseasesViewModel:DiseasesViewModel
+    private lateinit var diseasesViewModel: DiseasesViewModel
     private val spinnerOptions = arrayOf("Todos", "Gatos", "Perros")
-    private val spinnerOptionsId = longArrayOf(0,12,2)
+    private val spinnerOptionsId = longArrayOf(0, 12, 2)
     private lateinit var spinner: Spinner
 
     override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
+            inflater: LayoutInflater, container: ViewGroup?,
+            savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
         val view = inflater.inflate(R.layout.fragment_diseases, container, false)
@@ -38,7 +38,7 @@ class DiseasesFragment : Fragment() {
         return view
     }
 
-    fun init(view: View){
+    fun init(view: View) {
         diseasesViewModel = ViewModelProviders.of(this).get(DiseasesViewModel::class.java)
 
         var adapter = DiseaseAdapter(view.context)
@@ -50,14 +50,14 @@ class DiseasesFragment : Fragment() {
         val arrayAdapter = ArrayAdapter(view.context, R.layout.custom_spinner, spinnerOptions)
         spinner.adapter = arrayAdapter
 
-        spinner.onItemSelectedListener = object : AdapterView.OnItemSelectedListener{
+        spinner.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
             override fun onNothingSelected(parent: AdapterView<*>?) {
 
             }
 
             override fun onItemSelected(parent: AdapterView<*>?, view2: View?, position: Int, id: Long) {
-                Log.d("CODIGO", "SPECIE: "+spinnerOptions[position]+ " ID: "+spinnerOptionsId[position])
-                if (spinnerOptionsId[position].toInt()==0){
+                Log.d("CODIGO", "SPECIE: " + spinnerOptions[position] + " ID: " + spinnerOptionsId[position])
+                if (spinnerOptionsId[position].toInt() == 0) {
                     diseasesViewModel.allDiseases.observe(this@DiseasesFragment, Observer { diseases ->
                         diseases?.let { adapter.setDiseases(it) }
                     })
@@ -70,7 +70,7 @@ class DiseasesFragment : Fragment() {
             }
         }
 
-        if (isConnected(view.context)){
+        if (isConnected(view.context)) {
             diseasesViewModel.retrieveMovies()
         }
 
@@ -79,7 +79,7 @@ class DiseasesFragment : Fragment() {
         })
 
         view.button_refresh_diseases.setOnClickListener {
-            if (isConnected(view.context)){
+            if (isConnected(view.context)) {
                 diseasesViewModel.deleteDiseases()
                 diseasesViewModel.retrieveMovies()
                 Toast.makeText(view.context, "Datos actualizados", Toast.LENGTH_LONG).show()
