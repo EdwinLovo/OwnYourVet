@@ -2,6 +2,7 @@ package com.pdm.ownyourvet.Network
 
 import com.jakewharton.retrofit2.adapter.kotlin.coroutines.CoroutineCallAdapterFactory
 import com.pdm.ownyourvet.Network.Models.DiseasesData
+import com.pdm.ownyourvet.Network.Models.SpeciesData
 import com.pdm.ownyourvet.Room.Entities.Diseases
 import com.pdm.ownyourvet.Room.Entities.Species
 import kotlinx.coroutines.Deferred
@@ -18,7 +19,7 @@ interface DiseasesService {
     fun getDiseases():Deferred<Response<DiseasesData>>
 
     @GET("species")
-    fun getSpecies():Deferred<Response<Species>>
+    fun getSpecies():Deferred<Response<SpeciesData>>
 
     companion object {
         fun getDiseasesService():DiseasesService= Retrofit.Builder()
