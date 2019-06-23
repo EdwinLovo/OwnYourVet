@@ -29,8 +29,6 @@ class DiseasesFragment : Fragment() {
 
 
     private lateinit var diseasesViewModel: DiseasesViewModel
-    /*    private val spinnerOptions = arrayOf("Todos", "Gatos", "Perros")
-        private val spinnerOptionsId = longArrayOf(0, 12, 2)*/
     private lateinit var spinner: Spinner
     private lateinit var dialog: Dialog
     val spinnerOptions = arrayListOf<String>()
@@ -112,14 +110,17 @@ class DiseasesFragment : Fragment() {
             diseasesViewModel.retreiveDiseases()
         }
 
-        diseasesViewModel.allDiseases.observe(this, Observer { diseases ->
-            diseases?.let { adapter.setDiseases(it) }
-        })
+        diseasesViewModel.allDiseases.observe(this, Observer { diseases -> diseases?.let { adapter.setDiseases(it) } })
 
         view.button_refresh_diseases.setOnClickListener {
             if (isConnected(view.context)) {
+
                 diseasesViewModel.deleteDiseases()
+                diseasesViewModel.deleteSpecies()
+
+                diseasesViewModel.retrieveSpecies()
                 diseasesViewModel.retreiveDiseases()
+
                 Toast.makeText(view.context, "Datos actualizados", Toast.LENGTH_LONG).show()
             } else {
                 Toast.makeText(view.context, "Sin conexión a internet", Toast.LENGTH_LONG).show()

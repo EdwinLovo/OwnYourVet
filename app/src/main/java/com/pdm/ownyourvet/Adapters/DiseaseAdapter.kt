@@ -1,10 +1,8 @@
 package com.pdm.ownyourvet.Adapters
 
-import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.RecyclerView
 import com.pdm.ownyourvet.R
 import com.pdm.ownyourvet.Room.Entities.Diseases
@@ -24,18 +22,8 @@ abstract class DiseaseAdapter internal constructor(val activityHelper: ActivityH
 
     override fun getItemCount() = diseases.size
 
-    override fun onBindViewHolder(holder: DiseasesViewHolder, position: Int) {
-        holder.bind(diseases[position])
-//        holder.name.text = currentDisease.name
+    override fun onBindViewHolder(holder: DiseasesViewHolder, position: Int) = holder.bind(diseases[position])
 
-/*        if (currentDisease.specie_id.toInt()==12){
-            holder.specie.text = "Perros"
-        } else {
-            holder.specie.text = "Gatos"
-        }*/
-
-//        setClickListenerToDisease(holder, currentDisease)
-    }
 
     inner class DiseasesViewHolder(itemView:View):RecyclerView.ViewHolder(itemView){
         val name = itemView.textView_disease
@@ -43,6 +31,7 @@ abstract class DiseaseAdapter internal constructor(val activityHelper: ActivityH
         val linearLayout_disease = itemView.linearLayout_disease
 
         fun bind(disease:Diseases) = with(itemView){
+            setClickListenerToDisease(this@DiseasesViewHolder,disease)
             name.text = disease.name
             activityHelper.setSpecieOnListItem(specie,disease.specie_id)
         }
