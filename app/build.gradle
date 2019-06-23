@@ -107,5 +107,8 @@ dependencies {
     /*Paging*/
     implementation "androidx.paging:paging-runtime:$paging_version"
 
+    // Justify TextView
+    implementation 'com.codesgood:justifiedtextview:1.1.0'
+
 }
 apply plugin: 'com.google.gms.google-services'
