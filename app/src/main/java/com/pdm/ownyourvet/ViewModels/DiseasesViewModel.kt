@@ -36,7 +36,7 @@ class DiseasesViewModel(private val app: Application) : AndroidViewModel(app) {
         //this@DiseasesViewModel.deleteDiseases()
         val response = diseasesRepository.retrieveDiseasesAsync().await()
 
-        if (response.isSuccessful) with(response.body()!!.data) {
+        if (response.isSuccessful) with(response.body()!!.info.data) {
             this?.forEach {
                 this@DiseasesViewModel.insertDisease(it)
 //                Log.d("CODIGO", it.name + " ingresada correctamente")
