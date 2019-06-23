@@ -16,6 +16,7 @@ class SpeciesRepo (private val specieDao: SpecieDao){
 
     fun getAllSpecies() = specieDao.getAllSpecies()
 
+    fun findSpecieByRelation(id:Long) = specieDao.findSpecieById(id)
 
 
 }

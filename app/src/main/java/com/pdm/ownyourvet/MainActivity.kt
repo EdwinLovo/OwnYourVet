@@ -3,6 +3,7 @@ package com.pdm.ownyourvet
 import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
 import android.widget.TextView
@@ -20,6 +21,8 @@ import com.pdm.ownyourvet.ViewModels.DiseasesViewModel
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity(), ChatFragment.OnFragmentInteractionListener,ActivityHelper {
+
+
 
     lateinit var diseasesViewModel: DiseasesViewModel
 
@@ -82,11 +85,12 @@ class MainActivity : AppCompatActivity(), ChatFragment.OnFragmentInteractionList
     }
     override fun getLinearLayoutManagerWithContext(): LinearLayoutManager = LinearLayoutManager(this)
 
-    override fun listenDisease(id:Long,tv: TextView) {
-        diseasesViewModel.getDiseaseBySpecie(id).observe(this, Observer {
-
+    override fun setSpecieOnListItem(textView: TextView, id: Long) {
+//        textView.text = info
+        diseasesViewModel.getSpecieByRelation(id).observe(this, Observer {
+            Log.d("CUSTOM","listened")
+            textView.text = it?.name
         })
     }
-
 
 }

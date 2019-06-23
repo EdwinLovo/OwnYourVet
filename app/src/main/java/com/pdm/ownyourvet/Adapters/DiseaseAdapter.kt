@@ -45,7 +45,7 @@ abstract class DiseaseAdapter internal constructor(val diseaseViewModel: Disease
 
         fun bind(disease:Diseases) = with(itemView){
             name.text = disease.name
-            activityHelper.listenDisease(disease.specie_id,specie)
+            activityHelper.setSpecieOnListItem(specie,disease.specie_id)
         }
     }
 

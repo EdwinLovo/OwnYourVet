@@ -62,7 +62,7 @@ class DiseasesViewModel(private val app: Application) : AndroidViewModel(app) {
     }
 
     fun getAllSpecies() = speciesRepository.getAllSpecies()
-
+    fun getSpecieByRelation(id:Long) = speciesRepository.findSpecieByRelation(id)
     fun retrieveSpecies() = viewModelScope.launch(Dispatchers.IO) {
         val resp = DiseasesService.getDiseasesService().getSpecies().await()
         if (resp.isSuccessful) with(resp) {

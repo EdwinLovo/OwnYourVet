@@ -18,4 +18,7 @@ interface SpecieDao {
 
     @Query("delete  from species")
     suspend fun deleteAll()
+
+    @Query("select * from species where id = :id")
+    fun findSpecieById(id:Long):LiveData<Species>
 }
