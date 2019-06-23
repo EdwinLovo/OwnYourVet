@@ -1,6 +1,7 @@
 package com.pdm.ownyourvet.Room.Dao
 
 import androidx.lifecycle.LiveData
+import androidx.paging.DataSource
 import androidx.room.Dao
 import androidx.room.Insert
 import androidx.room.OnConflictStrategy
@@ -11,10 +12,10 @@ import com.pdm.ownyourvet.Room.Entities.Diseases
 interface DiseasesDao {
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    suspend fun insertDiseases(diseases: Diseases)
+    suspend fun insertDiseases(diseases: List<Diseases>)
 
     @Query("select * from diseases")
-    fun getAllDiseases():LiveData<List<Diseases>>
+    fun getAllDiseases():DataSource.Factory<Int,Diseases>
 
     @Query("select * from diseases where specie_id=:specie")
     fun getDiseasesBySpecieId(specie:Long):LiveData<List<Diseases>>

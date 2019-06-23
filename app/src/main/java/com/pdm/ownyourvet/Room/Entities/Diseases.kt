@@ -1,5 +1,6 @@
 package com.pdm.ownyourvet.Room.Entities
 
+import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 import com.squareup.moshi.Json
@@ -16,4 +17,7 @@ data class Diseases(
 
     val information:String
 
-)
+){
+    @ColumnInfo(name = "next_ref")
+    var nextReference:String? = ""
+}

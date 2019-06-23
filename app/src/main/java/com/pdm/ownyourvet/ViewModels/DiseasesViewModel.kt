@@ -3,9 +3,10 @@ package com.pdm.ownyourvet.ViewModels
 import android.app.Application
 import android.util.Log
 import android.widget.Toast
-import androidx.lifecycle.AndroidViewModel
-import androidx.lifecycle.LiveData
-import androidx.lifecycle.viewModelScope
+import androidx.lifecycle.*
+import androidx.paging.LivePagedListBuilder
+import androidx.paging.PagedList
+import com.pdm.ownyourvet.Adapters.diseases.DiseasesBoundaryCallback
 import com.pdm.ownyourvet.Network.DiseasesService
 import com.pdm.ownyourvet.Repositories.DiseasesRepo
 import com.pdm.ownyourvet.Repositories.SpeciesRepo
@@ -18,21 +19,23 @@ class DiseasesViewModel(private val app: Application) : AndroidViewModel(app) {
 
     private val diseasesRepository: DiseasesRepo
     private val speciesRepository: SpeciesRepo
-    val allDiseases: LiveData<List<Diseases>>
+//    val allDiseases: LiveData<List<Diseases>>
     var diseasesBySpecie: LiveData<List<Diseases>>? = null
+
+
 
     init {
         val diseasesDao = RoomDB.getInstance(app).diseasesDao()
         val speciesDao = RoomDB.getInstance(app).speciesDao()
         diseasesRepository = DiseasesRepo(diseasesDao)
         speciesRepository = SpeciesRepo(speciesDao)
-        allDiseases = diseasesRepository.allDiseases
+//        allDiseases = diseasesRepository.allDiseases
 
     }
     /*
     * DISEASES
     * */
-    fun retreiveDiseases() = viewModelScope.launch(Dispatchers.IO) {
+    /*fun retreiveDiseases() = viewModelScope.launch(Dispatchers.IO) {
         //this@DiseasesViewModel.deleteDiseases()
         val response = diseasesRepository.retrieveDiseasesAsync().await()
 
@@ -49,12 +52,18 @@ class DiseasesViewModel(private val app: Application) : AndroidViewModel(app) {
                 }
             }
         }
-    }
-    fun insertDisease(diseases: Diseases) = viewModelScope.launch(Dispatchers.IO) { diseasesRepository.insertDisease(diseases) }
+    }*/
+    fun insertDisease(diseases: List<Diseases>) = viewModelScope.launch(Dispatchers.IO) { diseasesRepository.insertDisease(diseases) }
 
     fun updateDiseasesBySpecie(specie: Long)  { diseasesBySpecie = diseasesRepository.getDiseasesBySpecieId(specie) }
 
-    fun deleteDiseases() = viewModelScope.launch(Dispatchers.IO) { diseasesRepository.deleteDiseases() }
+
+
+    fun deleteDiseases() = viewModelScope.launch(Dispatchers.IO) {
+        diseasesRepository.deleteDiseases()
+    }
+
+
 
     /*
     * SPECIES

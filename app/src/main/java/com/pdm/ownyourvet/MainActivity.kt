@@ -6,7 +6,10 @@ import android.os.Bundle
 import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
+import android.view.View
 import android.widget.TextView
+import android.widget.Toast
+import androidx.annotation.UiThread
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import androidx.navigation.NavController
@@ -16,11 +19,13 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.google.firebase.auth.FirebaseAuth
 import com.pdm.ownyourvet.Activities.LoginActivity
 import com.pdm.ownyourvet.Fragments.ChatFragment
+import com.pdm.ownyourvet.Room.RoomDB
 import com.pdm.ownyourvet.Utils.ActivityHelper
 import com.pdm.ownyourvet.ViewModels.DiseasesViewModel
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity(), ChatFragment.OnFragmentInteractionListener,ActivityHelper {
+
 
 
 
@@ -92,5 +97,9 @@ class MainActivity : AppCompatActivity(), ChatFragment.OnFragmentInteractionList
             textView.text = it?.name
         })
     }
+
+    override fun getDbFromMain(): RoomDB = RoomDB.getInstance(this)
+
+    override fun showToast(msg: String) = Toast.makeText(this, msg, Toast.LENGTH_LONG).show()
 
 }

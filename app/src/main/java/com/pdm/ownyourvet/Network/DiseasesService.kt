@@ -11,13 +11,17 @@ import retrofit2.Response
 import retrofit2.Retrofit
 import retrofit2.converter.moshi.MoshiConverterFactory
 import retrofit2.http.GET
+import retrofit2.http.Query
 
 const val BASE_URL = "https://ownyourvet.herokuapp.com/api/"
 
 interface DiseasesService {
 
     @GET("diseases")
-    fun getDiseases():Deferred<Response<DiseasesData>>
+    fun getDiseases(
+        @Query("page")
+        page:String? = "1"
+    ):Deferred<Response<DiseasesData>>
 
     @GET("species")
     fun getSpecies():Deferred<Response<SpeciesData>>

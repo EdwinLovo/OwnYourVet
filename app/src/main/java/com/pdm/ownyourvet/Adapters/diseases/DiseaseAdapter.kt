@@ -1,17 +1,18 @@
-package com.pdm.ownyourvet.Adapters
+package com.pdm.ownyourvet.Adapters.diseases
 
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.paging.PagedListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.pdm.ownyourvet.R
 import com.pdm.ownyourvet.Room.Entities.Diseases
 import com.pdm.ownyourvet.Utils.ActivityHelper
 import kotlinx.android.synthetic.main.diseases_item.view.*
 
-abstract class DiseaseAdapter internal constructor(val activityHelper: ActivityHelper):RecyclerView.Adapter<DiseaseAdapter.DiseasesViewHolder>(){
+abstract class DiseaseAdapter internal constructor(val activityHelper: ActivityHelper):
+    PagedListAdapter<Diseases,DiseaseAdapter.DiseasesViewHolder>(DiseaseDiffUtilCallback()){
 
-    private var diseases = emptyList<Diseases>()
 
     abstract fun setClickListenerToDisease(holder: DiseasesViewHolder, disease:Diseases)
 
@@ -20,9 +21,11 @@ abstract class DiseaseAdapter internal constructor(val activityHelper: ActivityH
         return DiseasesViewHolder(itemView)
     }
 
-    override fun getItemCount() = diseases.size
 
-    override fun onBindViewHolder(holder: DiseasesViewHolder, position: Int) = holder.bind(diseases[position])
+    override fun onBindViewHolder(holder: DiseasesViewHolder, position: Int) {
+        if(getItem(position)!=null)
+            holder.bind(getItem(position)!!)
+    }
 
 
     inner class DiseasesViewHolder(itemView:View):RecyclerView.ViewHolder(itemView){
@@ -35,10 +38,5 @@ abstract class DiseaseAdapter internal constructor(val activityHelper: ActivityH
             name.text = disease.name
             activityHelper.setSpecieOnListItem(specie,disease.specie_id)
         }
-    }
-
-    internal fun setDiseases(diseases:List<Diseases>){
-        this.diseases = diseases
-        notifyDataSetChanged()
     }
 }
