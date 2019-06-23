@@ -74,7 +74,7 @@ class DiseasesFragment : Fragment() {
         })
 
 
-        var adapter = object : DiseaseAdapter(diseasesViewModel,activityHelper) {
+        var adapter = object : DiseaseAdapter(activityHelper) {
             override fun setClickListenerToDisease(holder: DiseasesViewHolder, disease: Diseases) {
                 holder.linearLayout_disease.setOnClickListener {
                     showPopUp(view, disease)

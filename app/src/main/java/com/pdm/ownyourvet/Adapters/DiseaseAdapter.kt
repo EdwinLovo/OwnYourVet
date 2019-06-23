@@ -9,10 +9,9 @@ import androidx.recyclerview.widget.RecyclerView
 import com.pdm.ownyourvet.R
 import com.pdm.ownyourvet.Room.Entities.Diseases
 import com.pdm.ownyourvet.Utils.ActivityHelper
-import com.pdm.ownyourvet.ViewModels.DiseasesViewModel
 import kotlinx.android.synthetic.main.diseases_item.view.*
 
-abstract class DiseaseAdapter internal constructor(val diseaseViewModel: DiseasesViewModel,val activityHelper: ActivityHelper):RecyclerView.Adapter<DiseaseAdapter.DiseasesViewHolder>(){
+abstract class DiseaseAdapter internal constructor(val activityHelper: ActivityHelper):RecyclerView.Adapter<DiseaseAdapter.DiseasesViewHolder>(){
 
     private var diseases = emptyList<Diseases>()
 

@@ -88,7 +88,7 @@ class MainActivity : AppCompatActivity(), ChatFragment.OnFragmentInteractionList
     override fun setSpecieOnListItem(textView: TextView, id: Long) {
 //        textView.text = info
         diseasesViewModel.getSpecieByRelation(id).observe(this, Observer {
-            Log.d("CUSTOM","listened")
+//            Log.d("CUSTOM","listened")
             textView.text = it?.name
         })
     }
