@@ -18,7 +18,7 @@ interface DiseasesDao {
     fun getAllDiseases():DataSource.Factory<Int,Diseases>
 
     @Query("select * from diseases where specie_id=:specie")
-    fun getDiseasesBySpecieId(specie:Long):LiveData<List<Diseases>>
+    fun getDiseasesBySpecieId(specie:Long):DataSource.Factory<Int,Diseases>
 
     @Query("delete from diseases")
     suspend fun deleteAllDiseases()

@@ -25,6 +25,7 @@ class DiseasesBoundaryCallback(private val db: RoomDB) :
                 if (resp.isSuccessful) {
                     val body = resp.body()!!
                     currentPage = body.info.currentPage.toInt()
+                    Log.d("CUSTOM","current page $currentPage")
                     body.info.data.forEach {
                         it.nextReference = body.info.nextPage
                         newList.add(it)
@@ -41,6 +42,8 @@ class DiseasesBoundaryCallback(private val db: RoomDB) :
         helper.runIfNotRunning(PagingRequestHelper.RequestType.AFTER) {
             GlobalScope.launch(Dispatchers.IO) {
                 currentPage++
+                Log.d("CUSTOM","current page $currentPage")
+
                 val resp = api.getDiseases(currentPage.toString()).await()
                 if (resp.isSuccessful) {
                     db.diseasesDao().insertDiseases(resp.body()!!.info.data)

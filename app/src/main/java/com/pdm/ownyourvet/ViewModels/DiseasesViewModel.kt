@@ -6,6 +6,7 @@ import android.widget.Toast
 import androidx.lifecycle.*
 import androidx.paging.LivePagedListBuilder
 import androidx.paging.PagedList
+import androidx.room.Room
 import com.pdm.ownyourvet.Adapters.diseases.DiseasesBoundaryCallback
 import com.pdm.ownyourvet.Network.DiseasesService
 import com.pdm.ownyourvet.Repositories.DiseasesRepo
@@ -20,7 +21,6 @@ class DiseasesViewModel(private val app: Application) : AndroidViewModel(app) {
     private val diseasesRepository: DiseasesRepo
     private val speciesRepository: SpeciesRepo
 //    val allDiseases: LiveData<List<Diseases>>
-    var diseasesBySpecie: LiveData<List<Diseases>>? = null
 
 
 
@@ -32,6 +32,8 @@ class DiseasesViewModel(private val app: Application) : AndroidViewModel(app) {
 //        allDiseases = diseasesRepository.allDiseases
 
     }
+
+
     /*
     * DISEASES
     * */
@@ -53,14 +55,15 @@ class DiseasesViewModel(private val app: Application) : AndroidViewModel(app) {
             }
         }
     }*/
-    fun insertDisease(diseases: List<Diseases>) = viewModelScope.launch(Dispatchers.IO) { diseasesRepository.insertDisease(diseases) }
+//    fun insertDisease(diseases: List<Diseases>) = viewModelScope.launch(Dispatchers.IO) { diseasesRepository.insertDisease(diseases) }
 
-    fun updateDiseasesBySpecie(specie: Long)  { diseasesBySpecie = diseasesRepository.getDiseasesBySpecieId(specie) }
-
+//    fun updateDiseasesBySpecie(specie: Long)  { diseasesBySpecie = diseasesRepository.getDiseasesBySpecieId(specie) }
 
 
     fun deleteDiseases() = viewModelScope.launch(Dispatchers.IO) {
+        /*Log.d("CUSTOM",id.toString())*/
         diseasesRepository.deleteDiseases()
+
     }
 
 
@@ -73,6 +76,7 @@ class DiseasesViewModel(private val app: Application) : AndroidViewModel(app) {
         if (resp.isSuccessful) with(resp) {
 
             resp.body()!!.data.forEach {
+
                 speciesRepository.insertSpecie(it)
             }
 

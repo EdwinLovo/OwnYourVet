@@ -16,6 +16,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.*
 import androidx.annotation.UiThread
+import androidx.lifecycle.LiveData
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import androidx.lifecycle.viewModelScope
@@ -45,19 +46,18 @@ class DiseasesFragment : Fragment() {
     private lateinit var dialog: Dialog
     val spinnerOptions = arrayListOf<String>()
     val spinnerOptionsId = arrayListOf<Long>()
+    private lateinit var  pagedList:LiveData<PagedList<Diseases>>
 
-    val uiHandler = Handler(Looper.getMainLooper())
 
-    val myRunnable = Runnable { activityHelper.showToast("Datos actualizados")}
 
     private lateinit var activityHelper: ActivityHelper
-    private lateinit var myAdapter:DiseaseAdapter
-
+    private lateinit var myAdapter: DiseaseAdapter
     val config = PagedList.Config.Builder()
-        .setInitialLoadSizeHint(5)
-        .setPrefetchDistance(5)
-        .setPageSize(5)
-        .build()
+            .setInitialLoadSizeHint(5)
+            .setPrefetchDistance(5)
+            .setPageSize(5)
+            .build()
+
 
     override fun onAttach(context: Context) {
         super.onAttach(context)
@@ -65,8 +65,8 @@ class DiseasesFragment : Fragment() {
     }
 
     override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
+            inflater: LayoutInflater, container: ViewGroup?,
+            savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
         val view = inflater.inflate(R.layout.fragment_diseases, container, false)
@@ -74,6 +74,21 @@ class DiseasesFragment : Fragment() {
 
         return view
     }
+
+    private fun initializedPagedListBuilder(
+            config: PagedList.Config,
+            byId: Long = 0
+    ): LivePagedListBuilder<Int, Diseases> {
+        val db = activityHelper.getDbFromMain()
+        val livePageListBuilder = if (byId.toInt() == 0)
+            LivePagedListBuilder(db.diseasesDao().getAllDiseases(), config)
+        else {
+            LivePagedListBuilder(db.diseasesDao().getDiseasesBySpecieId(byId), config)
+        }
+        livePageListBuilder.setBoundaryCallback(DiseasesBoundaryCallback(db))
+        return livePageListBuilder
+    }
+
 
     fun init(view: View) {
         diseasesViewModel = ViewModelProviders.of(this).get(DiseasesViewModel::class.java)
@@ -97,7 +112,7 @@ class DiseasesFragment : Fragment() {
         })
 
 
-         myAdapter = object : DiseaseAdapter(activityHelper) {
+        myAdapter = object : DiseaseAdapter(activityHelper) {
             override fun setClickListenerToDisease(holder: DiseasesViewHolder, disease: Diseases) {
                 holder.linearLayout_disease.setOnClickListener {
                     showPopUp(view, disease)
@@ -105,16 +120,15 @@ class DiseasesFragment : Fragment() {
             }
         }
         val recyclerView = view.recyclerViewDiseases
+
         recyclerView.apply {
             adapter = myAdapter
             layoutManager = LinearLayoutManager(view.context) as RecyclerView.LayoutManager
-
-            val liveData = initializedPagedListBuilder(config).build()
-            liveData.observe(this@DiseasesFragment, Observer<PagedList<Diseases>> {
-                if(it!=null && it.isNotEmpty())
-                    myAdapter.submitList(it)
-
+            pagedList = initializedPagedListBuilder(config).build()
+            pagedList.observe(this@DiseasesFragment, Observer {
+                myAdapter.submitList(it)
             })
+
         }
 
         spinner = view.diseaseSpinner
@@ -128,37 +142,36 @@ class DiseasesFragment : Fragment() {
 
             override fun onItemSelected(parent: AdapterView<*>?, view2: View?, position: Int, id: Long) {
                 if (spinnerOptionsId[position].toInt() == 0) {
-                    /*diseasesViewModel.allDiseases.observe(this@DiseasesFragment, Observer { diseases ->
-                        //                        diseases?.let { myAdapter.setDiseases(it) }
-                    })*/
+                    recyclerView.apply {
+                        layoutManager = LinearLayoutManager(view.context) as RecyclerView.LayoutManager
+                        pagedList.removeObservers (this@DiseasesFragment)
+                        pagedList = initializedPagedListBuilder(config).build()
+                        pagedList.observe(this@DiseasesFragment, Observer {
+                            myAdapter.submitList(it)
+                        })
+
+                    }
+
                 } else {
-                    diseasesViewModel.updateDiseasesBySpecie(spinnerOptionsId[position])
-                    diseasesViewModel.diseasesBySpecie?.observe(this@DiseasesFragment, Observer { diseases ->
-                        //                        diseases.let { myAdapter.setDiseases(it) }
-                    })
+                    recyclerView.apply {
+                        layoutManager = LinearLayoutManager(view.context) as RecyclerView.LayoutManager
+                        pagedList.removeObservers (this@DiseasesFragment)
+                        pagedList = initializedPagedListBuilder(config,spinnerOptionsId[position]).build()
+                        pagedList.observe(this@DiseasesFragment, Observer {
+                            myAdapter.submitList(it)
+                        })
+
+                    }
                 }
             }
         }
 
-        /*if (isConnected(view.context)) {
-            diseasesViewModel.retreiveDiseases()
-        }*/
-
-/*        diseasesViewModel.allDiseases.observe(
-            this,
-            Observer { diseases -> diseases?.let { } })*/
 
         view.button_refresh_diseases.setOnClickListener {
             if (isConnected(view.context)) {
-                    diseasesViewModel.deleteDiseases().invokeOnCompletion {
-                        initializedPagedListBuilder(config)
-                        uiHandler.post(myRunnable)
-                    }
-/*                diseasesViewModel.deleteSpecies()
-                diseasesViewModel.retrieveSpecies()*/
-//                diseasesViewModel.deleteDiseasesAndRefreshList(config)
-
-//                diseasesViewModel.retreiveDiseases()
+                diseasesViewModel.deleteSpecies().invokeOnCompletion {
+                    diseasesViewModel.retrieveSpecies()
+                }
 
             } else {
                 Toast.makeText(view.context, "Sin conexión a internet", Toast.LENGTH_LONG).show()
@@ -166,19 +179,13 @@ class DiseasesFragment : Fragment() {
         }
     }
 
-    private fun initializedPagedListBuilder(config: PagedList.Config): LivePagedListBuilder<Int, Diseases> {
-        val db = activityHelper.getDbFromMain()
-        val livePageListBuilder = LivePagedListBuilder(db.diseasesDao().getAllDiseases(), config)
-        livePageListBuilder.setBoundaryCallback(DiseasesBoundaryCallback(db))
-        return livePageListBuilder
-    }
+
     fun showPopUp(view: View, disease: Diseases) {
         dialog = Dialog(view.context)
         dialog.setContentView(R.layout.custom_popup)
         dialog.window.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
 
         dialog.popup_name.text = disease.name
-        dialog.popup_information.text = disease.information
         if (disease.specie_id.toInt() == 12) {
             dialog.popup_specie.text = getString(R.string.animales_afectado_perros)
         } else {
@@ -190,7 +197,5 @@ class DiseasesFragment : Fragment() {
         }
         dialog.show()
     }
-
-
 
 }
