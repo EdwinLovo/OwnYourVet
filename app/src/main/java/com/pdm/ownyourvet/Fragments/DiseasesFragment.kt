@@ -68,11 +68,17 @@ class DiseasesFragment : Fragment() {
             inflater: LayoutInflater, container: ViewGroup?,
             savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
         val view = inflater.inflate(R.layout.fragment_diseases, container, false)
-        init(view)
 
+        try{
+            // Inflate the layout for this fragment
+            init(view)
+
+        }catch (e:Exception){
+            Log.e("CUSTOM",e.toString())
+        }
         return view
+
     }
 
     private fun initializedPagedListBuilder(
@@ -85,7 +91,7 @@ class DiseasesFragment : Fragment() {
         else {
             LivePagedListBuilder(db.diseasesDao().getDiseasesBySpecieId(byId), config)
         }
-        livePageListBuilder.setBoundaryCallback(DiseasesBoundaryCallback(db))
+        livePageListBuilder.setBoundaryCallback(DiseasesBoundaryCallback(db,activityHelper))
         return livePageListBuilder
     }
 
@@ -93,7 +99,10 @@ class DiseasesFragment : Fragment() {
     fun init(view: View) {
         diseasesViewModel = ViewModelProviders.of(this).get(DiseasesViewModel::class.java)
 
-        diseasesViewModel.retrieveSpecies()
+        if(isConnected(view.context)){
+            diseasesViewModel.retrieveSpecies()
+        }
+        else Log.e("CUSTOM","No ay inter prro :v")
 
         diseasesViewModel.getAllSpecies().observe(this, Observer {
 
@@ -130,7 +139,6 @@ class DiseasesFragment : Fragment() {
             })
 
         }
-
         spinner = view.diseaseSpinner
 
 
@@ -142,15 +150,19 @@ class DiseasesFragment : Fragment() {
 
             override fun onItemSelected(parent: AdapterView<*>?, view2: View?, position: Int, id: Long) {
                 if (spinnerOptionsId[position].toInt() == 0) {
-                    recyclerView.apply {
-                        layoutManager = LinearLayoutManager(view.context) as RecyclerView.LayoutManager
-                        pagedList.removeObservers (this@DiseasesFragment)
-                        pagedList = initializedPagedListBuilder(config).build()
-                        pagedList.observe(this@DiseasesFragment, Observer {
-                            myAdapter.submitList(it)
-                        })
+                   try{
+                       recyclerView.apply {
+                           layoutManager = LinearLayoutManager(view.context) as RecyclerView.LayoutManager
+                           pagedList.removeObservers (this@DiseasesFragment)
+                           pagedList = initializedPagedListBuilder(config).build()
+                           pagedList.observe(this@DiseasesFragment, Observer {
+                               myAdapter.submitList(it)
+                           })
 
-                    }
+                       }
+                   }catch (e:Exception){
+                       Log.e("CUSTOM",e.toString())
+                   }
 
                 } else {
                     recyclerView.apply {
@@ -170,7 +182,11 @@ class DiseasesFragment : Fragment() {
         view.button_refresh_diseases.setOnClickListener {
             if (isConnected(view.context)) {
                 diseasesViewModel.deleteSpecies().invokeOnCompletion {
-                    diseasesViewModel.retrieveSpecies()
+                    if(isConnected(view.context)){
+                        diseasesViewModel.retrieveSpecies()
+
+                    }
+                    else Toast.makeText(view.context,"Sin conexión a internet",Toast.LENGTH_SHORT).show()
                 }
 
             } else {
@@ -186,6 +202,7 @@ class DiseasesFragment : Fragment() {
         dialog.window.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
 
         dialog.popup_name.text = disease.name
+        dialog.popup_information.text =  disease.information
         if (disease.specie_id.toInt() == 12) {
             dialog.popup_specie.text = getString(R.string.animales_afectado_perros)
         } else {

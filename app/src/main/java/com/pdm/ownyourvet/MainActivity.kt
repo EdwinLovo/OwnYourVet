@@ -1,5 +1,6 @@
 package com.pdm.ownyourvet
 
+import android.content.Context
 import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -25,7 +26,6 @@ import com.pdm.ownyourvet.ViewModels.DiseasesViewModel
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity(), ChatFragment.OnFragmentInteractionListener,ActivityHelper {
-
 
 
 
@@ -101,5 +101,7 @@ class MainActivity : AppCompatActivity(), ChatFragment.OnFragmentInteractionList
     override fun getDbFromMain(): RoomDB = RoomDB.getInstance(this)
 
     override fun showToast(msg: String) = Toast.makeText(this, msg, Toast.LENGTH_LONG).show()
+
+    override fun getContext(): Context =  this
 
 }

@@ -51,9 +51,9 @@ class AdminMainActivity : AppCompatActivity() {
     }
 
     private fun setUpBottomNavMenu(navController: NavController){
-        bottom_nav_admin?.let {
+       /* bottom_nav_admin?.let {
             NavigationUI.setupWithNavController(it, navController)
-        }
+        }*/
     }
 
     private fun setUpSideNavigationMenu(navController: NavController){

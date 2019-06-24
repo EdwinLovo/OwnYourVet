@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<androidx.drawerlayout.widget.DrawerLayout
+        android:id="@+id/drawer_layout_admin"
         xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:tools="http://schemas.android.com/tools"
         xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -9,29 +10,36 @@
         android:background="@color/colorPrimaryDark"
         tools:context=".AdminMainActivity">
 
-    <androidx.appcompat.widget.Toolbar
-        android:id="@+id/toolbar_admin"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:titleTextColor="@color/colorPrimaryText"
-        android:background="?colorPrimary" />
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+        <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar_admin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:titleTextColor="@color/colorPrimaryText"
+                android:background="?colorPrimary" />
+
+        <fragment
+                android:id="@+id/nav_host_fragment_admin"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:name="androidx.navigation.fragment.NavHostFragment"
+                app:navGraph="@navigation/admin_navigation"
+                app:defaultNavHost="true" />
+
+    </LinearLayout>
 
 
-    <fragment
-        android:id="@+id/nav_host_fragment_admin"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:name="androidx.navigation.fragment.NavHostFragment"
-        app:navGraph="@navigation/admin_navigation"
-        app:defaultNavHost="true" />
+    <com.google.android.material.navigation.NavigationView
+            android:id="@+id/nav_view_admin"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            app:headerLayout="@layout/nav_header_main"
+            app:menu="@menu/navigation_menu_admin" />
 
-    <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/bottom_nav_admin"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:itemTextColor="@color/colorAccentDark"
-        app:itemIconTint="@color/colorAccentDark"
-        app:menu="@menu/navigation_menu_admin"/>
-
-</LinearLayout>
+</androidx.drawerlayout.widget.DrawerLayout>

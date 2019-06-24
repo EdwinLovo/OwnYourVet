@@ -1,10 +1,12 @@
 package com.pdm.ownyourvet.Adapters.diseases
 
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.paging.PagedListAdapter
 import androidx.recyclerview.widget.RecyclerView
+import com.codesgood.views.JustifiedTextView
 import com.pdm.ownyourvet.R
 import com.pdm.ownyourvet.Room.Entities.Diseases
 import com.pdm.ownyourvet.Utils.ActivityHelper
@@ -32,10 +34,10 @@ abstract class DiseaseAdapter internal constructor(val activityHelper: ActivityH
         val name = itemView.textView_disease
         val specie = itemView.textView_specie
         val linearLayout_disease = itemView.linearLayout_disease
-
         fun bind(disease:Diseases) = with(itemView){
             setClickListenerToDisease(this@DiseasesViewHolder,disease)
             name.text = disease.name
+//            Log.d("CUSTOM",itemInfo.toString())
             activityHelper.setSpecieOnListItem(specie,disease.specie_id)
         }
     }
