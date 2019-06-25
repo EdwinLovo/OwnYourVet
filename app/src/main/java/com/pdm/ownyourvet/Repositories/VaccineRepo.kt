@@ -11,9 +11,9 @@ import retrofit2.Response
 
 class VaccineRepo(private val vaccineDao: VaccineDao) {
 
-    fun getAllVaccinations(specie:Long):LiveData<List<Vaccine>> = vaccineDao.getAllVaccinationsBySpecie(specie)
-
     fun getAll():LiveData<List<Vaccine>> = vaccineDao.getAll()
+
+    fun getVaccinationsBySpecie(specie:Long) = vaccineDao.getVaccinationsBySpecie(specie)
 
     @WorkerThread
     suspend fun insert(vaccine: Vaccine) = vaccineDao.insertVaccine(vaccine)

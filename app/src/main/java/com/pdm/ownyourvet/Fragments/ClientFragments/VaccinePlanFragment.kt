@@ -30,21 +30,18 @@ class VaccinePlanFragment : Fragment() {
     fun init(view: View){
         vaccineViewModel = ViewModelProviders.of(this).get(VaccineViewModel::class.java)
 
-        var specie:Long
-        arguments?.let {
-            val safeArgs = VaccinePlanFragmentArgs.fromBundle(it)
-            specie = safeArgs.specieId
-        }
-
-
         var adapter =  object : VaccineAdapter(view.context){}
         val recyclerView = view.recyclerView_vaccine_plan
         recyclerView.adapter = adapter
         recyclerView.layoutManager = LinearLayoutManager(view.context)
 
-        vaccineViewModel.all.observe(this, Observer { vaccinations ->
-            vaccinations?.let { adapter.setVaccinations(it) }
-        })
+        arguments?.let { bundle ->
+            val safeArgs = VaccinePlanFragmentArgs.fromBundle(bundle)
+            val specie = safeArgs.specieId
+            vaccineViewModel.getVaccinationsBySpecie(specie).observe(this, Observer { vac ->
+                vac?.let { adapter.setVaccinations(it) }
+            })
+        }
 
     }
 

@@ -29,8 +29,8 @@ class VaccineFragment : Fragment() {
     private lateinit var diseasesViewModel: DiseasesViewModel
     private lateinit var vaccineViewModel: VaccineViewModel
     private lateinit var spinner: Spinner
-    private var specie:Long = 2
-    val spinnerOptions = arrayListOf<String>()
+    private var specie:Long = 0
+    private val spinnerOptions = arrayListOf<String>()
     val spinnerOptionsId = arrayListOf<Long>()
 
     override fun onCreateView(
@@ -70,14 +70,11 @@ class VaccineFragment : Fragment() {
             }
 
             override fun onItemSelected(parent: AdapterView<*>?, view2: View?, position: Int, id: Long) {
-                Log.d("CODIGO", "FG: "+spinnerOptionsId[position])
                 specie = spinnerOptionsId[position]
-                //vaccineViewModel.updateVaccinations(spinnerOptionsId[position])
             }
         }
 
         view.button_see_plan.setOnClickListener {
-            //vaccineViewModel.updateVaccinations(12)
             val next = VaccineFragmentDirections.nextAction(specie)
             Navigation.findNavController(it).navigate(next)
         }

@@ -15,7 +15,6 @@ import kotlinx.coroutines.launch
 class VaccineViewModel(private val app:Application):AndroidViewModel(app) {
 
     private val repo:VaccineRepo
-    var allVaccinations:LiveData<List<Vaccine>>? = null
     var all:LiveData<List<Vaccine>>
 
     init {
@@ -32,11 +31,7 @@ class VaccineViewModel(private val app:Application):AndroidViewModel(app) {
         repo.delete()
     }
 
-    //fun getVaccineBySpecie(id:Long) = repo.getAllVaccinations(id)
-
-    fun updateVaccinations(specie:Long) = viewModelScope.launch(Dispatchers.IO){
-        allVaccinations = repo.getAllVaccinations(specie)
-    }
+    fun getVaccinationsBySpecie(specie:Long) = repo.getVaccinationsBySpecie(specie)
 
     fun retrieveVaccinations() = viewModelScope.launch(Dispatchers.IO){
         this@VaccineViewModel.deleteVaccinations()
@@ -45,10 +40,8 @@ class VaccineViewModel(private val app:Application):AndroidViewModel(app) {
         if (response.isSuccessful) with(response.body()?.data){
             this?.forEach {
                 this@VaccineViewModel.insertVaccine(it)
-                Log.d("CODIGO", it.name+" ingresada correctamente")
             }
         } else with(response){
-            Log.d("CODIGO", "Error: $response")
             when(this.code()){
                 404->{
                     Toast.makeText(app, "Movie not found", Toast.LENGTH_LONG).show()

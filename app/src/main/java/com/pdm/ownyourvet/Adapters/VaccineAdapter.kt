@@ -35,7 +35,6 @@ abstract class VaccineAdapter internal constructor(context: Context):RecyclerVie
         val vaccine:TextView = itemView.textView_vaccine
         val date:TextView = itemView.textView_estimated_date
         val information:TextView = itemView.textView_information
-        val linearLayout:LinearLayout = itemView.linearLayout_vaccine
     }
 
     internal fun setVaccinations(vaccine: List<Vaccine>){
