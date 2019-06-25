@@ -18,4 +18,5 @@
     <string name="chat_edittext_message_hint">Escribe un mensaje...</string>
     <string name="animales_afectado_perros">Animales afectados: Perros</string>
     <string name="animales_afectados_gatos">Animales afectados: Gatos</string>
+    <string name="te_ayudamos_a_cuidar_la_salud_de_tus_mascotas">Te ayudamos a cuidar la salud de tus mascotas</string>
 </resources>
