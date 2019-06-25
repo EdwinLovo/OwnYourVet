@@ -37,5 +37,6 @@
         <argument
             android:name="specie_id"
             app:argType="long" />
+        <argument android:name="specie_name" app:argType="string"/>
     </fragment>
 </navigation>

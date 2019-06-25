@@ -2,6 +2,7 @@ package com.pdm.ownyourvet.Fragments.ClientFragments
 
 
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -13,6 +14,7 @@ import com.pdm.ownyourvet.Adapters.VaccineAdapter
 
 import com.pdm.ownyourvet.R
 import com.pdm.ownyourvet.ViewModels.VaccineViewModel
+import kotlinx.android.synthetic.main.fragment_vaccine_plan.*
 import kotlinx.android.synthetic.main.fragment_vaccine_plan.view.*
 
 class VaccinePlanFragment : Fragment() {
@@ -38,6 +40,8 @@ class VaccinePlanFragment : Fragment() {
         arguments?.let { bundle ->
             val safeArgs = VaccinePlanFragmentArgs.fromBundle(bundle)
             val specie = safeArgs.specieId
+            val specieName = safeArgs.specieName
+            view.textView_title_plan.text = "Plan de vacunación para "+specieName.toLowerCase()
             vaccineViewModel.getVaccinationsBySpecie(specie).observe(this, Observer { vac ->
                 vac?.let { adapter.setVaccinations(it) }
             })
