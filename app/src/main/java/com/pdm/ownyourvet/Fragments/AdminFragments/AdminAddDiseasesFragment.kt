@@ -2,6 +2,7 @@ package com.pdm.ownyourvet.Fragments.AdminFragments
 
 
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -43,7 +44,7 @@ class AdminAddDiseasesFragment : Fragment(),FragmentHelper {
         tvInfo = myView.et_add_disease_info
         viewModel = ViewModelProviders.of(this).get(DiseasesViewModel::class.java)
         if (diseaseId != "0") btAddDiseases.text = "Modificar"
-
+        viewModel.retrieveSpecies()
         viewModel.getAllSpecies().observe(this, Observer {
             if (it.isNotEmpty()) {
                 spinnerOptionsId.clear()
@@ -86,6 +87,7 @@ class AdminAddDiseasesFragment : Fragment(),FragmentHelper {
         val nextAction = AdminAddDiseasesFragmentDirections.nextAction()
         Navigation.findNavController(myView).navigate(nextAction)
     }
+
 
 
 }
