@@ -17,7 +17,7 @@
         android:layout_marginTop="24dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
-        android:src="@mipmap/ownyourvet"
+        android:src="@mipmap/ic_launcher"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -104,7 +104,7 @@
             android:layout_marginRight="8dp"
             android:layout_weight="1"
             android:gravity="center"
-            android:text="TextView"
+            android:text="@string/especie"
             android:textColor="@color/colorPrimaryText"
             android:textSize="20sp" />
 
