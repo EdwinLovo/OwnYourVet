@@ -14,7 +14,7 @@ interface DiseasesDao {
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun insertDiseases(diseases: List<Diseases>)
 
-    @Query("select * from diseases")
+    @Query("select * from diseases order by name asc")
     fun getAllDiseases():DataSource.Factory<Int,Diseases>
 
     @Query("select * from diseases where specie_id=:specie")

@@ -19,4 +19,9 @@
     <string name="animales_afectado_perros">Animales afectados: Perros</string>
     <string name="animales_afectados_gatos">Animales afectados: Gatos</string>
     <string name="te_ayudamos_a_cuidar_la_salud_de_tus_mascotas">Te ayudamos a cuidar la salud de tus mascotas</string>
+    <string name="descripcion_plan_vacunacion">
+        La importancia de las vacunas está dada por el efecto que tiene en el cuerpo de nuestra mascota permitiendo que sus sistema inmunológico se fortalezca y proteja mejor frente a cualquier amenaza en su organismo. Algunas de estas vacunas previenen la aparición de enfermedades que comprometen de la vida de nuestra mascota como la rabia o el moquillo.
+
+        Debemos tener en cuenta que las vacunas deben realizarse de acuerdo a un plan entregado por el veterinario/a.
+    </string>
 </resources>
