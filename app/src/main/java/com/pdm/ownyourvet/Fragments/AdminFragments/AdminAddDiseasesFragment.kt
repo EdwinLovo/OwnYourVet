@@ -15,6 +15,7 @@ import androidx.navigation.Navigation
 import com.pdm.ownyourvet.R
 import com.pdm.ownyourvet.Utils.FragmentHelper
 import com.pdm.ownyourvet.ViewModels.DiseasesViewModel
+import com.pdm.ownyourvet.isConnected
 import kotlinx.android.synthetic.main.fragment_admin_add_diseases.view.*
 
 
@@ -44,7 +45,8 @@ class AdminAddDiseasesFragment : Fragment(),FragmentHelper {
         tvInfo = myView.et_add_disease_info
         viewModel = ViewModelProviders.of(this).get(DiseasesViewModel::class.java)
         if (diseaseId != "0") btAddDiseases.text = "Modificar"
-        viewModel.retrieveSpecies()
+        if(isConnected(myView.context))  viewModel.retrieveSpecies()
+
         viewModel.getAllSpecies().observe(this, Observer {
             if (it.isNotEmpty()) {
                 spinnerOptionsId.clear()
