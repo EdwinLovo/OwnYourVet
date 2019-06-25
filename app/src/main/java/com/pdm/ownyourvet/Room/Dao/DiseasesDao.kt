@@ -17,7 +17,7 @@ interface DiseasesDao {
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun insertDiseaseNoPaging(diseases: Diseases):Long
 
-    @Query("select * from diseases")
+    @Query("select * from diseases order by name asc")
     fun getAllDiseases():DataSource.Factory<Int,Diseases>
     @Query("select * from diseases")
     fun getAllDiseasesNoPaging():LiveData<List<Diseases>>

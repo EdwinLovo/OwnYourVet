@@ -20,4 +20,23 @@
         android:name="com.pdm.ownyourvet.Fragments.DiseasesFragment"
         android:label="Enfermedades"
         tools:layout="@layout/fragment_diseases" />
+    <fragment
+        android:id="@+id/destination_vaccine"
+        android:name="com.pdm.ownyourvet.Fragments.ClientFragments.VaccineFragment"
+        android:label="Planes Vacunación"
+        tools:layout="@layout/fragment_vaccine" >
+        <action
+            android:id="@+id/next_action"
+            app:destination="@id/destination_vaccine_plan" />
+    </fragment>
+    <fragment
+        android:id="@+id/destination_vaccine_plan"
+        android:name="com.pdm.ownyourvet.Fragments.ClientFragments.VaccinePlanFragment"
+        android:label="Vacunación"
+        tools:layout="@layout/fragment_vaccine_plan" >
+        <argument
+            android:name="specie_id"
+            app:argType="long" />
+        <argument android:name="specie_name" app:argType="string"/>
+    </fragment>
 </navigation>

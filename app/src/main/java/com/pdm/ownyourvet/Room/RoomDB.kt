@@ -6,14 +6,17 @@ import androidx.room.Room
 import androidx.room.RoomDatabase
 import com.pdm.ownyourvet.Room.Dao.DiseasesDao
 import com.pdm.ownyourvet.Room.Dao.SpecieDao
+import com.pdm.ownyourvet.Room.Dao.VaccineDao
 import com.pdm.ownyourvet.Room.Entities.Diseases
 import com.pdm.ownyourvet.Room.Entities.Species
+import com.pdm.ownyourvet.Room.Entities.Vaccine
 
-@Database(entities = [Diseases::class,Species::class], version = 6, exportSchema = false)
+@Database(entities = [Diseases::class,Species::class, Vaccine::class], version = 7, exportSchema = false)
 abstract class RoomDB:RoomDatabase() {
 
     abstract fun diseasesDao(): DiseasesDao
     abstract fun speciesDao(): SpecieDao
+    abstract fun vaccineDao(): VaccineDao
 
     companion object {
         @Volatile
