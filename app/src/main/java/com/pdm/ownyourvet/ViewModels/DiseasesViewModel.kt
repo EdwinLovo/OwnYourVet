@@ -3,7 +3,9 @@ package com.pdm.ownyourvet.ViewModels
 import android.app.Application
 import android.util.Log
 import android.widget.Toast
+import androidx.annotation.UiThread
 import androidx.lifecycle.*
+import androidx.navigation.Navigation
 import androidx.paging.LivePagedListBuilder
 import androidx.paging.PagedList
 import androidx.room.Room
@@ -13,8 +15,10 @@ import com.pdm.ownyourvet.Repositories.DiseasesRepo
 import com.pdm.ownyourvet.Repositories.SpeciesRepo
 import com.pdm.ownyourvet.Room.Entities.Diseases
 import com.pdm.ownyourvet.Room.RoomDB
+import com.pdm.ownyourvet.Utils.FragmentHelper
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
 
 class DiseasesViewModel(private val app: Application) : AndroidViewModel(app) {
 
@@ -37,6 +41,21 @@ class DiseasesViewModel(private val app: Application) : AndroidViewModel(app) {
     /*
     * DISEASES
     * */
+    fun retreiveDiseases() = viewModelScope.launch(Dispatchers.IO){
+        val resp = DiseasesService.getDiseasesService().getDiseasesNoPaging().await()
+        if(resp.isSuccessful) with(resp){
+            diseasesRepository.deleteDiseases()
+            val body = resp.body()!!
+            diseasesRepository.insertDisease(body.data)
+/*            body.data.forEach {
+                diseasesRepository.insertDiseaseNoPaging(it)
+            }*/
+        }
+    }
+
+    fun getDiseasesNoPaging() = diseasesRepository.getAllDiseasesNoPaging()
+
+    fun getDiseaseById(id:Long) = diseasesRepository.findDiseaseById(id)
     /*fun retreiveDiseases() = viewModelScope.launch(Dispatchers.IO) {
         //this@DiseasesViewModel.deleteDiseases()
         val response = diseasesRepository.retrieveDiseasesAsync().await()
@@ -90,6 +109,44 @@ class DiseasesViewModel(private val app: Application) : AndroidViewModel(app) {
 
         }
     }
+    fun saveDisease(name:String, info:String, specieId:String,fragmentHelper: FragmentHelper) = viewModelScope.launch(Dispatchers.IO){
+        val resp = DiseasesService.getDiseasesService().saveDisease(name,info,specieId).await()
+        if(resp.isSuccessful){
+            val body = resp.body()!!
+            diseasesRepository.insertDiseaseNoPaging(body.data)
+            withContext(Dispatchers.Main){
+                fragmentHelper.executeAfter()
+
+            }
+
+        }else with(resp) {
+            Log.d("CODIGO", "Error: $resp")
+            when (this.code()) {
+                404 -> {
+                    android.widget.Toast.makeText(app, "Disease not found", Toast.LENGTH_LONG).show()
+                }
+            }
+
+        }
+    }
+    fun updateDisease(diseaseId:String, name:String, info:String, specieId:String,fragmentHelper: FragmentHelper) = viewModelScope.launch(Dispatchers.IO){
+        val resp = DiseasesService.getDiseasesService().updateDisease(diseaseId,name,info,specieId).await()
+        if(resp.isSuccessful){
+            withContext(Dispatchers.Main){
+                fragmentHelper.executeAfter()
+
+            }
+        }else with(resp) {
+            Log.d("CODIGO", "Error: $resp")
+            when (this.code()) {
+                404 -> {
+                    android.widget.Toast.makeText(app, "Disease not found", Toast.LENGTH_LONG).show()
+                }
+            }
+
+        }
+    }
+
     fun getAllSpecies() = speciesRepository.getAllSpecies()
     fun getSpecieByRelation(id:Long) = speciesRepository.findSpecieByRelation(id)
     fun deleteSpecies() = viewModelScope.launch(Dispatchers.IO){ speciesRepository.deleteAllSpecies() }

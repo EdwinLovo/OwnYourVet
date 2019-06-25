@@ -10,5 +10,9 @@
         android:id="@+id/destination_chat_admin"
         android:icon="@drawable/ic_chat_black_24dp"
         android:title="Chat"/>
+    <item
+        android:id="@+id/destination_admin_diseases"
+        android:icon="@drawable/ic_chat_black_24dp"
+        android:title="Diseases"/>
 
 </menu>

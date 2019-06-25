@@ -18,4 +18,6 @@
     <string name="chat_edittext_message_hint">Escribe un mensaje...</string>
     <string name="animales_afectado_perros">Animales afectados: Perros</string>
     <string name="animales_afectados_gatos">Animales afectados: Gatos</string>
+    <string name="nombre">Nombre</string>
+    <string name="informacion">Información</string>
 </resources>

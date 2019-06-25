@@ -11,12 +11,15 @@ import retrofit2.Response
 
 class DiseasesRepo(private val diseasesDao: DiseasesDao) {
 
-    val allDiseases = diseasesDao.getAllDiseases()
+    fun getAllDiseasesNoPaging() = diseasesDao.getAllDiseasesNoPaging()
 
     fun getDiseasesBySpecieId(specie:Long) = diseasesDao.getDiseasesBySpecieId(specie)
-
+    fun findDiseaseById(id:Long) = diseasesDao.findById(id)
     @WorkerThread
     suspend fun insertDisease(diseases: List<Diseases>) = diseasesDao.insertDiseases(diseases)
+
+    @WorkerThread
+    suspend fun insertDiseaseNoPaging(disease: Diseases) = diseasesDao.insertDiseaseNoPaging(disease)
 
     @WorkerThread
     suspend fun deleteDiseases() = diseasesDao.deleteAllDiseases()

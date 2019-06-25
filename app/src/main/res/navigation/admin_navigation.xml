@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
-            xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/admin_navigation"
     app:startDestination="@id/destination_home_admin">
@@ -15,4 +15,27 @@
         android:name="com.pdm.ownyourvet.Fragments.ChatFragment"
         android:label="Chat"
         tools:layout="@layout/fragment_chat" />
+    <fragment
+        android:id="@+id/destination_admin_diseases"
+        android:name="com.pdm.ownyourvet.Fragments.AdminFragments.AdminDiseasesFragment"
+        android:label="Administración de Enfermedades"
+        tools:layout="@layout/fragment_admin_diseases" >
+        <action
+            android:id="@+id/next_action"
+            app:destination="@+id/destination_add_disease" />
+    </fragment>
+    <fragment
+        android:id="@+id/destination_add_disease"
+        android:name="com.pdm.ownyourvet.Fragments.AdminFragments.AdminAddDiseasesFragment"
+        android:label="Add a disease"
+        tools:layout="@layout/fragment_admin_add_diseases" >
+        <argument
+            android:name="diseaseId"
+            app:argType="string"
+            android:defaultValue="0" />
+        <action
+            android:id="@+id/next_action"
+            app:popUpTo="@+id/destination_add_disease"
+            app:popUpToInclusive="true" />
+    </fragment>
 </navigation>
