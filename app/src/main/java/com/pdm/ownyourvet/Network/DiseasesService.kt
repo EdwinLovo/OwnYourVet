@@ -1,11 +1,7 @@
 package com.pdm.ownyourvet.Network
 
 import com.jakewharton.retrofit2.adapter.kotlin.coroutines.CoroutineCallAdapterFactory
-<<<<<<< HEAD
-=======
 import com.pdm.ownyourvet.BASE_URL
-import com.pdm.ownyourvet.Network.Models.DiseaseInfo
->>>>>>> origin/vaccine
 import com.pdm.ownyourvet.Network.Models.DiseasesData
 import com.pdm.ownyourvet.Network.Models.SpeciesData
 import com.pdm.ownyourvet.Network.Models.diseases.DiseaseOperationResponse

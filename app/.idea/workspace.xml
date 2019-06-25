@@ -11,45 +11,7 @@
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="45b377f6-5192-424f-bc3f-6b9676a8b823" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/pdm/ownyourvet/Adapters/VaccineAdapter.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/pdm/ownyourvet/Fragments/ClientFragments/VaccineFragment.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/pdm/ownyourvet/Fragments/ClientFragments/VaccinePlanFragment.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/pdm/ownyourvet/Network/Models/vaccine/VaccineData.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/pdm/ownyourvet/Network/VaccineService.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/pdm/ownyourvet/Repositories/VaccineRepo.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/pdm/ownyourvet/Room/Dao/VaccineDao.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/pdm/ownyourvet/Room/Entities/Vaccine.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/pdm/ownyourvet/ViewModels/VaccineViewModel.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/res/drawable/ic_colorize_black_24dp.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/res/drawable/splash_screen.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/res/layout/fragment_vaccine.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/res/layout/fragment_vaccine_plan.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/res/layout/vaccine_item.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/AndroidManifest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/pdm/ownyourvet/Extensions.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pdm/ownyourvet/Extensions.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/pdm/ownyourvet/MainEmptyActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pdm/ownyourvet/MainEmptyActivity.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/pdm/ownyourvet/Network/DiseasesService.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pdm/ownyourvet/Network/DiseasesService.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/pdm/ownyourvet/Room/Dao/DiseasesDao.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pdm/ownyourvet/Room/Dao/DiseasesDao.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/pdm/ownyourvet/Room/RoomDB.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pdm/ownyourvet/Room/RoomDB.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/res/layout/nav_header_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/layout/nav_header_main.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/res/menu/navigation_menu_clients.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/menu/navigation_menu_clients.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/res/mipmap-hdpi/ic_launcher.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/res/mipmap-hdpi/ic_launcher_round.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/res/mipmap-mdpi/ic_launcher.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/res/mipmap-mdpi/ic_launcher_round.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/res/mipmap-xhdpi/ic_launcher.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/res/mipmap-xhdpi/ic_launcher_round.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/res/mipmap-xxhdpi/ic_launcher.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/res/mipmap-xxhdpi/ic_launcher_round.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/res/mipmap-xxxhdpi/ic_launcher.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/res/navigation/clients_navigation.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/navigation/clients_navigation.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/values/strings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/res/values/styles.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/values/styles.xml" afterDir="false" />
-    </list>
+    <list default="true" id="45b377f6-5192-424f-bc3f-6b9676a8b823" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,11 +41,20 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/pdm/ownyourvet/Room/Dao/DiseasesDao.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="230">
-              <caret line="16" selection-start-line="16" selection-end-line="16" />
+            <state relative-caret-position="66">
+              <caret line="16" column="24" selection-start-line="16" selection-start-column="24" selection-end-line="16" selection-end-column="24" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/res/values/strings.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="81">
+              <caret line="16" column="60" selection-start-line="16" selection-start-column="60" selection-end-line="16" selection-end-column="60" />
             </state>
           </provider>
         </entry>
@@ -151,15 +122,6 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/pdm/ownyourvet/Fragments/DiseasesFragment.kt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-500">
-              <caret line="178" column="9" selection-start-line="145" selection-start-column="7" selection-end-line="178" selection-end-column="9" />
-            </state>
-          </provider>
-        </entry>
-      </file>
     </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
@@ -189,6 +151,7 @@
         <option value="$PROJECT_DIR$/src/main/java/com/pdm/ownyourvet/Fragments/AdminFragments/AdminDiseasesFragment.kt" />
         <option value="$PROJECT_DIR$/src/main/java/com/pdm/ownyourvet/Fragments/AdminFragments/AdminAddDiseasesFragment.kt" />
         <option value="$PROJECT_DIR$/src/main/java/com/pdm/ownyourvet/Room/Dao/DiseasesDao.kt" />
+        <option value="$PROJECT_DIR$/src/main/res/values/strings.xml" />
       </list>
     </option>
   </component>
@@ -373,10 +336,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="27" width="1366" height="741" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Captures" order="0" side_tool="true" weight="0.25" />
-      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.25075528" />
+      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.25075528" />
       <window_info id="Structure" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info id="Build Variants" order="4" side_tool="true" />
@@ -384,15 +346,15 @@
       <window_info id="Designer" order="6" />
       <window_info id="Resources Explorer" order="7" />
       <window_info id="Capture Tool" order="8" />
-      <window_info anchor="bottom" id="Run" order="0" />
+      <window_info anchor="bottom" id="Run" order="0" weight="0.32847896" />
       <window_info anchor="bottom" id="Logcat" order="1" weight="0.4223301" />
       <window_info anchor="bottom" id="TODO" order="2" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.9514563" />
-      <window_info anchor="bottom" id="Terminal" order="4" />
+      <window_info anchor="bottom" id="Terminal" order="4" weight="0.32847896" />
       <window_info anchor="bottom" id="Event Log" order="5" side_tool="true" />
-      <window_info anchor="bottom" id="Version Control" order="6" />
-      <window_info anchor="bottom" id="Build" order="7" weight="0.32847896" />
-      <window_info anchor="bottom" id="Android Profiler" order="8" />
+      <window_info anchor="bottom" id="Version Control" order="6" weight="0.32847896" />
+      <window_info active="true" anchor="bottom" id="Build" order="7" visible="true" weight="0.048543688" />
+      <window_info anchor="bottom" id="Android Profiler" order="8" weight="0.32847896" />
       <window_info anchor="right" id="Device File Explorer" order="0" side_tool="true" />
       <window_info anchor="right" id="Capture Analysis" order="1" />
       <window_info anchor="right" id="Gradle" order="2" />
@@ -583,8 +545,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/pdm/ownyourvet/Room/Dao/DiseasesDao.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="230">
-          <caret line="16" selection-start-line="16" selection-end-line="16" />
+        <state relative-caret-position="66">
+          <caret line="16" column="24" selection-start-line="16" selection-start-column="24" selection-end-line="16" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/res/values/strings.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="81">
+          <caret line="16" column="60" selection-start-line="16" selection-start-column="60" selection-end-line="16" selection-end-column="60" />
         </state>
       </provider>
     </entry>
