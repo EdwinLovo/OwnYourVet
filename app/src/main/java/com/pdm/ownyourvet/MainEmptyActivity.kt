@@ -21,10 +21,19 @@ class MainEmptyActivity : AppCompatActivity() {
             }
             overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out)
         } else {
-            goToActivity<MainActivity> {
-                flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+            isUserRegistered { match, admin ->
+                if (admin){
+                    goToActivity<AdminMainActivity> {
+                        flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+                    }
+                    overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out)
+                } else {
+                    goToActivity<MainActivity> {
+                        flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+                    }
+                    overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out)
+                }
             }
-            overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out)
         }
         finish()
     }

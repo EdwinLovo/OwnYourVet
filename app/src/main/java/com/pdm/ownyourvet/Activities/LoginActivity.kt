@@ -142,7 +142,7 @@ class LoginActivity : AppCompatActivity(), GoogleApiClient.OnConnectionFailedLis
         toast("Connection Failed!!")
     }
 
-    private fun isUserRegistered(callback: (match:Boolean, admin:Boolean) -> Unit):Boolean{
+    /*private fun isUserRegistered(callback: (match:Boolean, admin:Boolean) -> Unit):Boolean{
         var type = true
         var match = false
         val store:FirebaseFirestore = FirebaseFirestore.getInstance()
@@ -159,6 +159,6 @@ class LoginActivity : AppCompatActivity(), GoogleApiClient.OnConnectionFailedLis
             }
 
         return match
-    }
+    }*/
 
 }

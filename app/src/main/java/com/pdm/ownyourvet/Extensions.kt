@@ -86,3 +86,23 @@ fun createUserByType(){
         }
 }
 
+fun isUserRegistered(callback: (match:Boolean, admin:Boolean) -> Unit):Boolean{
+    val mAuth: FirebaseAuth by lazy { FirebaseAuth.getInstance() }
+    var type = true
+    var match = false
+    val store:FirebaseFirestore = FirebaseFirestore.getInstance()
+    val f = store.collection("users").whereEqualTo("uid", mAuth.currentUser?.uid)
+    store.collection("users").get()
+            .addOnSuccessListener { result ->
+                for (document in result) {
+                    if (document.data["uid"].toString()==mAuth.currentUser?.uid.toString()){
+                        match = true
+                        type = document.data["admin"] as Boolean
+                    }
+                }
+                callback(match, type)
+            }
+
+    return match
+}
+
