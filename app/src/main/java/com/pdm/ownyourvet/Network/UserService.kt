@@ -13,6 +13,13 @@ import retrofit2.converter.moshi.MoshiConverterFactory
 import retrofit2.http.*
 
 interface UserService {
+
+    @GET("usersadmins")
+    fun getAdmins(): Deferred<Response<UserResponse>>
+
+    @GET("usersnormal")
+    fun getClients(): Deferred<Response<UserResponse>>
+
     @GET("users")
     fun getUsers(): Deferred<Response<UserResponse>>
 

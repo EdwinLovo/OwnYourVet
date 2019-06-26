@@ -19,8 +19,14 @@ class HomeAdminViewModel(private val app: Application) : AndroidViewModel(app) {
         userRepo = UserRepo(userDao)
     }
 
-    fun retreiveUsers() = viewModelScope.launch(Dispatchers.IO) {
+    fun getUserByType(type: String) = userRepo.getUserByType(type)
 
+
+    fun retrieveClients() = viewModelScope.launch(Dispatchers.IO) {
+        val resp = UserService.getUserService().getClients().await()
+        if (resp.isSuccessful) with(resp) {
+            userRepo.insertUsers(this.body()!!.data)
+        }
     }
 
     fun sendUser(user: User) = viewModelScope.launch(Dispatchers.IO) {
