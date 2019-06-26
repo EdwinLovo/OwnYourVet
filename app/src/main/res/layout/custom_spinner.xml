@@ -7,5 +7,6 @@
     android:textSize="20sp"
     android:gravity="left"
     android:textColor="@color/colorAccent"
+    android:fontFamily="@font/golden_sans_bold"
     android:padding="5dip"
     />

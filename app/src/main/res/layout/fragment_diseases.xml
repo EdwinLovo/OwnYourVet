@@ -17,6 +17,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Filtrar por: "
+            android:fontFamily="@font/golden_sans_bold"
             android:textColor="@color/colorPrimaryText"
             android:textSize="22sp" />
 
@@ -29,6 +30,7 @@
             android:id="@+id/button_refresh_diseases"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/golden_sans_bold"
             android:text="Actualizar" />
 
     </LinearLayout>

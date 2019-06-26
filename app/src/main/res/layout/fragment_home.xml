@@ -10,6 +10,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Welcome to OwnYourVet!"
+        android:fontFamily="@font/golden_sans_bold"
         android:gravity="center"
         android:textColor="@color/colorAccent"
         android:textSize="40sp"/>

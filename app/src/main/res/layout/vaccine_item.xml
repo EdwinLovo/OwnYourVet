@@ -27,6 +27,8 @@
             android:layout_marginTop="4dp"
             android:layout_marginRight="8dp"
             android:layout_marginBottom="4dp"
+            android:fontFamily="@font/golden_sans_bold"
+            android:textColor="@color/colorGooglePlus"
             android:text="asdasd"
             android:textSize="@dimen/login_text_xl_size" />
 
@@ -38,6 +40,7 @@
             android:layout_marginTop="4dp"
             android:layout_marginRight="8dp"
             android:layout_marginBottom="4dp"
+            android:fontFamily="@font/golden_sans_bold"
             android:text="sdasd"
             android:textSize="@dimen/login_text_xl_size" />
 
@@ -49,6 +52,7 @@
             android:layout_marginTop="4dp"
             android:layout_marginRight="8dp"
             android:layout_marginBottom="4dp"
+            android:fontFamily="@font/golden_sans"
             android:text="sdasd"
             android:textSize="@dimen/login_text_size" />
 

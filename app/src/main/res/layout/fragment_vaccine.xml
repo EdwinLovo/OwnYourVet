@@ -39,6 +39,7 @@
                 android:gravity="center"
                 android:paddingLeft="8dp"
                 android:paddingRight="8dp"
+                android:fontFamily="@font/golden_sans_bold"
                 android:text="Nuestros planes de vacunación"
                 android:textColor="@color/colorGooglePlus"
                 android:textSize="25sp"/>
@@ -54,6 +55,7 @@
                 android:layout_marginRight="8dp"
                 android:paddingLeft="8dp"
                 android:paddingRight="8dp"
+                android:fontFamily="@font/golden_sans"
                 android:text="@string/descripcion_plan_vacunacion"
                 android:textColor="@color/colorPrimaryText"
                 android:textSize="18sp" />
@@ -76,6 +78,7 @@
                     android:layout_marginRight="4dp"
                     android:layout_weight="1"
                     android:gravity="center"
+                    android:fontFamily="@font/golden_sans_bold"
                     android:text="@string/especie"
                     android:textColor="@color/colorPrimaryText"
                     android:textSize="20sp" />
@@ -100,6 +103,7 @@
                     android:layout_marginLeft="8dp"
                     android:layout_marginRight="8dp"
                     android:gravity="center"
+                    android:fontFamily="@font/golden_sans_bold"
                     android:background="@color/colorAccent"
                     android:textColor="@color/colorPrimaryText"
                     android:text="Ver Plan"
