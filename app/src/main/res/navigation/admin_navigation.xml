@@ -27,12 +27,12 @@
     <fragment
         android:id="@+id/destination_add_disease"
         android:name="com.pdm.ownyourvet.Fragments.AdminFragments.AdminAddDiseasesFragment"
-        android:label="Add a disease"
-        tools:layout="@layout/fragment_admin_add_diseases" >
+        android:label="Agregar Enfermedad"
+        tools:layout="@layout/fragment_admin_add_diseases">
         <argument
             android:name="diseaseId"
-            app:argType="string"
-            android:defaultValue="0" />
+            android:defaultValue="0"
+            app:argType="string" />
         <action
             android:id="@+id/next_action"
             app:popUpTo="@+id/destination_add_disease"

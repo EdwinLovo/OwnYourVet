@@ -18,7 +18,7 @@
             android:layout_height="wrap_content"
             android:text="Filtrar por: "
             android:textColor="@color/colorPrimaryText"
-            android:textSize="@dimen/login_text_xl_size" />
+            android:textSize="22sp" />
 
         <Spinner
             android:id="@+id/diseaseSpinner"
