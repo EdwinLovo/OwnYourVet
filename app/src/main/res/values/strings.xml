@@ -27,4 +27,13 @@
         Debemos tener en cuenta que las vacunas deben realizarse de acuerdo a un plan entregado por el veterinario/a.
     </string>
     <string name="especie">Especie:</string>
+    <string name="descripcion_onwyourvet">Somos un hospital veterinario que brinda servicio las 24 horas del día y los 7 días de la semana, contamos con más de 20 años de experiencia en el mercado, con profesionales altamente calificados y tecnología de punta.</string>
+    <string name="nuestra_mision">Nuestra Misión</string>
+    <string name="mision">Brindar servicios profesionales en medicina veterinaria integral, con un personal profesional para preservar la salud y calidad de vida de nuestros pacientes, así como mantener la confianza con los propietarios, por medio de un compromiso de capacitación continua.</string>
+    <string name="nuestra_vision">Nuestra Visión</string>
+    <string name="vision">Ser una institución profesional con personal capacitado y experimentado para brindar servicios especializados y a ritmo con los avances de la medicina veterinaria.</string>
+    <string name="objetivos">Objetivos</string>
+    <string name="uno">1. Mantenerse siempre a la vanguardia, a la altura de los estándares mundiales en medicina veterinaria en temas tecnológicos.</string>
+    <string name="dos">2. Constante capacitación con asistencia a congresos y capacitaciones dentro y fuera del país.</string>
+    <string name="tres">3. Estar a la disposición del cliente 24/7, ofreciéndole un servicio eficiente y de calidad.</string>
 </resources>

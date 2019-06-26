@@ -1,18 +1,139 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Fragments.ClientFragments.HomeFragment">
 
-    <TextView
-        android:layout_gravity="center"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Welcome to OwnYourVet!"
-        android:fontFamily="@font/golden_sans_bold"
-        android:gravity="center"
-        android:textColor="@color/colorAccent"
-        android:textSize="40sp"/>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
-</FrameLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_margin="8dp"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/icon_app"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:text="@string/app_name"
+                    android:textColor="@color/colorGooglePlus"
+                    android:textSize="40sp"
+                    android:fontFamily="@font/golden_sans_bold"/>
+
+            </LinearLayout>
+
+            <com.codesgood.views.JustifiedTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:padding="8dp"
+                android:textColor="@color/colorPrimaryText"
+                android:fontFamily="@font/golden_sans"
+                android:textSize="22sp"
+                android:text="@string/descripcion_onwyourvet"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_margin="8dp"
+                android:padding="8dp">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/nuestra_mision"
+                    android:textSize="30sp"
+                    android:textColor="@color/colorAccent"
+                    android:fontFamily="@font/golden_sans_bold"/>
+                <com.codesgood.views.JustifiedTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorPrimaryText"
+                    android:textSize="20sp"
+                    android:fontFamily="@font/golden_sans"
+                    android:text="@string/mision"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_margin="8dp"
+                android:padding="8dp">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/nuestra_vision"
+                    android:textSize="30sp"
+                    android:textColor="@color/colorAccent"
+                    android:fontFamily="@font/golden_sans_bold"/>
+                <com.codesgood.views.JustifiedTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorPrimaryText"
+                    android:textSize="20sp"
+                    android:fontFamily="@font/golden_sans"
+                    android:text="@string/vision"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_margin="8dp"
+                android:padding="8dp">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/objetivos"
+                    android:textSize="30sp"
+                    android:textColor="@color/colorAccent"
+                    android:fontFamily="@font/golden_sans_bold"
+                    android:gravity="center"/>
+                <com.codesgood.views.JustifiedTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:textColor="@color/colorPrimaryText"
+                    android:textSize="20sp"
+                    android:fontFamily="@font/golden_sans"
+                    android:text="@string/uno"/>
+                <com.codesgood.views.JustifiedTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:textColor="@color/colorPrimaryText"
+                    android:textSize="20sp"
+                    android:fontFamily="@font/golden_sans"
+                    android:text="@string/dos"/>
+                <com.codesgood.views.JustifiedTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:textColor="@color/colorPrimaryText"
+                    android:textSize="20sp"
+                    android:fontFamily="@font/golden_sans"
+                    android:text="@string/tres"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>
