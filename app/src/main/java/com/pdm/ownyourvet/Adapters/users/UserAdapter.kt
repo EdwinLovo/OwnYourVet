@@ -11,7 +11,7 @@ import kotlinx.android.synthetic.main.user_item.view.*
 abstract class UserAdapter: RecyclerView.Adapter<UserAdapter.ViewHolder>() {
 
     var userList:List<User> = emptyList()
-    abstract fun setClickListener(itemView: View, disease: User)
+    abstract fun setClickListener(itemView: View, user: User)
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): UserAdapter.ViewHolder {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.user_item, parent, false)
         return ViewHolder(view)

@@ -2,12 +2,14 @@ package com.pdm.ownyourvet.Fragments.AdminFragments
 
 
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
+import androidx.navigation.Navigation
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.pdm.ownyourvet.Adapters.users.UserAdapter
 
@@ -26,6 +28,7 @@ class AdminClientListFragment : Fragment() {
         adminViewModel = ViewModelProviders.of(this).get(HomeAdminViewModel::class.java)
 
         adminViewModel.getUserByType("0").observe(this, Observer {
+            Log.d("OBSERVERS","clients observed")
             userAdapter.updateList(it)
         })
 
@@ -36,8 +39,11 @@ class AdminClientListFragment : Fragment() {
         // Inflate the layout for this fragment
         val view =  inflater.inflate(R.layout.fragment_admin_client_list, container, false)
         userAdapter = object:UserAdapter(){
-            override fun setClickListener(itemView: View, disease: User) {
-                TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+            override fun setClickListener(itemView: View, user: User) {
+                val nextAction = AdminClientListFragmentDirections.nextAction()
+                nextAction.clientId = user.id
+//                nextAction.diseaseId = disease.id.toString()
+                Navigation.findNavController(itemView).navigate(nextAction)
             }
         }
         view.rv_client_list.apply {
@@ -45,9 +51,14 @@ class AdminClientListFragment : Fragment() {
             adapter = userAdapter
             layoutManager = LinearLayoutManager(view.context)
         }
-        if(isConnected(view.context)) adminViewModel.retrieveClients()
+        refreshFromApi(view)
+        view.bt_client_refresh.setOnClickListener {refreshFromApi(view)}
         return view
 
+    }
+
+    private fun refreshFromApi(v:View){
+        if(isConnected(v.context)) adminViewModel.retrieveClients()
     }
 
 

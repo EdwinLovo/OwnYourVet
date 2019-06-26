@@ -44,7 +44,7 @@ class DiseasesViewModel(private val app: Application) : AndroidViewModel(app) {
     fun retreiveDiseases() = viewModelScope.launch(Dispatchers.IO){
         val resp = DiseasesService.getDiseasesService().getDiseasesNoPaging().await()
         if(resp.isSuccessful) with(resp){
-            diseasesRepository.deleteDiseases()
+//            diseasesRepository.deleteDiseases()
             val body = resp.body()!!
             diseasesRepository.insertDisease(body.data)
 /*            body.data.forEach {

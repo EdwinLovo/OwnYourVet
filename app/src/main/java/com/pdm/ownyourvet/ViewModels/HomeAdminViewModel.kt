@@ -25,6 +25,7 @@ class HomeAdminViewModel(private val app: Application) : AndroidViewModel(app) {
     fun retrieveClients() = viewModelScope.launch(Dispatchers.IO) {
         val resp = UserService.getUserService().getClients().await()
         if (resp.isSuccessful) with(resp) {
+            Log.d("REQUESTS","Clients retrieved")
             userRepo.insertUsers(this.body()!!.data)
         }
     }
