@@ -1,5 +1,6 @@
 package com.pdm.ownyourvet
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
@@ -37,7 +38,9 @@ class AdminMainActivity : AppCompatActivity() {
         when(item?.itemId){
             R.id.exit -> {
                 mAuth.signOut()
-                goToActivity<LoginActivity>()
+                goToActivity<LoginActivity> {
+                    flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+                }
                 return true
             }
             else -> {

@@ -1,6 +1,7 @@
 package com.pdm.ownyourvet
 
 import android.content.Context
+import android.content.Intent
 import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -60,7 +61,9 @@ class MainActivity : AppCompatActivity(), ChatFragment.OnFragmentInteractionList
         when(item?.itemId){
             R.id.exit -> {
                 mAuth.signOut()
-                goToActivity<LoginActivity>()
+                goToActivity<LoginActivity> {
+                    flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+                }
                 return true
             }
             else -> {
