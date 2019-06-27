@@ -5,6 +5,8 @@ import android.util.Log
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.viewModelScope
+import com.pdm.ownyourvet.Network.Models.pets.Patient
+import com.pdm.ownyourvet.Network.Models.pets.Pet
 import com.pdm.ownyourvet.Network.Models.users.SingleUserResponse
 import com.pdm.ownyourvet.Network.UserService
 import com.pdm.ownyourvet.Repositories.UserRepo
@@ -17,6 +19,7 @@ import kotlinx.coroutines.withContext
 class HomeAdminViewModel(private val app: Application) : AndroidViewModel(app) {
     private val userRepo: UserRepo
     val userLiveData:MutableLiveData<User> = MutableLiveData()
+    val petLiveData:MutableLiveData<List<Patient>> = MutableLiveData()
 
     init {
         val userDao = RoomDB.getInstance(app).userDao()
@@ -59,5 +62,23 @@ class HomeAdminViewModel(private val app: Application) : AndroidViewModel(app) {
             }
         }
 
+    }
+    fun updateUser(
+            id:String,
+            email:String,
+            names:String,
+            direction:String
+    ) = viewModelScope.launch(Dispatchers.IO){
+        val resp = UserService.getUserService().updateUser(id,email,"0",names,direction).await()
+        if(resp.isSuccessful) with(resp){
+            userLiveData.postValue(this.body()!!.data)
+        }else Log.e("REQUESTS",resp.message())
+    }
+    fun getPetsOf(id:String)= viewModelScope.launch(Dispatchers.IO){
+        val resp = UserService.getUserService().getPetsOf(id).await()
+        if(resp.isSuccessful){
+            Log.d("REQUESTS","pets of user get")
+            petLiveData.postValue(resp.body()!!.data)
+        }else Log.e("REQUESTS",resp.message())
     }
 }

@@ -12,10 +12,13 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 
 import com.pdm.ownyourvet.R
+import com.pdm.ownyourvet.Room.Entities.User
 import com.pdm.ownyourvet.Utils.NavigationHelper
 import com.pdm.ownyourvet.ViewModels.HomeAdminViewModel
 import com.pdm.ownyourvet.isConnected
+import kotlinx.android.synthetic.main.fragment_admin_client_list.view.*
 import kotlinx.android.synthetic.main.fragment_client_resume.*
+import kotlinx.android.synthetic.main.fragment_client_resume.view.*
 
 class ClientResumeFragment : Fragment() {
 
@@ -44,6 +47,14 @@ class ClientResumeFragment : Fragment() {
 //        Log.d("CUSTOM",navigationHelper.getUserId())
         if(isConnected(myView.context))
             homeAdminViewModel.retreiveUserById(navigationHelper.getUserId())
+        myView.bt_client_update.setOnClickListener {
+            homeAdminViewModel.updateUser(
+                    navigationHelper.getUserId(),
+                    et_client_email.text.toString(),
+                    et_client_name.text.toString(),
+                    et_client_direction.text.toString()
+            )
+        }
         return myView
     }
 

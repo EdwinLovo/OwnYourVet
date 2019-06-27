@@ -3,6 +3,8 @@ package com.pdm.ownyourvet.Network
 import com.jakewharton.retrofit2.adapter.kotlin.coroutines.CoroutineCallAdapterFactory
 import com.pdm.ownyourvet.BASE_URL
 import com.pdm.ownyourvet.Network.Models.diseases.DiseaseOperationResponse
+import com.pdm.ownyourvet.Network.Models.pets.Pet
+import com.pdm.ownyourvet.Network.Models.pets.PetResponse
 import com.pdm.ownyourvet.Network.Models.users.SingleUserResponse
 import com.pdm.ownyourvet.Network.Models.users.UserResponse
 import com.pdm.ownyourvet.Room.Entities.User
@@ -23,11 +25,15 @@ interface UserService {
     @GET("users")
     fun getUsers(): Deferred<Response<UserResponse>>
 
+    @GET("patientsof/{id}")
+    fun getPetsOf(
+            @Path("id") id: String
+    ): Deferred<Response<PetResponse>>
+
     @GET("users/{id}")
     fun getUserById(
             @Path("id") id: String
     ): Deferred<Response<SingleUserResponse>>
-
     @POST("users")
     @FormUrlEncoded
     fun saveUser(
@@ -37,6 +43,16 @@ interface UserService {
             @Field("names") names: String? = "none",
             @Field("direction") direction: String? = "none"
     ): Deferred<Response<SingleUserResponse>>
+
+    @PUT("users/{id}")
+    @FormUrlEncoded
+    fun updateUser(
+            @Path("id") id: String,
+            @Field("email") email: String,
+            @Field("user_type") user_type: String,
+            @Field("names") names: String? = "none",
+            @Field("direction") direction: String? = "none"
+    ):Deferred<Response<SingleUserResponse>>
 
     companion object {
         fun getUserService(): UserService = Retrofit.Builder()
