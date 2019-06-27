@@ -2,10 +2,10 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
         android:id="@+id/destination_client_resume"
-        android:icon="@drawable/ic_chat_black_24dp"
+        android:icon="@drawable/ic_info_outline_black_24dp"
         android:title="Info"/>
     <item
         android:id="@+id/destination_client_pets"
-        android:icon="@drawable/ic_chat_black_24dp"
+        android:icon="@drawable/ic_pets_black_24dp"
         android:title="Mascotas"/>
 </menu>

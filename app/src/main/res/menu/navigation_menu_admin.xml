@@ -8,7 +8,7 @@
 
     <item
         android:id="@+id/destination_clients"
-        android:icon="@drawable/ic_chat_black_24dp"
+        android:icon="@drawable/ic_person_black_24dp"
         android:title="Clientes"/>
 
 
@@ -20,7 +20,7 @@
                 android:title="Chat"/>
             <item
                 android:id="@+id/destination_admin_diseases"
-                android:icon="@drawable/ic_chat_black_24dp"
+                android:icon="@drawable/ic_colorize_black_24dp"
                 android:title="Enfermedades"/>
         </menu>
     </item>
