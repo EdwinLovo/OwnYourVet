@@ -36,4 +36,16 @@
     <string name="uno">1. Mantenerse siempre a la vanguardia, a la altura de los estándares mundiales en medicina veterinaria en temas tecnológicos.</string>
     <string name="dos">2. Constante capacitación con asistencia a congresos y capacitaciones dentro y fuera del país.</string>
     <string name="tres">3. Estar a la disposición del cliente 24/7, ofreciéndole un servicio eficiente y de calidad.</string>
+    <string name="farmacia_veterinaria">Farmacia Veterinaria</string>
+    <string name="consiste_en_la_comercializaci_n_de_medicamentos_para_animales">Consiste en la comercialización de diversos medicamentos de calidad para animales.</string>
+    <string name="consultas">Atención de consultas</string>
+    <string name="atConsultas">Las consultas pueden estar dirigidas a la prevención o el tratamiento de enfermedades, como así también a la búsqueda de asesoramiento en general.</string>
+    <string name="cirugias">Cirugías</string>
+    <string name="ciru">Las cirugías se deben realizar en un lugar preparado para tal fin, el cual debe estar separado debidamente de otras dependencias de la clínica. La naturaleza de las intervenciones es amplia dependiendo el veterinario actuante.</string>
+    <string name="laboratorio">Laboratorio</string>
+    <string name="labo">Se pueden realizar análisis complementarios ya sea bioquímicos, histopatológicos, dérmicos, etc., esto permite acceder a un diagnóstico de manera más rápida, ofreciendo una mejor atención al cliente y al paciente.</string>
+    <string name="internaci_n">Internación</string>
+    <string name="inter">Este servicio permite realizar un seguimiento del paciente, observando la evolución de la enfermedad. Se debe prestar especial atención en separar pacientes con enfermedades infecciosas de enfermedades no infecciosas.</string>
+    <string name="esterilizaci_n">Esterilización</string>
+    <string name="este">La esterilización en una hembra y castración en un macho mejora su estado de salud, su calidad de vida y su longevidad en un promedio de uno a tres años en los perros, y de tres a cinco años en los gatos.</string>
 </resources>
