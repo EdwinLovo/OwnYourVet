@@ -6,11 +6,6 @@
     app:startDestination="@id/destination_home_admin">
 
     <fragment
-        android:id="@+id/destination_home_admin"
-        android:name="com.pdm.ownyourvet.Fragments.AdminFragments.HomeAdminFragment"
-        android:label="Home"
-        tools:layout="@layout/fragment_home_admin" />
-    <fragment
         android:id="@+id/destination_chat_admin"
         android:name="com.pdm.ownyourvet.Fragments.ChatFragment"
         android:label="Chat"
@@ -38,4 +33,9 @@
             app:popUpTo="@+id/destination_add_disease"
             app:popUpToInclusive="true" />
     </fragment>
+    <fragment
+        android:id="@+id/destination_home_admin"
+        android:name="com.pdm.ownyourvet.Fragments.ClientFragments.HomeFragment"
+        android:label="Home"
+        tools:layout="@layout/fragment_home" />
 </navigation>
