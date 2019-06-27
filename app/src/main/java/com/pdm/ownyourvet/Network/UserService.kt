@@ -3,8 +3,10 @@ package com.pdm.ownyourvet.Network
 import com.jakewharton.retrofit2.adapter.kotlin.coroutines.CoroutineCallAdapterFactory
 import com.pdm.ownyourvet.BASE_URL
 import com.pdm.ownyourvet.Network.Models.diseases.DiseaseOperationResponse
+import com.pdm.ownyourvet.Network.Models.pets.PatientRawResponse
 import com.pdm.ownyourvet.Network.Models.pets.Pet
 import com.pdm.ownyourvet.Network.Models.pets.PetResponse
+import com.pdm.ownyourvet.Network.Models.users.ClientRawResponse
 import com.pdm.ownyourvet.Network.Models.users.SingleUserResponse
 import com.pdm.ownyourvet.Network.Models.users.UserResponse
 import com.pdm.ownyourvet.Room.Entities.User
@@ -43,6 +45,25 @@ interface UserService {
             @Field("names") names: String? = "none",
             @Field("direction") direction: String? = "none"
     ): Deferred<Response<SingleUserResponse>>
+
+
+    @POST("patients")
+    @FormUrlEncoded
+    fun savePet(
+            @Field("name") name: String,
+            @Field("race_id") race_id: String
+    ): Deferred<Response<PatientRawResponse >>
+
+
+    @POST("clientpatients")
+    @FormUrlEncoded
+    fun savePetToUser(
+            @Field("client_id") client_id: String,
+            @Field("patient_id") patient_id: Long
+    ): Deferred<Response<Void>>
+
+
+
 
     @PUT("users/{id}")
     @FormUrlEncoded

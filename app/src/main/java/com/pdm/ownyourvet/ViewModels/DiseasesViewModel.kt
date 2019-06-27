@@ -12,6 +12,7 @@ import androidx.room.Room
 import com.pdm.ownyourvet.Adapters.diseases.DiseasesBoundaryCallback
 import com.pdm.ownyourvet.Network.DiseasesService
 import com.pdm.ownyourvet.Network.Models.pets.Race
+import com.pdm.ownyourvet.Network.UserService
 import com.pdm.ownyourvet.Repositories.DiseasesRepo
 import com.pdm.ownyourvet.Repositories.SpeciesRepo
 import com.pdm.ownyourvet.Room.Entities.Diseases
@@ -89,6 +90,18 @@ class DiseasesViewModel(private val app: Application) : AndroidViewModel(app) {
         diseasesRepository.deleteDiseases()
 
     }
+
+    fun savePet(user:String,name:String,raceId:String) = viewModelScope.launch(Dispatchers.IO){
+        val resp = UserService.getUserService().savePet(name,raceId).await()
+        if(resp.isSuccessful) {
+            val body = resp.body()!!.data
+            val usrPetResp = UserService.getUserService().savePetToUser(user,body.id).await()
+            if(usrPetResp.isSuccessful){
+
+            }
+        }
+    }
+
 
 
 
