@@ -27,6 +27,7 @@ import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity(), ChatFragment.OnFragmentInteractionListener,ActivityHelper {
 
+//    private val mAuth: FirebaseAuth by lazy { FirebaseAuth.getInstance()}
 
 
     lateinit var diseasesViewModel: DiseasesViewModel
