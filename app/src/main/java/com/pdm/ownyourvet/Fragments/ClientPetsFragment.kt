@@ -10,6 +10,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
+import androidx.navigation.Navigation
 import androidx.recyclerview.widget.GridLayoutManager
 import com.pdm.ownyourvet.Adapters.pets.PetsAdapter
 import com.pdm.ownyourvet.Network.Models.pets.Patient
@@ -60,6 +61,11 @@ class ClientPetsFragment : Fragment() {
             setHasFixedSize(true)
             adapter = petsAdapter
             layoutManager = GridLayoutManager(myView.context,3)
+        }
+        myView.floating_action_button.setOnClickListener {
+            val nextAction = ClientPetsFragmentDirections.nextAction()
+            Navigation.findNavController(it).navigate(nextAction)
+
         }
         return myView
     }

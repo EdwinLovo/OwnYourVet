@@ -14,7 +14,7 @@
         android:id="@+id/destination_admin_diseases"
         android:name="com.pdm.ownyourvet.Fragments.AdminFragments.AdminDiseasesFragment"
         android:label="Administración de Enfermedades"
-        tools:layout="@layout/fragment_admin_diseases" >
+        tools:layout="@layout/fragment_admin_diseases">
         <action
             android:id="@+id/next_action"
             app:destination="@+id/destination_add_disease" />

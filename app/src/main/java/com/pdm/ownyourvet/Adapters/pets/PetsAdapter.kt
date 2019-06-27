@@ -26,10 +26,11 @@ abstract class PetsAdapter: RecyclerView.Adapter<PetsAdapter.ViewHolder>()  {
 
     inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val name = itemView.tv_user_name
-
+        val another = itemView.tv_user_email
         fun bind(patient: Patient) = with(itemView){
             this.setOnClickListener { setClickListener(itemView,patient) }
             name.text = patient.patient.name
+            another.text = patient.patient.race.name
         }
     }
     fun updateList(list:List<Patient>) {

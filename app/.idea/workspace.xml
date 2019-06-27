@@ -15,108 +15,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="45b377f6-5192-424f-bc3f-6b9676a8b823" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/pdm/ownyourvet/Fragments/ClientFragments/ServicesFragment.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/res/drawable-hdpi/bisturi.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/res/drawable-hdpi/ciru.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/res/drawable-hdpi/consult.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/res/drawable-hdpi/form.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/res/drawable-hdpi/icon_app.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/res/drawable-hdpi/meds.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/res/drawable-hdpi/vet.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/res/drawable-mdpi/bisturi.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/res/drawable-mdpi/ciru.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/res/drawable-mdpi/consult.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/res/drawable-mdpi/form.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/res/drawable-mdpi/icon_app.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/res/drawable-mdpi/meds.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/res/drawable-mdpi/vet.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/res/drawable-xhdpi/bisturi.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/res/drawable-xhdpi/ciru.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/res/drawable-xhdpi/consult.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/res/drawable-xhdpi/form.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/res/drawable-xhdpi/icon_app.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/res/drawable-xhdpi/meds.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/res/drawable-xhdpi/vet.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/res/drawable-xxhdpi/bisturi.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/res/drawable-xxhdpi/ciru.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/res/drawable-xxhdpi/consult.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/res/drawable-xxhdpi/form.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/res/drawable-xxhdpi/icon_app.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/res/drawable-xxhdpi/meds.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/res/drawable-xxhdpi/vet.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/res/drawable-xxxhdpi/bisturi.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/res/drawable-xxxhdpi/form.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/res/drawable-xxxhdpi/icon_app.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/res/drawable-xxxhdpi/meds.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/res/drawable-xxxhdpi/vet.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/res/drawable/ic_add_black_24dp.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/res/drawable/ic_update_black_30dp.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/res/drawable/ic_work_black_24dp.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/res/font/golden_sans.otf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/res/font/golden_sans_black.otf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/res/font/golden_sans_bold.otf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/res/font/golden_sans_light.otf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/res/font/golden_sans_medium.otf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/res/font/golden_sans_thin.otf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/res/font/golden_sans_ultra_light.otf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/res/layout/fragment_services.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/res/mipmap-hdpi/ic_launcher.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/res/mipmap-mdpi/ic_launcher.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/res/mipmap-xhdpi/ic_launcher.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/res/mipmap-xxhdpi/ic_launcher.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/res/mipmap-xxxhdpi/ic_launcher.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/codeStyles/codeStyleConfig.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/pdm/ownyourvet/Fragments/ClientPetInteractionFragment.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/pdm/ownyourvet/Network/Models/pets/RaceResponse.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/res/layout/dropdown_menu_popup_item.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/res/layout/fragment_client_pet_interaction.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/navEditor.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/navEditor.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/release/app.aab" beforeDir="false" afterPath="$PROJECT_DIR$/release/app.aab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/AndroidManifest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/pdm/ownyourvet/AdminMainActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pdm/ownyourvet/AdminMainActivity.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/pdm/ownyourvet/Fragments/ClientFragments/VaccinePlanFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pdm/ownyourvet/Fragments/ClientFragments/VaccinePlanFragment.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/pdm/ownyourvet/Fragments/DiseasesFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pdm/ownyourvet/Fragments/DiseasesFragment.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/pdm/ownyourvet/MainActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pdm/ownyourvet/MainActivity.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/pdm/ownyourvet/MainEmptyActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pdm/ownyourvet/MainEmptyActivity.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/res/drawable/button_ripple.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/drawable/button_ripple.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/res/drawable/button_ripple_bg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/drawable/button_ripple_bg.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/res/drawable/button_ripple_google.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/drawable/button_ripple_google.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/res/drawable/splash_screen.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/drawable/splash_screen.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/res/layout/activity_forgot_password.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/layout/activity_forgot_password.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/res/layout/activity_login.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/layout/activity_login.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/res/layout/activity_sign_up.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/layout/activity_sign_up.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/res/layout/custom_popup.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/layout/custom_popup.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/res/layout/custom_spinner.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/layout/custom_spinner.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/res/layout/diseases_item.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/layout/diseases_item.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/res/layout/fragment_admin_add_diseases.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/layout/fragment_admin_add_diseases.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/pdm/ownyourvet/Adapters/pets/PetsAdapter.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pdm/ownyourvet/Adapters/pets/PetsAdapter.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/pdm/ownyourvet/Fragments/ClientPetsFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pdm/ownyourvet/Fragments/ClientPetsFragment.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/pdm/ownyourvet/Network/DiseasesService.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pdm/ownyourvet/Network/DiseasesService.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/pdm/ownyourvet/Network/Models/pets/Race.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pdm/ownyourvet/Network/Models/pets/Race.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/pdm/ownyourvet/Room/Entities/Species.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pdm/ownyourvet/Room/Entities/Species.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/pdm/ownyourvet/ViewModels/DiseasesViewModel.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pdm/ownyourvet/ViewModels/DiseasesViewModel.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/res/layout/fragment_admin_diseases.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/layout/fragment_admin_diseases.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/res/layout/fragment_chat.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/layout/fragment_chat.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/res/layout/fragment_chat_item_left.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/layout/fragment_chat_item_left.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/res/layout/fragment_chat_item_right.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/layout/fragment_chat_item_right.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/res/layout/fragment_diseases.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/layout/fragment_diseases.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/res/layout/fragment_home.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/layout/fragment_home.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/res/layout/fragment_home_admin.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/layout/fragment_home_admin.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/res/layout/fragment_vaccine.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/layout/fragment_vaccine.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/res/layout/fragment_vaccine_plan.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/layout/fragment_vaccine_plan.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/res/layout/nav_header_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/layout/nav_header_main.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/res/layout/vaccine_item.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/layout/vaccine_item.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/res/menu/navigation_menu_admin.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/menu/navigation_menu_admin.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/res/menu/navigation_menu_clients.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/menu/navigation_menu_clients.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/res/menu/toolbar_menu.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/menu/toolbar_menu.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/res/mipmap-hdpi/icon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/res/mipmap-hdpi/ownyourvet.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/res/mipmap-ldpi/icon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/res/mipmap-ldpi/ownyourvet.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/res/mipmap-mdpi/icon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/res/mipmap-mdpi/ownyourvet.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/res/mipmap-xhdpi/icon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/res/mipmap-xhdpi/ownyourvet.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/res/mipmap-xxhdpi/icon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/res/mipmap-xxhdpi/ownyourvet.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/res/mipmap-xxxhdpi/icon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/res/mipmap-xxxhdpi/ownyourvet.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/layout/fragment_client_pets.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/layout/fragment_client_pets.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/layout/fragment_client_resume.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/layout/fragment_client_resume.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/res/navigation/admin_navigation.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/navigation/admin_navigation.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/res/navigation/clients_navigation.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/navigation/clients_navigation.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/res/values/colors.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/values/colors.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/values/strings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/navigation/client_info_navigation.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/navigation/client_info_navigation.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -138,75 +55,83 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/pdm/ownyourvet/Adapters/pets/PetsAdapter.kt">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/pdm/ownyourvet/Fragments/ClientPetInteractionFragment.kt">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="305">
-              <caret line="34" column="36" selection-start-line="34" selection-start-column="36" selection-end-line="34" selection-end-column="36" />
+              <caret line="66" column="40" selection-start-line="66" selection-start-column="40" selection-end-line="66" selection-end-column="40" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/pdm/ownyourvet/Network/DiseasesService.kt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="66">
+              <caret line="50" column="37" selection-start-line="50" selection-start-column="37" selection-end-line="50" selection-end-column="37" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/pdm/ownyourvet/Network/Models/pets/Race.kt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="207">
+              <caret line="9" column="19" selection-start-line="9" selection-start-column="19" selection-end-line="9" selection-end-column="19" />
               <folding>
-                <element signature="e#42#411#0" expanded="true" />
+                <element signature="e#48#126#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/pdm/ownyourvet/Fragments/ClientPetsFragment.kt">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/pdm/ownyourvet/Network/Models/pets/RaceResponse.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="259">
-              <caret line="49" column="5" selection-start-line="49" selection-start-column="5" selection-end-line="50" selection-end-column="52" />
+            <state relative-caret-position="161">
+              <caret line="7" column="26" selection-start-line="7" selection-start-column="26" selection-end-line="7" selection-end-column="26" />
+              <folding>
+                <element signature="e#48#126#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/pdm/ownyourvet/Fragments/AdminFragments/HomeAdminFragment.kt">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/pdm/ownyourvet/Network/UserService.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="143">
-              <caret line="24" column="35" selection-start-line="24" selection-start-column="35" selection-end-line="24" selection-end-column="35" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/res/navigation/admin_navigation.xml">
-          <provider editor-type-id="nav-designer" />
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="612">
-              <caret line="54" column="13" selection-start-line="54" selection-start-column="13" selection-end-line="54" selection-end-column="13" />
+            <state relative-caret-position="232">
+              <caret line="30" column="32" selection-start-line="30" selection-start-column="32" selection-end-line="30" selection-end-column="32" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/res/menu/navigation_menu_admin.xml">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/pdm/ownyourvet/ViewModels/DiseasesViewModel.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="358">
-              <caret line="20" selection-start-line="20" selection-end-line="20" />
+            <state relative-caret-position="314">
+              <caret line="163" column="55" selection-start-line="163" selection-start-column="55" selection-end-line="163" selection-end-column="55" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/pdm/ownyourvet/Repositories/DiseasesRepo.kt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="207">
+              <caret line="16" selection-start-line="16" selection-end-line="16" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/res/layout/fragment_admin_client_list.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="184">
+              <caret line="8" column="3" selection-start-line="8" selection-start-column="3" selection-end-line="21" selection-end-column="19" />
             </state>
           </provider>
           <provider editor-type-id="android-designer2" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/pdm/ownyourvet/Fragments/ClientFragments/HomeFragment.kt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="115">
-              <caret line="16" column="6" selection-start-line="16" selection-start-column="6" selection-end-line="16" selection-end-column="6" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/pdm/ownyourvet/Adapters/users/UserAdapter.kt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="397">
-              <caret line="35" selection-start-line="35" selection-end-line="38" selection-end-column="5" />
-              <folding>
-                <element signature="e#43#309#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
         </entry>
       </file>
     </leaf>
@@ -218,8 +143,9 @@
         <option value="navigationResourceFile" />
         <option value="resourceFile" />
         <option value="Kotlin Interface" />
-        <option value="Kotlin Class" />
         <option value="Kotlin File" />
+        <option value="layoutResourceFile_vertical" />
+        <option value="Kotlin Class" />
       </list>
     </option>
   </component>
@@ -228,6 +154,11 @@
       <find>nav_header_main</find>
       <find>o</find>
       <find>setTo</find>
+      <find>support</find>
+      <find>androidx.core.app.CoreComponentFactory</find>
+      <find>com.google.android.material:material:1.1.0-alpha07</find>
+      <find>design</find>
+      <find>com.android.ma</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -236,15 +167,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/com/pdm/ownyourvet/Repositories/DiseasesRepo.kt" />
-        <option value="$PROJECT_DIR$/src/main/java/com/pdm/ownyourvet/Network/Models/diseases/DiseaseInsertResponse.kt" />
-        <option value="$PROJECT_DIR$/src/main/java/com/pdm/ownyourvet/Network/Models/diseases/DiseaseOperationResponse.kt" />
-        <option value="$PROJECT_DIR$/src/main/java/com/pdm/ownyourvet/Utils/FragmentHelper.kt" />
-        <option value="$PROJECT_DIR$/src/main/java/com/pdm/ownyourvet/Room/Dao/DiseasesDao.kt" />
-        <option value="$PROJECT_DIR$/src/main/res/values/strings.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/pdm/ownyourvet/Network/DiseasesService.kt" />
-        <option value="$PROJECT_DIR$/src/main/java/com/pdm/ownyourvet/Fragments/AdminFragments/AdminAddDiseasesFragment.kt" />
-        <option value="$PROJECT_DIR$/src/main/java/com/pdm/ownyourvet/Room/Entities/Vaccine.kt" />
         <option value="$PROJECT_DIR$/src/main/java/com/pdm/ownyourvet/Network/Models/users/UserResponse.kt" />
         <option value="$PROJECT_DIR$/src/main/java/com/pdm/ownyourvet/Network/Models/users/SingleUserResponse.kt" />
         <option value="$PROJECT_DIR$/src/main/java/com/pdm/ownyourvet/Fragments/AdminFragments/HomeAdminFragment.kt" />
@@ -252,13 +174,10 @@
         <option value="$PROJECT_DIR$/src/main/java/com/pdm/ownyourvet/Room/Entities/User.kt" />
         <option value="$PROJECT_DIR$/src/main/java/com/pdm/ownyourvet/Fragments/ClientFragments/HomeFragment.kt" />
         <option value="$PROJECT_DIR$/src/main/java/com/pdm/ownyourvet/Fragments/DiseasesFragment.kt" />
-        <option value="$PROJECT_DIR$/src/main/res/layout/fragment_admin_client_list.xml" />
         <option value="$PROJECT_DIR$/src/main/res/layout/user_item.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/pdm/ownyourvet/Repositories/UserRepo.kt" />
         <option value="$PROJECT_DIR$/src/main/java/com/pdm/ownyourvet/Room/Dao/UserDao.kt" />
         <option value="$PROJECT_DIR$/src/main/java/com/pdm/ownyourvet/Fragments/AdminFragments/AdminUserInfoFragment.kt" />
-        <option value="$PROJECT_DIR$/src/main/java/com/pdm/ownyourvet/Fragments/AdminFragments/AdminDiseasesFragment.kt" />
-        <option value="$PROJECT_DIR$/src/main/java/com/pdm/ownyourvet/ViewModels/DiseasesViewModel.kt" />
         <option value="$PROJECT_DIR$/src/main/res/menu/admin_client_menu.xml" />
         <option value="$PROJECT_DIR$/src/main/res/layout/activity_admin_client_info.xml" />
         <option value="$PROJECT_DIR$/src/main/res/layout/fragment_admin_user_info.xml" />
@@ -269,24 +188,36 @@
         <option value="$PROJECT_DIR$/src/main/java/com/pdm/ownyourvet/Adapters/users/UserAdapter.kt" />
         <option value="$PROJECT_DIR$/src/main/java/com/pdm/ownyourvet/Utils/NavigationHelper.kt" />
         <option value="$PROJECT_DIR$/src/main/java/com/pdm/ownyourvet/Fragments/AdminFragments/AdminSchedulesFragment.kt" />
-        <option value="$PROJECT_DIR$/src/main/res/layout/fragment_client_resume.xml" />
-        <option value="$PROJECT_DIR$/src/main/res/navigation/client_info_navigation.xml" />
         <option value="$PROJECT_DIR$/src/main/res/menu/client_info_menu.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/pdm/ownyourvet/AdminMainActivity.kt" />
         <option value="$PROJECT_DIR$/src/main/java/com/pdm/ownyourvet/MainActivity.kt" />
         <option value="$PROJECT_DIR$/src/main/java/com/pdm/ownyourvet/Activities/AdminClientInfo.kt" />
         <option value="$PROJECT_DIR$/src/main/java/com/pdm/ownyourvet/Fragments/AdminFragments/ClientResumeFragment.kt" />
-        <option value="$PROJECT_DIR$/src/main/res/layout/fragment_client_pets.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/pdm/ownyourvet/Network/Models/pets/Race.kt" />
         <option value="$PROJECT_DIR$/src/main/java/com/pdm/ownyourvet/Network/Models/pets/PetResponse.kt" />
         <option value="$PROJECT_DIR$/src/main/java/com/pdm/ownyourvet/Network/UserService.kt" />
-        <option value="$PROJECT_DIR$/src/main/java/com/pdm/ownyourvet/Network/Models/pets/Patient.kt" />
         <option value="$PROJECT_DIR$/src/main/java/com/pdm/ownyourvet/Network/Models/pets/Pet.kt" />
         <option value="$PROJECT_DIR$/src/main/java/com/pdm/ownyourvet/ViewModels/HomeAdminViewModel.kt" />
-        <option value="$PROJECT_DIR$/src/main/java/com/pdm/ownyourvet/Adapters/pets/PetsAdapter.kt" />
-        <option value="$PROJECT_DIR$/src/main/java/com/pdm/ownyourvet/Fragments/ClientPetsFragment.kt" />
         <option value="$PROJECT_DIR$/src/main/res/menu/navigation_menu_admin.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/pdm/ownyourvet/Adapters/pets/PetsAdapter.kt" />
+        <option value="$PROJECT_DIR$/src/main/java/com/pdm/ownyourvet/Network/Models/pets/Patient.kt" />
+        <option value="$PROJECT_DIR$/src/main/java/com/pdm/ownyourvet/Room/Entities/Species.kt" />
+        <option value="$PROJECT_DIR$/src/main/res/layout/fragment_client_pets.xml" />
         <option value="$PROJECT_DIR$/src/main/res/navigation/admin_navigation.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/pdm/ownyourvet/Fragments/ClientPetsFragment.kt" />
+        <option value="$PROJECT_DIR$/src/main/res/navigation/client_info_navigation.xml" />
+        <option value="$PROJECT_DIR$/src/main/res/layout/fragment_client_resume.xml" />
+        <option value="$PROJECT_DIR$/build.gradle" />
+        <option value="$PROJECT_DIR$/src/main/res/layout/dropdown_menu_popup_item.xml" />
+        <option value="$PROJECT_DIR$/src/main/res/layout/fragment_admin_client_list.xml" />
+        <option value="$PROJECT_DIR$/src/main/res/layout/fragment_admin_diseases.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/pdm/ownyourvet/Fragments/AdminFragments/AdminDiseasesFragment.kt" />
+        <option value="$PROJECT_DIR$/src/main/res/layout/fragment_client_pet_interaction.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/pdm/ownyourvet/Repositories/DiseasesRepo.kt" />
+        <option value="$PROJECT_DIR$/src/main/java/com/pdm/ownyourvet/Network/Models/pets/RaceResponse.kt" />
+        <option value="$PROJECT_DIR$/src/main/java/com/pdm/ownyourvet/Network/DiseasesService.kt" />
+        <option value="$PROJECT_DIR$/src/main/java/com/pdm/ownyourvet/ViewModels/DiseasesViewModel.kt" />
+        <option value="$PROJECT_DIR$/src/main/java/com/pdm/ownyourvet/Network/Models/pets/Race.kt" />
+        <option value="$PROJECT_DIR$/src/main/java/com/pdm/ownyourvet/Fragments/ClientPetInteractionFragment.kt" />
       </list>
     </option>
   </component>
@@ -303,7 +234,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="ProjectPane" />
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="AndroidView">
         <subPane>
           <expand>
@@ -327,52 +259,6 @@
               <item name="app" type="feadf853:AndroidModuleNode" />
               <item name="java" type="edd41e36:AndroidSourceTypeNode" />
               <item name="ownyourvet" type="cbb59c9e:AndroidPsiDirectoryNode" />
-              <item name="Adapters" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="app" type="1abcf292:AndroidViewProjectNode" />
-              <item name="app" type="feadf853:AndroidModuleNode" />
-              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
-              <item name="ownyourvet" type="cbb59c9e:AndroidPsiDirectoryNode" />
-              <item name="Adapters" type="462c0819:PsiDirectoryNode" />
-              <item name="pets" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="app" type="1abcf292:AndroidViewProjectNode" />
-              <item name="app" type="feadf853:AndroidModuleNode" />
-              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
-              <item name="ownyourvet" type="cbb59c9e:AndroidPsiDirectoryNode" />
-              <item name="Adapters" type="462c0819:PsiDirectoryNode" />
-              <item name="users" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="app" type="1abcf292:AndroidViewProjectNode" />
-              <item name="app" type="feadf853:AndroidModuleNode" />
-              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
-              <item name="ownyourvet" type="cbb59c9e:AndroidPsiDirectoryNode" />
-              <item name="Fragments" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="app" type="1abcf292:AndroidViewProjectNode" />
-              <item name="app" type="feadf853:AndroidModuleNode" />
-              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
-              <item name="ownyourvet" type="cbb59c9e:AndroidPsiDirectoryNode" />
-              <item name="Fragments" type="462c0819:PsiDirectoryNode" />
-              <item name="AdminFragments" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="app" type="1abcf292:AndroidViewProjectNode" />
-              <item name="app" type="feadf853:AndroidModuleNode" />
-              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
-              <item name="ownyourvet" type="cbb59c9e:AndroidPsiDirectoryNode" />
-              <item name="Fragments" type="462c0819:PsiDirectoryNode" />
-              <item name="ClientFragments" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="app" type="1abcf292:AndroidViewProjectNode" />
-              <item name="app" type="feadf853:AndroidModuleNode" />
-              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
-              <item name="ownyourvet" type="cbb59c9e:AndroidPsiDirectoryNode" />
               <item name="Network" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -382,15 +268,6 @@
               <item name="ownyourvet" type="cbb59c9e:AndroidPsiDirectoryNode" />
               <item name="Network" type="462c0819:PsiDirectoryNode" />
               <item name="Models" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="app" type="1abcf292:AndroidViewProjectNode" />
-              <item name="app" type="feadf853:AndroidModuleNode" />
-              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
-              <item name="ownyourvet" type="cbb59c9e:AndroidPsiDirectoryNode" />
-              <item name="Network" type="462c0819:PsiDirectoryNode" />
-              <item name="Models" type="462c0819:PsiDirectoryNode" />
-              <item name="diseases" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="app" type="1abcf292:AndroidViewProjectNode" />
@@ -404,26 +281,15 @@
             <path>
               <item name="app" type="1abcf292:AndroidViewProjectNode" />
               <item name="app" type="feadf853:AndroidModuleNode" />
-              <item name="res" type="d4f16f75:AndroidResFolderNode" />
-            </path>
-            <path>
-              <item name="app" type="1abcf292:AndroidViewProjectNode" />
-              <item name="app" type="feadf853:AndroidModuleNode" />
-              <item name="res" type="d4f16f75:AndroidResFolderNode" />
-              <item name="menu" type="ddeffd01:AndroidResFolderTypeNode" />
-            </path>
-            <path>
-              <item name="app" type="1abcf292:AndroidViewProjectNode" />
-              <item name="app" type="feadf853:AndroidModuleNode" />
-              <item name="res" type="d4f16f75:AndroidResFolderNode" />
-              <item name="navigation" type="ddeffd01:AndroidResFolderTypeNode" />
+              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
+              <item name="ownyourvet" type="cbb59c9e:AndroidPsiDirectoryNode" />
+              <item name="Repositories" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
+      <pane id="ProjectPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -540,7 +406,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="27" width="1366" height="741" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Captures" order="0" side_tool="true" weight="0.25" />
       <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.25075528" />
@@ -552,11 +417,11 @@
       <window_info id="Resources Explorer" order="7" />
       <window_info id="Capture Tool" order="8" />
       <window_info anchor="bottom" id="Run" order="0" weight="0.5388349" />
-      <window_info anchor="bottom" id="Logcat" order="1" sideWeight="0.49848944" weight="0.34951457" />
+      <window_info anchor="bottom" id="Logcat" order="1" sideWeight="0.49697885" weight="0.49838188" />
       <window_info anchor="bottom" id="TODO" order="2" weight="0.32847896" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.5841424" />
       <window_info anchor="bottom" id="Terminal" order="4" weight="0.32847896" />
-      <window_info anchor="bottom" id="Event Log" order="5" sideWeight="0.50151056" side_tool="true" weight="0.26860842" />
+      <window_info anchor="bottom" id="Event Log" order="5" sideWeight="0.5030211" side_tool="true" weight="0.32200646" />
       <window_info anchor="bottom" id="Version Control" order="6" weight="0.32847896" />
       <window_info anchor="bottom" id="Build" order="7" weight="0.5825243" />
       <window_info anchor="bottom" id="Android Profiler" order="8" weight="0.32847896" />
@@ -569,119 +434,23 @@
       <window_info anchor="right" id="Preview" order="5" weight="0.32930514" />
     </layout>
   </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/pdm/ownyourvet/Adapters/pets/PetsAdapter.kt</url>
+          <line>31</line>
+          <properties />
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/res/layout/fragment_home_admin.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-      <provider editor-type-id="android-designer2" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/res/layout/fragment_home.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-      <provider editor-type-id="android-designer2" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/res/layout/fragment_admin_user_info.xml" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/pdm/ownyourvet/Fragments/AdminFragments/ClientPetsFragment.kt" />
-    <entry file="file://$PROJECT_DIR$/src/main/AndroidManifest.xml">
-      <provider editor-type-id="android-manifest" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="253">
-          <caret line="11" selection-start-line="11" selection-end-line="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/res/layout/activity_client_pets_fragment.xml" />
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/androidx.fragment/fragment/1.1.0-beta01/7d14599c398aecc07b40608a306a161463124337/fragment-1.1.0-beta01-sources.jar!/androidx/fragment/app/Fragment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="23">
-          <caret line="625" column="24" selection-start-line="625" selection-start-column="24" selection-end-line="625" selection-end-column="24" />
-          <folding>
-            <element signature="e#23937#23938#0" expanded="true" />
-            <element signature="e#23970#23971#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/pdm/ownyourvet/Utils/NavigationHelper.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="69">
-          <caret line="3" column="26" selection-start-line="3" selection-start-column="26" selection-end-line="3" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/pdm/ownyourvet/Fragments/AdminFragments/AdminUserInfoFragment.kt" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/pdm/ownyourvet/Fragments/AdminFragments/AdminDiseasesFragment.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="851">
-          <caret line="53" selection-start-line="53" selection-end-line="55" selection-end-column="75" />
-          <folding>
-            <element signature="e#54#764#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/pdm/ownyourvet/Fragments/AdminFragments/AdminAddDiseasesFragment.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="483">
-          <caret line="39" column="61" selection-start-line="39" selection-start-column="61" selection-end-line="39" selection-end-column="61" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/pdm/ownyourvet/Fragments/AdminFragments/AdminSchedulesFragment.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="230">
-          <caret line="10" selection-start-line="10" selection-end-line="10" />
-          <folding>
-            <element signature="e#54#236#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/res/layout/fragment_admin_add_diseases.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="37" selection-start-line="37" selection-end-line="48" selection-end-column="56" />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/pdm/ownyourvet/Utils/FragmentHelper.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="69">
-          <caret line="3" column="8" selection-start-line="3" selection-start-column="8" selection-end-line="3" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/pdm/ownyourvet/Repositories/UserRepo.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="230">
-          <caret line="12" column="4" selection-start-line="12" selection-start-column="4" selection-end-line="12" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/pdm/ownyourvet/Repositories/DiseasesRepo.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="299">
-          <caret line="20" column="17" lean-forward="true" selection-start-line="20" selection-start-column="17" selection-end-line="20" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/pdm/ownyourvet/Repositories/SpeciesRepo.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/pdm/ownyourvet/ViewModels/VaccineViewModel.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-322">
           <caret line="14" column="6" selection-start-line="14" selection-start-column="6" selection-end-line="14" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/pdm/ownyourvet/ViewModels/DiseasesViewModel.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="253">
-          <caret line="116" selection-start-line="116" selection-end-line="119" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -737,58 +506,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/pdm/ownyourvet/Network/DiseasesService.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="690">
-          <caret line="40" column="9" selection-start-line="40" selection-start-column="9" selection-end-line="40" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/pdm/ownyourvet/Room/Entities/User.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="115">
           <caret line="7" column="15" selection-start-line="7" selection-start-column="15" selection-end-line="7" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/res/layout/fragment_admin_diseases.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="17" column="1" lean-forward="true" selection-start-line="17" selection-start-column="1" selection-end-line="20" selection-end-column="47" />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/res/layout/fragment_client_resume.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="23">
-          <caret line="13" column="35" lean-forward="true" selection-start-line="9" selection-end-line="13" selection-end-column="35" />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/pdm/ownyourvet/Room/Entities/Species.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="115">
-          <caret line="8" column="11" selection-start-line="8" selection-start-column="11" selection-end-line="8" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/pdm/ownyourvet/Network/Models/pets/Race.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="9" column="26" selection-start-line="9" selection-start-column="26" selection-end-line="9" selection-end-column="26" />
-          <folding>
-            <element signature="e#48#126#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/res/navigation/client_info_navigation.xml">
-      <provider selected="true" editor-type-id="nav-designer" />
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="253">
-          <caret line="11" selection-start-line="11" selection-end-line="15" selection-end-column="54" />
         </state>
       </provider>
     </entry>
@@ -799,38 +520,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/pdm/ownyourvet/Network/UserService.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="232">
-          <caret line="30" column="32" selection-start-line="30" selection-start-column="32" selection-end-line="30" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/pdm/ownyourvet/Network/Models/pets/Patient.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="138">
-          <caret line="6" column="21" selection-start-line="6" selection-start-column="21" selection-end-line="6" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/pdm/ownyourvet/Network/Models/pets/Pet.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="8" column="12" selection-start-line="8" selection-start-column="12" selection-end-line="8" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/pdm/ownyourvet/ViewModels/HomeAdminViewModel.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1012">
           <caret line="21" column="48" selection-start-line="21" selection-start-column="48" selection-end-line="21" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/pdm/ownyourvet/Network/Models/pets/PetResponse.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="138">
-          <caret line="6" column="24" selection-start-line="6" selection-start-column="24" selection-end-line="6" selection-end-column="24" />
         </state>
       </provider>
     </entry>
@@ -852,48 +545,6 @@
       <provider selected="true" editor-type-id="text-editor" />
       <provider editor-type-id="android-designer2" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/res/layout/fragment_client_pets.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="17" column="51" selection-start-line="17" selection-start-column="51" selection-end-line="17" selection-end-column="51" />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/pdm/ownyourvet/Adapters/users/UserAdapter.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="397">
-          <caret line="35" selection-start-line="35" selection-end-line="38" selection-end-column="5" />
-          <folding>
-            <element signature="e#43#309#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/pdm/ownyourvet/Adapters/pets/PetsAdapter.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="305">
-          <caret line="34" column="36" selection-start-line="34" selection-start-column="36" selection-end-line="34" selection-end-column="36" />
-          <folding>
-            <element signature="e#42#411#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/pdm/ownyourvet/Fragments/ClientPetsFragment.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="259">
-          <caret line="49" column="5" selection-start-line="49" selection-start-column="5" selection-end-line="50" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/pdm/ownyourvet/Fragments/ClientFragments/HomeFragment.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="115">
-          <caret line="16" column="6" selection-start-line="16" selection-start-column="6" selection-end-line="16" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/pdm/ownyourvet/Fragments/AdminFragments/HomeAdminFragment.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="143">
@@ -909,11 +560,265 @@
       </provider>
       <provider editor-type-id="android-designer2" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/res/navigation/admin_navigation.xml">
-      <provider editor-type-id="nav-designer" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/pdm/ownyourvet/Fragments/ClientFragments/HomeFragment.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="612">
-          <caret line="54" column="13" selection-start-line="54" selection-start-column="13" selection-end-line="54" selection-end-column="13" />
+        <state relative-caret-position="115">
+          <caret line="16" column="6" selection-start-line="16" selection-start-column="6" selection-end-line="16" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/pdm/ownyourvet/Adapters/users/UserAdapter.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="397">
+          <caret line="35" selection-start-line="35" selection-end-line="38" selection-end-column="5" />
+          <folding>
+            <element signature="e#43#309#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/pdm/ownyourvet/Room/Entities/Species.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="115">
+          <caret line="9" column="11" selection-start-line="9" selection-start-column="11" selection-end-line="9" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/pdm/ownyourvet/Adapters/pets/PetsAdapter.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="236">
+          <caret line="32" column="52" selection-start-line="32" selection-start-column="52" selection-end-line="32" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/pdm/ownyourvet/Network/Models/pets/PetResponse.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="138">
+          <caret line="6" column="24" selection-start-line="6" selection-start-column="24" selection-end-line="6" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/pdm/ownyourvet/Network/Models/pets/Patient.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="138">
+          <caret line="6" column="23" selection-start-line="6" selection-start-column="23" selection-end-line="6" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/pdm/ownyourvet/Network/Models/pets/Pet.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="276">
+          <caret line="12" column="1" lean-forward="true" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/res/navigation/clients_navigation.xml">
+      <provider selected="true" editor-type-id="nav-designer" />
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="-621" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/res/navigation/admin_navigation.xml">
+      <provider selected="true" editor-type-id="nav-designer" />
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="313">
+          <caret line="41" column="41" selection-start-line="41" selection-start-column="41" selection-end-line="41" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/res/layout/fragment_client_pets.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="253">
+          <caret line="11" column="47" selection-start-line="11" selection-start-column="25" selection-end-line="11" selection-end-column="47" />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/pdm/ownyourvet/Fragments/ClientPetsFragment.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="259">
+          <caret line="56" column="39" selection-start-line="56" selection-start-column="39" selection-end-line="56" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/res/navigation/client_info_navigation.xml">
+      <provider selected="true" editor-type-id="nav-designer" />
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="253">
+          <caret line="11" selection-start-line="11" selection-end-line="19" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/Android/Sdk/platforms/android-28/android.jar!/dalvik/system/BaseDexClassLoader.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="115">
+          <caret line="6" column="59" selection-start-line="6" selection-start-column="59" selection-end-line="6" selection-end-column="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.android.material/material/1.1.0-alpha07/8545936dd92172bf4230585aedc68830ded426b6/material-1.1.0-alpha07-sources.jar!/com/google/android/material/textfield/TextInputLayout.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="23">
+          <caret line="404" selection-start-line="404" selection-end-line="404" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="106" lean-forward="true" selection-start-line="106" selection-end-line="106" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="121">
+          <caret line="17" column="31" selection-start-line="17" selection-start-column="31" selection-end-line="17" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/res/layout/dropdown_menu_popup_item.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="161">
+          <caret line="7" selection-start-line="7" selection-end-line="7" />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/res/layout/fragment_client_resume.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="207">
+          <caret line="9" selection-start-line="9" selection-end-line="67" />
+          <folding>
+            <element signature="e#368#2541#0" />
+          </folding>
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/res/layout/fragment_admin_add_diseases.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="267">
+          <caret line="16" selection-start-line="16" selection-end-line="23" selection-end-column="61" />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2" />
+    </entry>
+    <entry file="jar://$USER_HOME$/Android/Sdk/platforms/android-28/android.jar!/android/widget/AbsSpinner.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="193">
+          <caret line="23" column="16" selection-start-line="23" selection-start-column="16" selection-end-line="23" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/res/values/colors.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="92">
+          <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/pdm/ownyourvet/Fragments/AdminFragments/AdminDiseasesFragment.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="276">
+          <caret line="28" lean-forward="true" selection-start-line="28" selection-end-line="28" />
+          <folding>
+            <element signature="e#54#871#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/res/layout/custom_spinner.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="8" column="32" selection-start-line="8" selection-start-column="32" selection-end-line="8" selection-end-column="32" />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/res/layout/fragment_client_pet_interaction.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="253">
+          <caret line="29" column="44" lean-forward="true" selection-start-line="29" selection-start-column="44" selection-end-line="29" selection-end-column="44" />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/res/layout/fragment_admin_diseases.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="92">
+          <caret line="7" column="53" selection-start-line="7" selection-start-column="53" selection-end-line="7" selection-end-column="53" />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/pdm/ownyourvet/Fragments/AdminFragments/AdminAddDiseasesFragment.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="213">
+          <caret line="74" column="24" selection-start-line="74" selection-start-column="16" selection-end-line="74" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/res/layout/fragment_admin_client_list.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="8" column="3" selection-start-line="8" selection-start-column="3" selection-end-line="21" selection-end-column="19" />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/pdm/ownyourvet/Repositories/DiseasesRepo.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="207">
+          <caret line="16" selection-start-line="16" selection-end-line="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/pdm/ownyourvet/Network/UserService.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="232">
+          <caret line="30" column="32" selection-start-line="30" selection-start-column="32" selection-end-line="30" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/pdm/ownyourvet/Network/DiseasesService.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="66">
+          <caret line="50" column="37" selection-start-line="50" selection-start-column="37" selection-end-line="50" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/pdm/ownyourvet/Network/Models/pets/RaceResponse.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="161">
+          <caret line="7" column="26" selection-start-line="7" selection-start-column="26" selection-end-line="7" selection-end-column="26" />
+          <folding>
+            <element signature="e#48#126#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/pdm/ownyourvet/ViewModels/DiseasesViewModel.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="314">
+          <caret line="163" column="55" selection-start-line="163" selection-start-column="55" selection-end-line="163" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/pdm/ownyourvet/Network/Models/pets/Race.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="207">
+          <caret line="9" column="19" selection-start-line="9" selection-start-column="19" selection-end-line="9" selection-end-column="19" />
+          <folding>
+            <element signature="e#48#126#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/pdm/ownyourvet/Fragments/ClientPetInteractionFragment.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="305">
+          <caret line="66" column="40" selection-start-line="66" selection-start-column="40" selection-end-line="66" selection-end-column="40" />
         </state>
       </provider>
     </entry>

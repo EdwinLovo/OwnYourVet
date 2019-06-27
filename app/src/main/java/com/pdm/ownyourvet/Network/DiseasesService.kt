@@ -6,6 +6,8 @@ import com.pdm.ownyourvet.Network.Models.DiseasesData
 import com.pdm.ownyourvet.Network.Models.SpeciesData
 import com.pdm.ownyourvet.Network.Models.diseases.DiseaseOperationResponse
 import com.pdm.ownyourvet.Network.Models.diseases.DiseaseResponse
+import com.pdm.ownyourvet.Network.Models.pets.Race
+import com.pdm.ownyourvet.Network.Models.pets.RaceResponse
 import kotlinx.coroutines.Deferred
 import retrofit2.Response
 import retrofit2.Retrofit
@@ -42,6 +44,11 @@ interface DiseasesService {
 
     @GET("species")
     fun getSpecies(): Deferred<Response<SpeciesData>>
+
+    @GET("racesofspecie/{id}")
+    fun getRacesOfSpecie(
+            @Path("id")id:String
+    ): Deferred<Response<RaceResponse>>
 
     companion object {
         fun getDiseasesService(): DiseasesService = Retrofit.Builder()

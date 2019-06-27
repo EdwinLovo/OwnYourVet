@@ -16,6 +16,11 @@
         app:srcCompat="@drawable/ic_add_black_24dp"
         tools:ignore="VectorDrawableCompat" />
 
+
+
+
+
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_admin_diseases"
         android:layout_width="match_parent"

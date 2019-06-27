@@ -11,9 +11,11 @@ import androidx.paging.PagedList
 import androidx.room.Room
 import com.pdm.ownyourvet.Adapters.diseases.DiseasesBoundaryCallback
 import com.pdm.ownyourvet.Network.DiseasesService
+import com.pdm.ownyourvet.Network.Models.pets.Race
 import com.pdm.ownyourvet.Repositories.DiseasesRepo
 import com.pdm.ownyourvet.Repositories.SpeciesRepo
 import com.pdm.ownyourvet.Room.Entities.Diseases
+import com.pdm.ownyourvet.Room.Entities.Species
 import com.pdm.ownyourvet.Room.RoomDB
 import com.pdm.ownyourvet.Utils.FragmentHelper
 import kotlinx.coroutines.Dispatchers
@@ -25,6 +27,8 @@ class DiseasesViewModel(private val app: Application) : AndroidViewModel(app) {
     private val diseasesRepository: DiseasesRepo
     private val speciesRepository: SpeciesRepo
 //    val allDiseases: LiveData<List<Diseases>>
+    val speciesLiveData:MutableLiveData<List<Species>> = MutableLiveData()
+    val racesLiveData:MutableLiveData<List<Race>> = MutableLiveData()
 
 
 
@@ -46,6 +50,7 @@ class DiseasesViewModel(private val app: Application) : AndroidViewModel(app) {
         if(resp.isSuccessful) with(resp){
 //            diseasesRepository.deleteDiseases()
             val body = resp.body()!!
+            diseasesRepository.deleteDiseases()
             diseasesRepository.insertDisease(body.data)
 /*            body.data.forEach {
                 diseasesRepository.insertDiseaseNoPaging(it)
@@ -93,7 +98,7 @@ class DiseasesViewModel(private val app: Application) : AndroidViewModel(app) {
     fun retrieveSpecies() = viewModelScope.launch(Dispatchers.IO) {
         val resp = DiseasesService.getDiseasesService().getSpecies().await()
         if (resp.isSuccessful) with(resp) {
-
+            speciesLiveData.postValue(this.body()!!.data)
             resp.body()!!.data.forEach {
 
                 speciesRepository.insertSpecie(it)
@@ -140,7 +145,10 @@ class DiseasesViewModel(private val app: Application) : AndroidViewModel(app) {
             Log.d("CODIGO", "Error: $resp")
             when (this.code()) {
                 404 -> {
-                    android.widget.Toast.makeText(app, "Disease not found", Toast.LENGTH_LONG).show()
+                    withContext(Dispatchers.Main) {
+                        android.widget.Toast.makeText(app, "Disease not found", Toast.LENGTH_LONG).show()
+
+                    }
                 }
             }
 
@@ -150,4 +158,11 @@ class DiseasesViewModel(private val app: Application) : AndroidViewModel(app) {
     fun getAllSpecies() = speciesRepository.getAllSpecies()
     fun getSpecieByRelation(id:Long) = speciesRepository.findSpecieByRelation(id)
     fun deleteSpecies() = viewModelScope.launch(Dispatchers.IO){ speciesRepository.deleteAllSpecies() }
+    fun getRacesOfSpecie(id:String) = viewModelScope.launch (Dispatchers.IO){
+        val resp = DiseasesService.getDiseasesService().getRacesOfSpecie(id).await()
+        if(resp.isSuccessful){
+            racesLiveData.postValue(resp.body()!!.data)
+        }
+        else Log.e("CUSTOM",resp.message())
+    }
 }

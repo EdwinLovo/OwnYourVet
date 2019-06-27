@@ -13,5 +13,19 @@
         android:id="@+id/destination_client_pets"
         android:name="com.pdm.ownyourvet.Fragments.ClientPetsFragment"
         android:label="fragment_client_pets"
-        tools:layout="@layout/fragment_client_pets" />
+        tools:layout="@layout/fragment_client_pets" >
+        <action
+            android:id="@+id/next_action"
+            app:destination="@id/destination_pet_interaction" />
+    </fragment>
+    <fragment
+        android:id="@+id/destination_pet_interaction"
+        android:name="com.pdm.ownyourvet.Fragments.ClientPetInteractionFragment"
+        android:label="fragment_client_pet_interaction"
+        tools:layout="@layout/fragment_client_pet_interaction">
+        <argument
+            android:name="petId"
+            android:defaultValue="0L"
+            app:argType="long" />
+    </fragment>
 </navigation>
