@@ -15,17 +15,108 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="45b377f6-5192-424f-bc3f-6b9676a8b823" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/pdm/ownyourvet/Adapters/pets/PetsAdapter.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/pdm/ownyourvet/Network/Models/pets/Patient.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/pdm/ownyourvet/Network/Models/pets/Pet.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/pdm/ownyourvet/Network/Models/pets/PetResponse.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/pdm/ownyourvet/Network/Models/pets/Race.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/pdm/ownyourvet/Fragments/ClientFragments/ServicesFragment.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/res/drawable-hdpi/bisturi.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/res/drawable-hdpi/ciru.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/res/drawable-hdpi/consult.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/res/drawable-hdpi/form.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/res/drawable-hdpi/icon_app.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/res/drawable-hdpi/meds.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/res/drawable-hdpi/vet.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/res/drawable-mdpi/bisturi.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/res/drawable-mdpi/ciru.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/res/drawable-mdpi/consult.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/res/drawable-mdpi/form.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/res/drawable-mdpi/icon_app.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/res/drawable-mdpi/meds.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/res/drawable-mdpi/vet.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/res/drawable-xhdpi/bisturi.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/res/drawable-xhdpi/ciru.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/res/drawable-xhdpi/consult.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/res/drawable-xhdpi/form.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/res/drawable-xhdpi/icon_app.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/res/drawable-xhdpi/meds.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/res/drawable-xhdpi/vet.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/res/drawable-xxhdpi/bisturi.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/res/drawable-xxhdpi/ciru.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/res/drawable-xxhdpi/consult.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/res/drawable-xxhdpi/form.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/res/drawable-xxhdpi/icon_app.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/res/drawable-xxhdpi/meds.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/res/drawable-xxhdpi/vet.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/res/drawable-xxxhdpi/bisturi.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/res/drawable-xxxhdpi/form.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/res/drawable-xxxhdpi/icon_app.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/res/drawable-xxxhdpi/meds.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/res/drawable-xxxhdpi/vet.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/res/drawable/ic_add_black_24dp.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/res/drawable/ic_update_black_30dp.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/res/drawable/ic_work_black_24dp.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/res/font/golden_sans.otf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/res/font/golden_sans_black.otf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/res/font/golden_sans_bold.otf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/res/font/golden_sans_light.otf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/res/font/golden_sans_medium.otf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/res/font/golden_sans_thin.otf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/res/font/golden_sans_ultra_light.otf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/res/layout/fragment_services.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/res/mipmap-hdpi/ic_launcher.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/res/mipmap-mdpi/ic_launcher.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/res/mipmap-xhdpi/ic_launcher.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/res/mipmap-xxhdpi/ic_launcher.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/res/mipmap-xxxhdpi/ic_launcher.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/codeStyles/codeStyleConfig.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/navEditor.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/navEditor.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/pdm/ownyourvet/Fragments/AdminFragments/ClientResumeFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pdm/ownyourvet/Fragments/AdminFragments/ClientResumeFragment.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/pdm/ownyourvet/Fragments/ClientPetsFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pdm/ownyourvet/Fragments/ClientPetsFragment.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/pdm/ownyourvet/Network/UserService.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pdm/ownyourvet/Network/UserService.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/pdm/ownyourvet/ViewModels/HomeAdminViewModel.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pdm/ownyourvet/ViewModels/HomeAdminViewModel.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/res/layout/fragment_client_pets.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/layout/fragment_client_pets.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/release/app.aab" beforeDir="false" afterPath="$PROJECT_DIR$/release/app.aab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/pdm/ownyourvet/AdminMainActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pdm/ownyourvet/AdminMainActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/pdm/ownyourvet/Fragments/ClientFragments/VaccinePlanFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pdm/ownyourvet/Fragments/ClientFragments/VaccinePlanFragment.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/pdm/ownyourvet/Fragments/DiseasesFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pdm/ownyourvet/Fragments/DiseasesFragment.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/pdm/ownyourvet/MainActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pdm/ownyourvet/MainActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/pdm/ownyourvet/MainEmptyActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pdm/ownyourvet/MainEmptyActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/drawable/button_ripple.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/drawable/button_ripple.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/drawable/button_ripple_bg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/drawable/button_ripple_bg.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/drawable/button_ripple_google.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/drawable/button_ripple_google.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/drawable/splash_screen.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/drawable/splash_screen.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/layout/activity_forgot_password.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/layout/activity_forgot_password.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/layout/activity_login.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/layout/activity_login.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/layout/activity_sign_up.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/layout/activity_sign_up.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/layout/custom_popup.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/layout/custom_popup.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/layout/custom_spinner.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/layout/custom_spinner.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/layout/diseases_item.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/layout/diseases_item.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/layout/fragment_admin_add_diseases.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/layout/fragment_admin_add_diseases.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/layout/fragment_admin_diseases.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/layout/fragment_admin_diseases.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/layout/fragment_chat.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/layout/fragment_chat.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/layout/fragment_chat_item_left.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/layout/fragment_chat_item_left.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/layout/fragment_chat_item_right.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/layout/fragment_chat_item_right.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/layout/fragment_diseases.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/layout/fragment_diseases.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/layout/fragment_home.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/layout/fragment_home.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/layout/fragment_home_admin.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/layout/fragment_home_admin.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/layout/fragment_vaccine.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/layout/fragment_vaccine.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/layout/fragment_vaccine_plan.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/layout/fragment_vaccine_plan.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/layout/nav_header_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/layout/nav_header_main.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/layout/vaccine_item.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/layout/vaccine_item.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/menu/navigation_menu_admin.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/menu/navigation_menu_admin.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/menu/navigation_menu_clients.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/menu/navigation_menu_clients.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/menu/toolbar_menu.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/menu/toolbar_menu.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/mipmap-hdpi/icon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/mipmap-hdpi/ownyourvet.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/mipmap-ldpi/icon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/mipmap-ldpi/ownyourvet.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/mipmap-mdpi/icon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/mipmap-mdpi/ownyourvet.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/mipmap-xhdpi/icon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/mipmap-xhdpi/ownyourvet.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/mipmap-xxhdpi/icon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/mipmap-xxhdpi/ownyourvet.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/mipmap-xxxhdpi/icon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/mipmap-xxxhdpi/ownyourvet.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/navigation/admin_navigation.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/navigation/admin_navigation.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/navigation/clients_navigation.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/navigation/clients_navigation.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/values/colors.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/values/colors.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/values/strings.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -59,11 +150,49 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/pdm/ownyourvet/Fragments/ClientPetsFragment.kt">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="259">
-              <caret line="49" column="5" lean-forward="true" selection-start-line="49" selection-start-column="5" selection-end-line="50" selection-end-column="52" />
+              <caret line="49" column="5" selection-start-line="49" selection-start-column="5" selection-end-line="50" selection-end-column="52" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/pdm/ownyourvet/Fragments/AdminFragments/HomeAdminFragment.kt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="143">
+              <caret line="24" column="35" selection-start-line="24" selection-start-column="35" selection-end-line="24" selection-end-column="35" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/res/navigation/admin_navigation.xml">
+          <provider editor-type-id="nav-designer" />
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="612">
+              <caret line="54" column="13" selection-start-line="54" selection-start-column="13" selection-end-line="54" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/res/menu/navigation_menu_admin.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="358">
+              <caret line="20" selection-start-line="20" selection-end-line="20" />
+            </state>
+          </provider>
+          <provider editor-type-id="android-designer2" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/pdm/ownyourvet/Fragments/ClientFragments/HomeFragment.kt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="115">
+              <caret line="16" column="6" selection-start-line="16" selection-start-column="6" selection-end-line="16" selection-end-column="6" />
             </state>
           </provider>
         </entry>
@@ -122,7 +251,6 @@
         <option value="$PROJECT_DIR$/src/main/java/com/pdm/ownyourvet/Room/RoomDB.kt" />
         <option value="$PROJECT_DIR$/src/main/java/com/pdm/ownyourvet/Room/Entities/User.kt" />
         <option value="$PROJECT_DIR$/src/main/java/com/pdm/ownyourvet/Fragments/ClientFragments/HomeFragment.kt" />
-        <option value="$PROJECT_DIR$/src/main/res/menu/navigation_menu_admin.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/pdm/ownyourvet/Fragments/DiseasesFragment.kt" />
         <option value="$PROJECT_DIR$/src/main/res/layout/fragment_admin_client_list.xml" />
         <option value="$PROJECT_DIR$/src/main/res/layout/user_item.xml" />
@@ -137,7 +265,6 @@
         <option value="$PROJECT_DIR$/src/main/res/layout/activity_client_pets_fragment.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/pdm/ownyourvet/Fragments/AdminFragments/ClientPetsFragment.kt" />
         <option value="$PROJECT_DIR$/src/main/AndroidManifest.xml" />
-        <option value="$PROJECT_DIR$/src/main/res/navigation/admin_navigation.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/pdm/ownyourvet/Fragments/AdminFragments/AdminClientListFragment.kt" />
         <option value="$PROJECT_DIR$/src/main/java/com/pdm/ownyourvet/Adapters/users/UserAdapter.kt" />
         <option value="$PROJECT_DIR$/src/main/java/com/pdm/ownyourvet/Utils/NavigationHelper.kt" />
@@ -158,6 +285,8 @@
         <option value="$PROJECT_DIR$/src/main/java/com/pdm/ownyourvet/ViewModels/HomeAdminViewModel.kt" />
         <option value="$PROJECT_DIR$/src/main/java/com/pdm/ownyourvet/Adapters/pets/PetsAdapter.kt" />
         <option value="$PROJECT_DIR$/src/main/java/com/pdm/ownyourvet/Fragments/ClientPetsFragment.kt" />
+        <option value="$PROJECT_DIR$/src/main/res/menu/navigation_menu_admin.xml" />
+        <option value="$PROJECT_DIR$/src/main/res/navigation/admin_navigation.xml" />
       </list>
     </option>
   </component>
@@ -236,6 +365,14 @@
               <item name="app" type="feadf853:AndroidModuleNode" />
               <item name="java" type="edd41e36:AndroidSourceTypeNode" />
               <item name="ownyourvet" type="cbb59c9e:AndroidPsiDirectoryNode" />
+              <item name="Fragments" type="462c0819:PsiDirectoryNode" />
+              <item name="ClientFragments" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="app" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
+              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
+              <item name="ownyourvet" type="cbb59c9e:AndroidPsiDirectoryNode" />
               <item name="Network" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -267,9 +404,19 @@
             <path>
               <item name="app" type="1abcf292:AndroidViewProjectNode" />
               <item name="app" type="feadf853:AndroidModuleNode" />
-              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
-              <item name="ownyourvet" type="cbb59c9e:AndroidPsiDirectoryNode" />
-              <item name="ViewModels" type="462c0819:PsiDirectoryNode" />
+              <item name="res" type="d4f16f75:AndroidResFolderNode" />
+            </path>
+            <path>
+              <item name="app" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
+              <item name="res" type="d4f16f75:AndroidResFolderNode" />
+              <item name="menu" type="ddeffd01:AndroidResFolderTypeNode" />
+            </path>
+            <path>
+              <item name="app" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
+              <item name="res" type="d4f16f75:AndroidResFolderNode" />
+              <item name="navigation" type="ddeffd01:AndroidResFolderTypeNode" />
             </path>
           </expand>
           <select />
@@ -471,14 +618,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/res/navigation/admin_navigation.xml">
-      <provider selected="true" editor-type-id="nav-designer" />
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="1357">
-          <caret line="59" selection-start-line="59" selection-end-line="59" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/pdm/ownyourvet/Fragments/AdminFragments/AdminAddDiseasesFragment.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="483">
@@ -569,13 +708,6 @@
       </provider>
       <provider editor-type-id="android-designer2" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/pdm/ownyourvet/Fragments/ClientFragments/HomeFragment.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="115">
-          <caret line="16" column="6" selection-start-line="16" selection-start-column="6" selection-end-line="16" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/pdm/ownyourvet/MainActivity.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="23">
@@ -598,14 +730,6 @@
       </provider>
       <provider editor-type-id="android-designer2" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/res/menu/navigation_menu_admin.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="16" column="9" selection-start-line="16" selection-start-column="9" selection-end-line="16" selection-end-column="9" />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/pdm/ownyourvet/Activities/AdminClientInfo.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="470">
@@ -617,13 +741,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="690">
           <caret line="40" column="9" selection-start-line="40" selection-start-column="9" selection-end-line="40" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/pdm/ownyourvet/Fragments/AdminFragments/HomeAdminFragment.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="121">
-          <caret line="24" column="35" selection-start-line="24" selection-start-column="35" selection-end-line="24" selection-end-column="35" />
         </state>
       </provider>
     </entry>
@@ -766,7 +883,37 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/com/pdm/ownyourvet/Fragments/ClientPetsFragment.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="259">
-          <caret line="49" column="5" lean-forward="true" selection-start-line="49" selection-start-column="5" selection-end-line="50" selection-end-column="52" />
+          <caret line="49" column="5" selection-start-line="49" selection-start-column="5" selection-end-line="50" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/pdm/ownyourvet/Fragments/ClientFragments/HomeFragment.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="115">
+          <caret line="16" column="6" selection-start-line="16" selection-start-column="6" selection-end-line="16" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/pdm/ownyourvet/Fragments/AdminFragments/HomeAdminFragment.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="143">
+          <caret line="24" column="35" selection-start-line="24" selection-start-column="35" selection-end-line="24" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/res/menu/navigation_menu_admin.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="358">
+          <caret line="20" selection-start-line="20" selection-end-line="20" />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/res/navigation/admin_navigation.xml">
+      <provider editor-type-id="nav-designer" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="612">
+          <caret line="54" column="13" selection-start-line="54" selection-start-column="13" selection-end-line="54" selection-end-column="13" />
         </state>
       </provider>
     </entry>

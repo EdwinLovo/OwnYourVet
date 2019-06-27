@@ -39,6 +39,7 @@
             android:inputType="textMultiLine"
             android:textColor="@color/colorTextBlack"
             android:textColorHint="@color/colorPrimaryText"
+            android:fontFamily="@font/golden_sans"
             android:padding="8dp"
             android:background="@drawable/edittext_chat"
             app:layout_constraintBottom_toBottomOf="parent"

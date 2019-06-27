@@ -20,6 +20,7 @@ class MainEmptyActivity : AppCompatActivity() {
                 flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
             }
             overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out)
+            finish()
         } else {
             isUserRegistered { match, admin ->
                 if (admin){
@@ -27,14 +28,15 @@ class MainEmptyActivity : AppCompatActivity() {
                         flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
                     }
                     overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out)
+                    finish()
                 } else {
                     goToActivity<MainActivity> {
                         flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
                     }
                     overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out)
+                    finish()
                 }
             }
         }
-        finish()
     }
 }

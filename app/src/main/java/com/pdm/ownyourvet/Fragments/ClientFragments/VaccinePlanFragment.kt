@@ -10,6 +10,7 @@ import android.view.ViewGroup
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import com.pdm.ownyourvet.Adapters.VaccineAdapter
 
 import com.pdm.ownyourvet.R
@@ -35,7 +36,7 @@ class VaccinePlanFragment : Fragment() {
         var adapter =  object : VaccineAdapter(view.context){}
         val recyclerView = view.recyclerView_vaccine_plan
         recyclerView.adapter = adapter
-        recyclerView.layoutManager = LinearLayoutManager(view.context)
+        recyclerView.layoutManager = LinearLayoutManager(view.context) as RecyclerView.LayoutManager?
 
         arguments?.let { bundle ->
             val safeArgs = VaccinePlanFragmentArgs.fromBundle(bundle)

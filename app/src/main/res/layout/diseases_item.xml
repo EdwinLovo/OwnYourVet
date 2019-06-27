@@ -27,7 +27,8 @@
             android:layout_marginTop="4dp"
             android:layout_marginRight="8dp"
             android:layout_marginBottom="4dp"
-            android:text="asdasd"
+            android:fontFamily="@font/golden_sans_bold"
+            android:text=""
             android:textSize="@dimen/login_text_xl_size" />
 
         <TextView
@@ -38,6 +39,7 @@
             android:layout_marginTop="4dp"
             android:layout_marginRight="8dp"
             android:layout_marginBottom="4dp"
+            android:fontFamily="@font/golden_sans"
             android:text=""
             android:textSize="@dimen/login_text_size" />
 

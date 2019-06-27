@@ -39,4 +39,9 @@
             app:argType="long" />
         <argument android:name="specie_name" app:argType="string"/>
     </fragment>
+    <fragment
+        android:id="@+id/destination_services"
+        android:name="com.pdm.ownyourvet.Fragments.ClientFragments.ServicesFragment"
+        android:label="Servicios"
+        tools:layout="@layout/fragment_services" />
 </navigation>

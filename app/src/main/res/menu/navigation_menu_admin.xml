@@ -13,7 +13,7 @@
     <item
         android:id="@+id/destination_admin_diseases"
         android:icon="@drawable/ic_chat_black_24dp"
-        android:title="Diseases"/>
+        android:title="Enfermedades"/>
     <item
         android:id="@+id/destination_clients"
         android:icon="@drawable/ic_chat_black_24dp"

@@ -31,6 +31,7 @@
         android:paddingEnd="18dp"
         android:paddingRight="18dp"
         android:paddingTop="8dp"
+        android:fontFamily="@font/golden_sans"
         app:layout_constraintEnd_toStartOf="@id/imageViewProfileRight"
         app:layout_constraintTop_toTopOf="parent"/>
 
@@ -44,6 +45,7 @@
         android:textSize="12sp"
         android:textStyle="italic"
         android:textColor="@color/colorPrimaryText"
+        android:fontFamily="@font/golden_sans_light"
         app:layout_constraintBottom_toBottomOf="@id/textViewMessageRight"
         app:layout_constraintEnd_toStartOf="@id/textViewMessageRight"/>
 
