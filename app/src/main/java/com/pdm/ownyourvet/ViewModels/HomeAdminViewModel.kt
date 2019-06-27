@@ -12,6 +12,7 @@ import com.pdm.ownyourvet.Network.UserService
 import com.pdm.ownyourvet.Repositories.UserRepo
 import com.pdm.ownyourvet.Room.Entities.User
 import com.pdm.ownyourvet.Room.RoomDB
+import com.pdm.ownyourvet.Utils.FragmentHelper
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
@@ -67,11 +68,15 @@ class HomeAdminViewModel(private val app: Application) : AndroidViewModel(app) {
             id:String,
             email:String,
             names:String,
-            direction:String
+            direction:String,
+            fragmentHelper: FragmentHelper
     ) = viewModelScope.launch(Dispatchers.IO){
         val resp = UserService.getUserService().updateUser(id,email,"0",names,direction).await()
         if(resp.isSuccessful) with(resp){
             userLiveData.postValue(this.body()!!.data)
+            withContext(Dispatchers.Main){
+                fragmentHelper.executeAfter()
+            }
         }else Log.e("REQUESTS",resp.message())
     }
     fun getPetsOf(id:String)= viewModelScope.launch(Dispatchers.IO){

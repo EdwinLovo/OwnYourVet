@@ -3,7 +3,6 @@ package com.pdm.ownyourvet.Fragments
 
 import android.content.Context
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -14,14 +13,14 @@ import com.pdm.ownyourvet.R
 import com.pdm.ownyourvet.ViewModels.DiseasesViewModel
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
+import com.pdm.ownyourvet.Utils.FragmentHelper
 import com.pdm.ownyourvet.Utils.NavigationHelper
 import com.pdm.ownyourvet.isConnected
 import kotlinx.android.synthetic.main.fragment_client_pet_interaction.*
 import kotlinx.android.synthetic.main.fragment_client_pet_interaction.view.*
-import kotlinx.android.synthetic.main.fragment_client_pet_interaction.view.sp_client_pet_specie
 
 
-class ClientPetInteractionFragment : Fragment() {
+class ClientPetInteractionFragment : Fragment(),FragmentHelper {
     lateinit var args: ClientPetInteractionFragmentArgs
     lateinit var diseasesViewModel: DiseasesViewModel
     lateinit var navigationHelper: NavigationHelper
@@ -35,6 +34,7 @@ class ClientPetInteractionFragment : Fragment() {
     lateinit var spClientSpecies:Spinner
     lateinit var spClientRaces:Spinner
     lateinit var btClientUpdate: Button
+    lateinit var myView:View
 
     var raceId:String = ""
 
@@ -53,13 +53,13 @@ class ClientPetInteractionFragment : Fragment() {
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
         // Inflate the layout for this fragment
-        val view = inflater.inflate(R.layout.fragment_client_pet_interaction, container, false)
-        if (isConnected(view.context))
+        myView = inflater.inflate(R.layout.fragment_client_pet_interaction, container, false)
+        if (isConnected(myView.context))
             diseasesViewModel.retrieveSpecies()
 
-        spClientSpecies = view.findViewById(R.id.sp_client_pet_specie)
-        spClientRaces = view.findViewById(R.id.sp_client_pet_race)
-        btClientUpdate = view.bt_client_update
+        spClientSpecies = myView.findViewById(R.id.sp_client_pet_specie)
+        spClientRaces = myView.findViewById(R.id.sp_client_pet_race)
+        btClientUpdate = myView.bt_client_update
 
         diseasesViewModel.speciesLiveData.observe(this, Observer { list ->
             specieSpinnerOptionsId.clear()
@@ -71,7 +71,7 @@ class ClientPetInteractionFragment : Fragment() {
 
 
             }
-            spClientSpecies.adapter = ArrayAdapter(view.context,R.layout.custom_spinner,specieSpinnerOption)
+            spClientSpecies.adapter = ArrayAdapter(myView.context,R.layout.custom_spinner,specieSpinnerOption)
         })
         diseasesViewModel.racesLiveData.observe(this, Observer {
             raceSpinnerOption.clear()
@@ -80,7 +80,7 @@ class ClientPetInteractionFragment : Fragment() {
                 raceSpinnerOption.add(race.name)
                 raceSpinnerOptionsId.add(race.id)
             }
-            spClientRaces.adapter = ArrayAdapter(view.context,R.layout.custom_spinner,raceSpinnerOption)
+            spClientRaces.adapter = ArrayAdapter(myView.context,R.layout.custom_spinner,raceSpinnerOption)
         })
 
         spClientSpecies.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
@@ -108,9 +108,12 @@ class ClientPetInteractionFragment : Fragment() {
 
         }
         btClientUpdate.setOnClickListener {
-            diseasesViewModel.savePet(navigationHelper.getUserId(),et_client_name.text.toString(),raceId)
+            diseasesViewModel.savePet(navigationHelper.getUserId(),et_client_name.text.toString(),raceId,this)
         }
-        return view
+        return myView
+    }
+    override fun executeAfter() {
+        Toast.makeText(myView.context,"Operacion completada!",Toast.LENGTH_SHORT).show()
     }
 
 

@@ -91,13 +91,15 @@ class DiseasesViewModel(private val app: Application) : AndroidViewModel(app) {
 
     }
 
-    fun savePet(user:String,name:String,raceId:String) = viewModelScope.launch(Dispatchers.IO){
+    fun savePet(user:String,name:String,raceId:String,fragmentHelper: FragmentHelper) = viewModelScope.launch(Dispatchers.IO){
         val resp = UserService.getUserService().savePet(name,raceId).await()
         if(resp.isSuccessful) {
             val body = resp.body()!!.data
             val usrPetResp = UserService.getUserService().savePetToUser(user,body.id).await()
             if(usrPetResp.isSuccessful){
-
+                withContext(Dispatchers.Main){
+                    fragmentHelper.executeAfter()
+                }
             }
         }
     }
