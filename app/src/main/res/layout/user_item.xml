@@ -27,8 +27,9 @@
             android:layout_marginTop="4dp"
             android:layout_marginRight="8dp"
             android:layout_marginBottom="4dp"
+            android:fontFamily="@font/golden_sans"
             android:text="asdasd"
-            android:textSize="@dimen/login_text_xl_size" />
+            android:textSize="20sp" />
 
         <TextView
             android:id="@+id/tv_user_name"
@@ -38,8 +39,9 @@
             android:layout_marginTop="4dp"
             android:layout_marginRight="8dp"
             android:layout_marginBottom="4dp"
+            android:fontFamily="@font/golden_sans_bold"
             android:text=""
-            android:textSize="@dimen/login_text_size" />
+            android:textSize="18sp" />
 
 
 

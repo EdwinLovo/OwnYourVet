@@ -204,9 +204,9 @@ class DiseasesFragment : Fragment() {
         dialog.popup_name.text = disease.name
         dialog.popup_information.text =  disease.information
         if (disease.specie_id.toInt() == 12) {
-            dialog.popup_specie.text = getString(R.string.animales_afectados_gatos)
-        } else {
             dialog.popup_specie.text = getString(R.string.animales_afectado_perros)
+        } else {
+            dialog.popup_specie.text = getString(R.string.animales_afectados_gatos)
         }
 
         dialog.textView_close_popup.setOnClickListener {

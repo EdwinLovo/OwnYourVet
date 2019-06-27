@@ -23,6 +23,7 @@
             android:hint="Nombre"
             android:inputType="textPersonName"
             android:padding="@dimen/login_edit_text_space"
+            android:fontFamily="@font/golden_sans"
             android:textSize="@dimen/login_text_size" />
 
         <EditText
@@ -35,6 +36,7 @@
             android:background="@drawable/edit_text_rounded"
             android:hint="Correo"
             android:inputType="textEmailAddress"
+            android:fontFamily="@font/golden_sans"
             android:padding="@dimen/login_edit_text_space"
             android:textSize="@dimen/login_text_size" />
 
@@ -48,6 +50,7 @@
             android:background="@drawable/edit_text_rounded"
             android:hint="Información"
             android:inputType="textMultiLine"
+            android:fontFamily="@font/golden_sans"
             android:padding="@dimen/login_edit_text_space"
             android:textSize="@dimen/login_text_size" />
 
@@ -60,6 +63,7 @@
             android:layout_marginRight="32dp"
             android:background="@drawable/button_ripple_bg"
             android:text="Modificar"
+            android:fontFamily="@font/golden_sans_bold"
             android:textColor="@color/colorPrimaryText"
             android:textSize="@dimen/login_text_xl_size" />
 

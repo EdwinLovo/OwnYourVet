@@ -60,7 +60,7 @@ class ClientPetsFragment : Fragment() {
         myView.rv_admin_client_pets.apply {
             setHasFixedSize(true)
             adapter = petsAdapter
-            layoutManager = GridLayoutManager(myView.context,3)
+            layoutManager = GridLayoutManager(myView.context,2)
         }
         myView.floating_action_button.setOnClickListener {
             val nextAction = ClientPetsFragmentDirections.nextAction()

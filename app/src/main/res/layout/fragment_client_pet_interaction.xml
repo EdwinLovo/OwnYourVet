@@ -41,6 +41,7 @@
             android:layout_marginRight="32dp"
             android:background="@drawable/edit_text_rounded"
             android:hint="Nombre"
+            android:fontFamily="@font/golden_sans"
             android:inputType="textPersonName"
             android:padding="@dimen/login_edit_text_space"
             android:textSize="@dimen/login_text_size" />
@@ -55,6 +56,7 @@
             android:layout_marginRight="32dp"
             android:background="@drawable/button_ripple_bg"
             android:text="Modificar"
+            android:fontFamily="@font/golden_sans_bold"
             android:textColor="@color/colorPrimaryText"
             android:textSize="@dimen/login_text_xl_size" />
 

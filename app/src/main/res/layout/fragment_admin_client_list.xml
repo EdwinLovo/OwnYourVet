@@ -17,6 +17,7 @@
             android:id="@+id/bt_client_refresh"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/golden_sans_bold"
             android:text="Actualizar" />
 
     </LinearLayout>
