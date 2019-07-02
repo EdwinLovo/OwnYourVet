@@ -24,13 +24,11 @@ class DatePickerFragment : Fragment() {
         // Inflate the layout for this fragment
         val view = inflater.inflate(R.layout.fragment_date_picker, container, false)
 
-        val dateSetListener = object : DatePickerDialog.OnDateSetListener{
-            override fun onDateSet(view: DatePicker?, year: Int, month: Int, dayOfMonth: Int) {
-                cal.set(Calendar.YEAR,year)
-                cal.set(Calendar.MONTH, month)
-                cal.set(Calendar.DAY_OF_MONTH, dayOfMonth)
-                updateDateInView()
-            }
+        val dateSetListener = DatePickerDialog.OnDateSetListener { _, year, month, dayOfMonth ->
+            cal.set(Calendar.YEAR, year)
+            cal.set(Calendar.MONTH, month)
+            cal.set(Calendar.DAY_OF_MONTH, dayOfMonth)
+            updateDateInView()
         }
 
         view.dateButton.setOnClickListener {
@@ -45,7 +43,7 @@ class DatePickerFragment : Fragment() {
     private fun updateDateInView() {
         val myFormat = "MM/dd/yyyy" // mention the format you need
         val sdf = SimpleDateFormat(myFormat, Locale.US)
-        dateTextview.text = sdf.format(cal.getTime())
+        dateTextview.text = sdf.format(cal.time)
     }
 
 }
