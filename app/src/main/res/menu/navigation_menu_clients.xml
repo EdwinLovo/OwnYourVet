@@ -30,4 +30,9 @@
         </menu>
     </item>
 
+    <item
+        android:id="@+id/destination_date"
+        android:icon="@drawable/ic_info_outline_black_24dp"
+        android:title="Date Picker"/>
+
 </menu>

@@ -44,4 +44,9 @@
         android:name="com.pdm.ownyourvet.Fragments.ClientFragments.ServicesFragment"
         android:label="Servicios"
         tools:layout="@layout/fragment_services" />
+    <fragment
+        android:id="@+id/destination_date"
+        android:name="com.pdm.ownyourvet.Fragments.DatePickerFragment"
+        android:label="Date Picker"
+        tools:layout="@layout/fragment_date_picker" />
 </navigation>
