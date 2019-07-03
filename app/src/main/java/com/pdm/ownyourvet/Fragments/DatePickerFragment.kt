@@ -41,7 +41,7 @@ class DatePickerFragment : Fragment() {
     }
 
     private fun updateDateInView() {
-        val myFormat = "MM/dd/yyyy" // mention the format you need
+        val myFormat = "dd/MM/yyyy" // mention the format you need
         val sdf = SimpleDateFormat(myFormat, Locale.US)
         dateTextview.text = sdf.format(cal.time)
     }

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+
+    tools:context=".Fragments.AdminFragments.MedicsFragment">
+
+    <!--    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">-->
+
+    <EditText
+        android:id="@+id/et_admin_search_medic"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/login_edit_text_height"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/edit_text_rounded"
+        android:fontFamily="@font/golden_sans"
+        android:hint="Filtro"
+        android:inputType="textPersonName"
+        android:padding="@dimen/login_edit_text_space"
+        android:textSize="@dimen/login_text_size" />
+
+    <!--        <Button
+                android:id="@+id/bt_add_disease"
+                android:layout_width="80dp"
+                android:layout_marginTop="10dp"
+                android:layout_height="40dp"
+                android:background="@drawable/button_ripple_bg"
+                android:fontFamily="@font/golden_sans_bold"
+                android:text="Buscar"
+                android:textColor="@color/colorPrimaryText"
+                android:textSize="@dimen/login_text_xl_size" />-->
+    <!--</LinearLayout>-->
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_admin_medic_list"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="8" />
+</LinearLayout>

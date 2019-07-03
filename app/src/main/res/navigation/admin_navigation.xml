@@ -57,4 +57,9 @@
         android:name="com.pdm.ownyourvet.Fragments.ClientFragments.HomeFragment"
         android:label="Home"
         tools:layout="@layout/fragment_home" />
+    <fragment
+        android:id="@+id/destination_admin_medics"
+        android:name="com.pdm.ownyourvet.Fragments.AdminFragments.MedicsFragment"
+        android:label="fragment_medics"
+        tools:layout="@layout/fragment_medics" />
 </navigation>

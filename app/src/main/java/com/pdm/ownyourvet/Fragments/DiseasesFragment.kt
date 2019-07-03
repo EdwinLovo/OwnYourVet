@@ -152,7 +152,7 @@ class DiseasesFragment : Fragment() {
                 if (spinnerOptionsId[position].toInt() == 0) {
                    try{
                        recyclerView.apply {
-                           layoutManager = LinearLayoutManager(view.context) as RecyclerView.LayoutManager
+//                           layoutManager = LinearLayoutManager(view.context) as RecyclerView.LayoutManager
                            pagedList.removeObservers (this@DiseasesFragment)
                            pagedList = initializedPagedListBuilder(config).build()
                            pagedList.observe(this@DiseasesFragment, Observer {
@@ -166,7 +166,7 @@ class DiseasesFragment : Fragment() {
 
                 } else {
                     recyclerView.apply {
-                        layoutManager = LinearLayoutManager(view.context) as RecyclerView.LayoutManager
+//                        layoutManager = LinearLayoutManager(view.context) as RecyclerView.LayoutManager
                         pagedList.removeObservers (this@DiseasesFragment)
                         pagedList = initializedPagedListBuilder(config,spinnerOptionsId[position]).build()
                         pagedList.observe(this@DiseasesFragment, Observer {
