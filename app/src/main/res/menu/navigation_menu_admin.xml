@@ -12,7 +12,7 @@
         android:title="Clientes"/>
 
     <item
-        android:id="@+id/destination_admin_medics"
+        android:id="@+id/destination_medics"
         android:icon="@drawable/ic_person_black_24dp"
         android:title="Medicos"/>
 

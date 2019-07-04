@@ -1,5 +1,5 @@
 package com.pdm.ownyourvet.Utils
 
 interface FragmentHelper {
-    fun executeAfter()
+    fun executeAfter(customMsg:String? = "")
 }
