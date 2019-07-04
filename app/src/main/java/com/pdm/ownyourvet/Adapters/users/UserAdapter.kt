@@ -22,6 +22,7 @@ abstract class UserAdapter: RecyclerView.Adapter<UserAdapter.ViewHolder>() {
     override fun onBindViewHolder(holder: UserAdapter.ViewHolder, position: Int)  = holder.bind(userList[position])
 
 
+
     inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val name = itemView.tv_user_name
         val email = itemView.tv_user_email

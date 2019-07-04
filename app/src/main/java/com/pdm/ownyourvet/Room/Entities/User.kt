@@ -15,7 +15,7 @@ data class User(
         val userType:String
 ){
     @field:Json(name = "names")
-    var names:String = "none"
+    var names:String = "None"
     @field:Json(name = "direction")
-    var direction:String = "none"
+    var direction:String = "None"
 }

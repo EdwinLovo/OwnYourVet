@@ -62,6 +62,12 @@ interface UserService {
             @Field("patient_id") patient_id: Long
     ): Deferred<Response<Void>>
 
+    @POST("adminsbyemail")
+    @FormUrlEncoded
+    fun filterUsersByEmail(
+            @Field("email") email: String
+    ): Deferred<Response<UserResponse>>
+
 
 
 

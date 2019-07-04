@@ -20,6 +20,7 @@ import kotlinx.coroutines.withContext
 class HomeAdminViewModel(private val app: Application) : AndroidViewModel(app) {
     private val userRepo: UserRepo
     val userLiveData:MutableLiveData<User> = MutableLiveData()
+    val adminsLiveData:MutableLiveData<List<User>> = MutableLiveData()
     val petLiveData:MutableLiveData<List<Patient>> = MutableLiveData()
 
     init {
@@ -45,6 +46,16 @@ class HomeAdminViewModel(private val app: Application) : AndroidViewModel(app) {
             userRepo.insertUsers(this.body()!!.data)
         }
     }
+    fun retrieveAdmins() = viewModelScope.launch(Dispatchers.IO){
+        val resp = UserService.getUserService().getAdmins().await()
+        if(resp.isSuccessful){
+            Log.d("REQUESTS","Admins retrieved!")
+            withContext(Dispatchers.Main){
+                adminsLiveData.postValue(resp.body()!!.data)
+            }
+        }
+        else Log.e("REQUESTS","Admins retrieving failed!")
+    }
 
     fun sendUser(user: User) = viewModelScope.launch(Dispatchers.IO) {
         val api = UserService.getUserService()
@@ -63,6 +74,13 @@ class HomeAdminViewModel(private val app: Application) : AndroidViewModel(app) {
             }
         }
 
+    }
+    fun retrieveUsersByEmail(email:String) = viewModelScope.launch (Dispatchers.IO){
+        val resp = UserService.getUserService().filterUsersByEmail(email).await()
+        if(resp.isSuccessful){
+            adminsLiveData.postValue(resp.body()!!.data)
+        }
+        else Log.e("REQUESTS","filtering failed")
     }
     fun updateUser(
             id:String,

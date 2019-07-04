@@ -85,7 +85,7 @@ class AdminAddDiseasesFragment : Fragment(),FragmentHelper {
         }
         return myView
     }
-    override fun executeAfter() {
+    override fun executeAfter(customMsg: String?) {
         val nextAction = AdminAddDiseasesFragmentDirections.nextAction()
         Navigation.findNavController(myView).navigate(nextAction)
     }

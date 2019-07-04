@@ -112,7 +112,7 @@ class ClientPetInteractionFragment : Fragment(),FragmentHelper {
         }
         return myView
     }
-    override fun executeAfter() {
+    override fun executeAfter(customMsg: String?) {
         Toast.makeText(myView.context,"Operacion completada!",Toast.LENGTH_SHORT).show()
     }
 
